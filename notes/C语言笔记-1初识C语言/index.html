@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>C语言笔记-1：初识C语言 | ZSYのBlog</title>
+<link rel="stylesheet" href="https://zzzsyyy.github.io/css/eureka.min.css">
+<script defer src="https://zzzsyyy.github.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
+     media="print"
+    onload="this.media='all';this.onload=null" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"
+     crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+     integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+    
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="C语言笔记-1：初识C语言">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"笔记",
+      "item":"https://zzzsyyy.github.io/notes/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"C语言笔记-1：初识C语言",
+      "item":"https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/"
+    },
+    "headline": "C语言笔记-1：初识C语言 | ZSYのBlog","datePublished": "2021-01-26T00:00:00+00:00",
+    "dateModified": "2021-01-26T00:00:00+00:00",
+    "wordCount":  3336 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsyyy.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003eC语言笔记-1：初识C语言\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="C语言笔记-1：初识C语言 | ZSYのBlog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://zzzsyyy.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" />
+
+
+
+
+<meta property="og:description" content="C语言笔记-1：初识C语言" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="ZSYのBlog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-01-26T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-01-26T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="notes" />
+
+
+<meta property="article:tag" content="C" />
+
+<meta property="article:tag" content="笔记" />
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" />
+
+
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">ZSYのBlog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+            <a href="/authors/Zhang/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>        
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?13ff6b44a46e18f234debd5cdd607d36";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">C语言笔记-1：初识C语言</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-26</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>需要大约7分钟阅读</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://zzzsyyy.github.io/series/C/" class="hover:text-eureka">C</a>
+        
+    </div>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>C语言笔记-1：初识C语言</p>
+<h1 id="初识c语言">初识C语言</h1>
+<h2 id="什么是c语言">什么是C语言</h2>
+<p>​	二进制语言：1010010100101</p>
+<p>​	汇编语言：助记符 - ADD - 10100001</p>
+<p>​	B语言</p>
+<p>​	C/C++/Java/Python</p>
+<blockquote>
+<p>C语言：&ndash;&gt;不成熟&ndash;&gt;成熟&ndash;&gt;流行</p>
+<p>国际标准：</p>
+<p>ANSI C-C89/C90/C11/C99</p>
+</blockquote>
+<h2 id="第一个c语言程序">第一个C语言程序</h2>
+<p>.c   源文件
+.h  头文件head</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+//std-standard input output
+//int是整型的意思-返回整型值
+int main//主函数-程序的入口
+{
+    //输出函数print fuction
+    //库函数#include &lt;stdio.h&gt;
+    printf(&quot;hehe\n&quot;);
+    //返回0
+    return 0;
+}
+</code></pre>
+<h2 id="数据类型">数据类型</h2>
+<h3 id="分类">分类</h3>
+<pre><code class="language-c">char          //字符数据类型
+short         //短整型
+int           //整型
+long          //长整型
+long long     //更长的整型
+float         //单精度浮点数
+double        //双精度浮点数
+//C语言没有字符串类型
+</code></pre>
+<h3 id="打印">打印</h3>
+<pre><code class="language-c">//char-字符类型
+//int-整型
+int main()
+{
+    char ch = 'A';//申请内存空间  #好像只能用单引号#
+    printf(&quot;%c\n&quot;,ch);//%c打印字符格式的数据
+    int age = 20;
+    print(&quot;%d\n&quot;,age);//%d打印整型十进制数
+    float f = 5.0;
+    printf(&quot;%f\n&quot;,f);//%f打印浮点数（单精度）
+    //5.000000
+    double d = 3.14;
+    printf(&quot;%lf\n&quot;,d);//%lf打印浮点数（双精度）
+    return 0;
+}
+</code></pre>
+<pre><code class="language-c">//short int -短整型
+//long-长整型
+//
+</code></pre>
+<h3 id="格式化输出">格式化输出</h3>
+<pre><code class="language-c">printf(&quot;%c&quot;,ch);
+//%c-打印字符
+//%d-打印整型
+//%f-打印浮点数
+//%p-打印地址
+//%x-打印十六进制
+//%o-
+</code></pre>
+<h3 id="数据类型的大小">数据类型的大小</h3>
+<pre><code class="language-c">//sizeof - 大小
+printf(&quot;%d\n&quot;,sizeof(char));//1
+printf(&quot;%d\n&quot;,sizeof(short));//2
+printf(&quot;%d\n&quot;,sizeof(int));//4
+printf(&quot;%d\n&quot;,sizeof(long));//4或8&gt;=4
+printf(&quot;%d\n&quot;,sizeof(long long));//8
+printf(&quot;%d\n&quot;,sizeof(float));//4
+printf(&quot;%d\n&quot;,sizeof(double));//8
+</code></pre>
+<blockquote>
+<p>字节
+bit - 比特位
+byte - 字节=8个比特位
+0000000000000000
+0000000000000001
+0000000000000010</p>
+</blockquote>
+<h2 id="变量常量">变量，常量</h2>
+<h3 id="定义变量">定义变量</h3>
+<h3 id="变量的分类">变量的分类</h3>
+<ul>
+<li>
+<p>全局变量 - 定义在代码块之外的变量</p>
+</li>
+<li>
+<p>局部变量 - 定义在代码块之内的变量</p>
+<pre><code class="language-c">int num1 = 0;//全局变量
+int a = 100;
+int main()
+{
+    int num2 = 100;//局部变量
+    int a = 10;
+    printf(&quot;%d\n&quot;,a);//10
+    return 0;
+}
+</code></pre>
+<p>局部变量的名字和全局变量的名字不要相同，相同时会以局部变量优先。</p>
+<p>局部变量和全局变量作用范围不同</p>
+<pre><code class="language-c">int main()
+{
+    {
+        int a = 0;//作用在大括号内
+    }
+    printf(&quot;%d\n&quot;,a);//错误
+    return 0;
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="变量的使用">变量的使用</h3>
+<p>​	输入函数</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main()
+{
+    int num1 = 0;
+    int num2 = 0;
+    int sum = 0;
+    scanf(&quot;%d%d&quot;,&amp;num1,&amp;num2);//&amp; - 取地址符号
+    sum = num1+num2;
+    printf(&quot;sum=%d\n&quot;,sum);
+    return 0;
+}
+
+</code></pre>
+<p>C语言语法规定：变量定义在当前代码块的最前面。</p>
+<h4 id="变量的作用域和生命周期">变量的作用域和生命周期</h4>
+<p>作用域：大括号｛｝、整个代码</p>
+<p>声明变量 - val变量在工程的其他源文件中定义，</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+int main()
+{
+    extern int val;//extern - 声明外部变量的
+    printf(&quot;val=%d\n&quot;,val);
+    return 0;
+}
+</code></pre>
+<p>生命周期：作用域的开始到结束。</p>
+<h3 id="常量">常量</h3>
+<p>分类</p>
+<ul>
+<li>
+<p>字面常量</p>
+</li>
+<li>
+<p>const 修饰的常变量</p>
+</li>
+<li>
+<p>#define 定义的标识符常量</p>
+</li>
+<li>
+<p>枚举常量</p>
+</li>
+</ul>
+<h4 id="字面常量">字面常量</h4>
+<p>就。。。字面意思</p>
+<h4 id="常变量">常变量</h4>
+<p>const - 常属性</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    const int num = 3;
+    prinf(&quot;%d\n&quot;,num);
+    num = 8;
+    printf(&quot;%d\n&quot;,num);//error
+    return 0;
+}
+</code></pre>
+<p>变量，具有常属性</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int arr[10] = {0};//okk
+    int n = 10;
+    int arr[n] = {1};//error
+    const int m = 10;
+    int arr[m] = {2};//error
+    return 0;
+}
+</code></pre>
+<h4 id="define-定义的标识符常量">#define 定义的标识符常量</h4>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+#define MAX 100
+
+int main()
+{
+    int arr[MAX] = {1};
+    return 0;
+}
+</code></pre>
+<h4 id="枚举常量">枚举常量</h4>
+<p>可以一一列举的量</p>
+<p>enum - 枚举关键字</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+enum Sex
+{
+    MALE,
+    FEMALE,
+    SECRET
+}
+
+int main()
+{
+    enum Sex s = FEMALE;
+    printf(&quot;%d\n%d\n%d&quot;,MALE,FEMALE,SECRET);//012有默认值，不可改变
+    return 0;
+}
+</code></pre>
+<h2 id="字符串转义字符注释">字符串+转义字符+注释</h2>
+<h3 id="字符串">字符串</h3>
+<pre><code class="language-c">&quot;hello world!\n&quot;
+</code></pre>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    &quot;&quot;;//空字符串
+    char arr1[] = &quot;abc&quot;;
+    printf(&quot;%s\n&quot;,arr1);//abc
+    char arr2[] = {'a','b','c'};
+    printf(&quot;%s\n&quot;,arr2);//abcbshjhd
+    return 0;
+}
+
+</code></pre>
+<pre><code class="language-c">arr1 = &quot;abc&quot;;//数组 - 'a','b','c','\0'
+arr2 = {'a','b','c'};// - 'a','b','c'
+//'\0'的值是0，标志字符串的结束,不算字符串的内容
+</code></pre>
+<blockquote>
+<p>ASCII 码</p>
+<p>0 - 48,</p>
+<p>A - 65, Z - 90</p>
+<p>a - 97, z - 121</p>
+</blockquote>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    char arr1[] = &quot;abc&quot;;
+    char arr2[] = {'a','b','c'};
+    //strlen() - 计算字符串长度 到'\0'停止 - 引&lt;string.h&gt;
+    printf(&quot;%d\n&quot;,strlen(arr1));//3
+    printf(&quot;%d\n&quot;,strlen(arr2));//随机值
+    return 0;
+}
+
+</code></pre>
+<h3 id="转义字符">转义字符</h3>
+<p>&lsquo;\'+字符</p>
+<table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表符</td>
+</tr>
+<tr>
+<td>?</td>
+<td>区别三字母词（现在不用）</td>
+</tr>
+<tr>
+<td>\&rsquo;</td>
+<td>表示单引号 &lsquo;\&rsquo;'</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>斜杠</td>
+</tr>
+<tr>
+<td>\&quot;</td>
+<td>表示双引号 &ldquo;\&rdquo;&quot;</td>
+</tr>
+<tr>
+<td>\ddd</td>
+<td>表示 8 进制数字对应字符（d&lt;8）</td>
+</tr>
+<tr>
+<td>\xdd</td>
+<td>表示 16 进制数字对应的字符（d 是 16 进制）</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="注释">注释</h3>
+<pre><code class="language-c">/*
+*C风格的注释
+不支持嵌套
+*/
+//C++风格的注释
+</code></pre>
+<p><kbd>Ctrl</kbd>+<kbd>K</kbd>+<kbd>C</kbd> - 注释</p>
+<p><kbd>Ctrl</kbd>+<kbd>K</kbd>+<kbd>U</kbd> - 取消注释</p>
+<h2 id="选择语句">选择语句</h2>
+<pre><code class="language-c">if (a==1)
+    printf(&quot;1&quot;);//单行不用大括号
+else
+    printf(&quot;error&quot;);
+</code></pre>
+<h2 id="循环语句">循环语句</h2>
+<ul>
+<li>
+<p>for 循环</p>
+</li>
+<li>
+<p>while 循环</p>
+</li>
+<li>
+<p>do while 循环</p>
+</li>
+</ul>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int line = 0;
+    printf(&quot;学习：\n&quot;);
+    while (line&lt;20000)//满足条件则执行
+    {
+        printf(&quot;一行代码\n&quot;);
+        line++;
+    }
+    return 0;
+}
+
+</code></pre>
+<h2 id="函数">函数</h2>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int Add (int x, int y)//Add - 函数名;int - 返回值类型
+{                  //函数体
+    int z = x + y;
+    return z;//返回值
+}
+
+int main()
+{
+    int num1;
+    int num2;
+    scanf(&quot;%d%d&quot;,&amp;num1,&amp;num2);
+    int sum = Add(num1,num2);//调用函数
+    printf(&quot;sum = %d\n&quot;,sum);
+    return 0;
+}
+</code></pre>
+<h2 id="数组">数组</h2>
+<h3 id="数组的定义">数组的定义</h3>
+<p>一组相同类型数据的集合</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    char ch[20];
+    printf(&quot;%d\n&quot;,arr[4]);//5 下标从0开始
+    return 0;
+}
+</code></pre>
+<h3 id="数组的使用">数组的使用</h3>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    int i = 0;
+    while (i&lt;sizeof(arr)/sizeof(arr[0]))
+    {
+        printf(&quot;%d\n&quot;,arr[i]);
+        i++;
+    }
+    return 0;
+}
+</code></pre>
+<h2 id="操作符">操作符</h2>
+<h3 id="双目操作符">双目操作符</h3>
+<blockquote>
+<p>算术操作符</p>
+</blockquote>
+<p>+ - * / %</p>
+<blockquote>
+<p>移位操作符</p>
+</blockquote>
+<p>&gt;&gt; &laquo;</p>
+<blockquote>
+<p>位操作符</p>
+</blockquote>
+<p>&amp; ^ |</p>
+<blockquote>
+<p>赋值操作符</p>
+</blockquote>
+<p>= += -= *= \= &amp;= ^= |= &raquo;= &laquo;=</p>
+<h4 id="关系操作符">关系操作符</h4>
+<p>&gt;</p>
+<p>&gt;=</p>
+<p>&lt;</p>
+<p>&lt;=</p>
+<p>==</p>
+<p>!=</p>
+<h4 id="逻辑操作符">逻辑操作符</h4>
+<p>&amp;&amp;         逻辑与 - and</p>
+<p>||           逻辑或 - or</p>
+<h3 id="单目操作符">单目操作符</h3>
+<p>！ 逻辑反操作</p>
+<p>- 负值</p>
+<p>+ 正值</p>
+<p>&amp; 取地址</p>
+<p>sizeof 操作数的类型长度（以字节为单位）</p>
+<p>~ 对一个数的二进制位按位取反</p>
+<p>&ndash; 前置、后置&ndash;</p>
+<p>++ 前置、后置++</p>
+<p>* 间接访问操作符（解引用操作符）</p>
+<p>(类型) 强制类型转换</p>
+<blockquote>
+<p>EOF - end of file - （-1）</p>
+</blockquote>
+<h4 id="--------按位取反">~        按位取反</h4>
+<blockquote>
+<p>原码、反码、补码
+负数在内存中存储时，存储的是二进制的补码
+最高位 - 符号位
+使用的、打印的是原码
+负数：原码的符号位不变，其他位按位取反得到反码，反码加一得到补码
+正数：三个码一样</p>
+</blockquote>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 0;
+    //00000000000000000000000000000000 - 原来
+    //11111111111111111111111111111111 - 取反后的补码
+    //11111111111111111111111111111110 - 反码
+    //10000000000000000000000000000001 - 原码 - -1
+    int b = ~a;
+    printf(&quot;%d\n&quot;,b);//-1
+    return 0;
+}
+</code></pre>
+<h4 id="-------">++   /  &ndash;</h4>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;
+    int b = a++;//后置++，先使用，再++
+    int c = ++a;//前置++，先++，再使用
+    printf(&quot;a=%d b=%d c=%d\n&quot;,a,b,c);//a=12 b=10 c=12
+    return 0;
+}
+</code></pre>
+<h4 id="类型--------强制类型转换">（类型）        强制类型转换</h4>
+<pre><code class="language-c">int main()
+{
+    int a = (int)3.14;
+    return 0;
+}
+</code></pre>
+<h3 id="三目操作符">三目操作符</h3>
+<h4 id="条件操作符">条件操作符</h4>
+<p>exp1 ? exp2 : exp3</p>
+<p>exp1为真 - exp2</p>
+<p>exp1为假 - exp3</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    int max = a&gt;b?a:b;
+    printf(&quot;%d\n&quot;,max);
+    return 0;
+}
+</code></pre>
+<h4 id="逗号表达式">逗号表达式</h4>
+<p>,</p>
+<h4 id="其他操作符">其他操作符</h4>
+<p>[]       下表引用操作符</p>
+<p>()        函数调用操作符</p>
+<p>.      结构体成员</p>
+<p>-&gt;    结构体指针成员</p>
+<h2 id="常见关键字">常见关键字</h2>
+<pre><code class="language-c">auto  break  case  char  const  continue  default  do  double  else  enum  extern float  for  goto  if  int  long  register  return  short  signed  sizeof  static  struct  switch  typedef  union  unsigned  void  volatile  while 
+</code></pre>
+<p>auto - 自动</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;//局部变量 - 自动变量（自动销毁）
+    return 0;
+}
+</code></pre>
+<blockquote>
+<p>计算机储存数据</p>
+<p>寄存器
+高速缓存
+内存
+硬盘</p>
+</blockquote>
+<p>register - 定义寄存器变量</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    register int a = 10;//建议定义a为寄存器变量
+    return 0;
+}
+</code></pre>
+<p>int定义的变量是有符号的 - signed int</p>
+<p>unsigned int -无符号数</p>
+<p>struct - 结构体关键字</p>
+<p>typeof -</p>
+<p>union - 联合体、共用体</p>
+<h3 id="typedef---类型定义">typedef - 类型定义</h3>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+typedef unsigned int u_int32;
+
+int main()
+{
+    u_int32 a = 18;
+    printdf(&quot;%d&quot;,a);//18
+    return 0;
+}
+</code></pre>
+<h3 id="static---静态">static - 静态</h3>
+<p>static - 修饰局部变量 - 生命周期变长</p>
+<p>static - 修饰全局变量 - 作用域变小 （只在本身的源文件中使用）</p>
+<p>static - 修饰函数 - 改变了函数的连接属性（外部连接属性-&gt;内部连接属性）</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+void test()
+{
+    int a = 1;
+    static int b = 1;//b是静态局部变量
+    a++,b++;
+    printf(&quot;a=%d b=%d\n&quot;,a,b);//a=22222、b=23456
+}
+
+int main()
+{
+    int i = 0;
+    while (i&lt;5)
+    {
+        test();
+        i++;
+    }
+    return 0;
+}
+
+</code></pre>
+<h3 id="define---定义常量和宏">#define - 定义常量和宏</h3>
+<p>对一些量的替换</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+#define MAX 100//定义标识符常量
+
+int main()
+{
+    int arr[MAX] = {1};
+    return 0;
+}
+</code></pre>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+#define MAX(X,Y) (X&gt;Y?X:Y)//定义宏
+
+int main()
+{
+    int x = 10, y = 20;
+    int max = MAX(x,y);
+    printf(&quot;%d&quot;,max);
+    return 0;
+}
+</code></pre>
+<h2 id="指针">指针</h2>
+<p>地址 - 空间</p>
+<p>32位/64位 - 32/64根地址线</p>
+<h3 id="指针-变量">指针 变量</h3>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+
+int main()
+{
+    int a = 10;
+    int *p = &amp;a;//取出a的地址
+    //p - 用来存放地址的变量 - 指针变量
+    printf(&quot;%p&quot;,p);
+    return 0;
+}
+
+</code></pre>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 10;
+    pritf(&quot;%d\n&quot;,a);
+    int*  p = &amp;a;//取地址
+    *p = 20;//* - 解引用操作符
+    printf(&quot;%d\n&quot;,a);
+    return 0;
+}
+</code></pre>
+<h3 id="指针变量的大小">指针变量的大小</h3>
+<p>32位 - 4           64位  - 8</p>
+<h2 id="结构体">结构体</h2>
+<h3 id="结构体的创建与初始化">结构体的创建与初始化</h3>
+<p>表示复杂对象</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+struct Book
+{
+   char name[20];
+   short price;
+};//; - 必不可少
+
+int main()
+{
+    //利用结构体 
+    struct Book  b1 = {&quot;C语言程序设计&quot;,55};
+    printf(&quot;书名：%s\n&quot;,b1.name);
+    printtf(&quot;%d&quot;,b1.price);
+}
+</code></pre>
+<h3 id="结构体的指针">结构体的指针</h3>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+struct Book
+{
+   char name[20];
+   short price;
+};
+
+int main()
+{
+    struct Book b1 = {&quot;C语言程序设计&quot;,55};
+    struct Book* pb = &amp;b1;
+    printf(&quot;%p\n&quot;,pb);
+    printf(&quot;%s\n&quot;,(*pb).name);
+    printf(&quot;%s\n&quot;,pb-&gt;name);
+    return 0;
+}
+
+</code></pre>
+<p>结构体变量.成员</p>
+<p>结构体指针-&gt;成员</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+
+struct Book
+{
+   char name[20];
+   short price;
+};
+
+int main()
+{
+    struct Book b1 = {&quot;C语言程序设计&quot;,55};
+    struct Book* pb = &amp;b1;
+    printf(&quot;书名：%s 价格：%d\n&quot;,pb-&gt;name，pb-&gt;price);
+    b1.price = 15;//price是变量，可以直接更改
+    //b1.name = &quot;C++&quot; - error
+    strcpy(b1.name, &quot;C++&quot;);//引入string.h
+    //数组名实际上是数组的地址
+    printf(&quot;书名：%s 价格：%d\n&quot;,pb-&gt;name，pb-&gt;price);
+
+    return 0;
+}
+
+</code></pre>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://zzzsyyy.github.io/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
+    
+    <a href="https://zzzsyyy.github.io/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsyyy.github.io/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsyyy.github.io/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsyyy.github.io/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2"></span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/z_zzsy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" class="block">C语言笔记-2：循环和分支语句</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsyyy.github.io/notes/Forensics/" class="block">一些Misc的Writeup - 1</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
+        <br />
+        
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么是c语言">什么是C语言</a></li>
+    <li><a href="#第一个c语言程序">第一个C语言程序</a></li>
+    <li><a href="#数据类型">数据类型</a>
+      <ul>
+        <li><a href="#分类">分类</a></li>
+        <li><a href="#打印">打印</a></li>
+        <li><a href="#格式化输出">格式化输出</a></li>
+        <li><a href="#数据类型的大小">数据类型的大小</a></li>
+      </ul>
+    </li>
+    <li><a href="#变量常量">变量，常量</a>
+      <ul>
+        <li><a href="#定义变量">定义变量</a></li>
+        <li><a href="#变量的分类">变量的分类</a></li>
+        <li><a href="#变量的使用">变量的使用</a>
+          <ul>
+            <li><a href="#变量的作用域和生命周期">变量的作用域和生命周期</a></li>
+          </ul>
+        </li>
+        <li><a href="#常量">常量</a>
+          <ul>
+            <li><a href="#字面常量">字面常量</a></li>
+            <li><a href="#常变量">常变量</a></li>
+            <li><a href="#define-定义的标识符常量">#define 定义的标识符常量</a></li>
+            <li><a href="#枚举常量">枚举常量</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#字符串转义字符注释">字符串+转义字符+注释</a>
+      <ul>
+        <li><a href="#字符串">字符串</a></li>
+        <li><a href="#转义字符">转义字符</a></li>
+        <li><a href="#注释">注释</a></li>
+      </ul>
+    </li>
+    <li><a href="#选择语句">选择语句</a></li>
+    <li><a href="#循环语句">循环语句</a></li>
+    <li><a href="#函数">函数</a></li>
+    <li><a href="#数组">数组</a>
+      <ul>
+        <li><a href="#数组的定义">数组的定义</a></li>
+        <li><a href="#数组的使用">数组的使用</a></li>
+      </ul>
+    </li>
+    <li><a href="#操作符">操作符</a>
+      <ul>
+        <li><a href="#双目操作符">双目操作符</a>
+          <ul>
+            <li><a href="#关系操作符">关系操作符</a></li>
+            <li><a href="#逻辑操作符">逻辑操作符</a></li>
+          </ul>
+        </li>
+        <li><a href="#单目操作符">单目操作符</a>
+          <ul>
+            <li><a href="#--------按位取反">~        按位取反</a></li>
+            <li><a href="#-------">++   /  &ndash;</a></li>
+            <li><a href="#类型--------强制类型转换">（类型）        强制类型转换</a></li>
+          </ul>
+        </li>
+        <li><a href="#三目操作符">三目操作符</a>
+          <ul>
+            <li><a href="#条件操作符">条件操作符</a></li>
+            <li><a href="#逗号表达式">逗号表达式</a></li>
+            <li><a href="#其他操作符">其他操作符</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#常见关键字">常见关键字</a>
+      <ul>
+        <li><a href="#typedef---类型定义">typedef - 类型定义</a></li>
+        <li><a href="#static---静态">static - 静态</a></li>
+        <li><a href="#define---定义常量和宏">#define - 定义常量和宏</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针">指针</a>
+      <ul>
+        <li><a href="#指针-变量">指针 变量</a></li>
+        <li><a href="#指针变量的大小">指针变量的大小</a></li>
+      </ul>
+    </li>
+    <li><a href="#结构体">结构体</a>
+      <ul>
+        <li><a href="#结构体的创建与初始化">结构体的创建与初始化</a></li>
+        <li><a href="#结构体的指针">结构体的指针</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <style type="text/css">
+      .love {
+          position:fixed;
+          pointer-events:none;
+          top:0;
+          left:0;
+          height:100%;
+      }
+    </style>
+    <canvas class="love"></canvas>
+    <script src="/js/love.min.js"></script>
+    <script type="text/javascript">
+    love.setCanvasSize();
+    </script>
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

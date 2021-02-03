@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on ZSYのBlog</title>
+    <link>https://zzzsyyy.github.io/authors/</link>
+    <description>Recent content in Authors on ZSYのBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsyyy.github.io/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
+    <lastBuildDate>Mon, 01 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsyyy.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zhang.Mathias</title>
+      <link>https://zzzsyyy.github.io/authors/Zhang/</link>
+      <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsyyy.github.io/authors/Zhang/</guid>
+      <description>个人介绍 大连人，北航在读学生 。</description>
+    </item>
+    
+    <item>
+      <title>Example Author</title>
+      <link>https://zzzsyyy.github.io/authors/Example-Author/</link>
+      <pubDate>Fri, 20 Nov 2020 22:52:56 +0800</pubDate>
+      
+      <guid>https://zzzsyyy.github.io/authors/Example-Author/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo Authors</title>
+      <link>https://zzzsyyy.github.io/authors/hugo-authors/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsyyy.github.io/authors/hugo-authors/</guid>
+      <description>Vestibulum vel arcu Donec interdum justo sed posuere imperdiet. Quisque nec mauris eu erat mattis egestas in vitae nisl. Sed nisl augue, congue sed quam quis, tempor tempus nibh. Pellentesque accumsan in quam a interdum. Morbi iaculis venenatis lacinia. Mauris quis nisl vitae nisi mollis placerat id vel ligula. Integer vitae arcu ac leo iaculis rhoncus id vitae dolor. Fusce quis nisl tincidunt, vulputate dolor quis, mollis massa. Donec congue velit at risus cursus, eu auctor dolor rhoncus.</description>
+    </item>
+    
+  </channel>
+</rss>

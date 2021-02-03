@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>C语言笔记-2：循环和分支语句 | ZSYのBlog</title>
+<link rel="stylesheet" href="https://zzzsyyy.github.io/css/eureka.min.css">
+<script defer src="https://zzzsyyy.github.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
+     media="print"
+    onload="this.media='all';this.onload=null" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"
+     crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+     integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+    
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="C语言笔记-2：循环和分支语句">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"笔记",
+      "item":"https://zzzsyyy.github.io/notes/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"C语言笔记-2：循环和分支语句",
+      "item":"https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/"
+    },
+    "headline": "C语言笔记-2：循环和分支语句 | ZSYのBlog","datePublished": "2021-01-28T00:00:00+00:00",
+    "dateModified": "2021-01-31T00:00:00+00:00",
+    "wordCount":  1117 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsyyy.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003eC语言笔记-2：循环和分支语句\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="C语言笔记-2：循环和分支语句 | ZSYのBlog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://zzzsyyy.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" />
+
+
+
+
+<meta property="og:description" content="C语言笔记-2：循环和分支语句" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="ZSYのBlog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-01-28T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-01-31T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="notes" />
+
+
+<meta property="article:tag" content="C" />
+
+<meta property="article:tag" content="笔记" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">ZSYのBlog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+            <a href="/authors/Zhang/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>        
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?13ff6b44a46e18f234debd5cdd607d36";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">C语言笔记-2：循环和分支语句</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-28</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>需要大约3分钟阅读</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://zzzsyyy.github.io/series/C/" class="hover:text-eureka">C</a>
+        
+    </div>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>C语言笔记-2：循环和分支语句</p>
+<h1 id="循环与分支语句">循环与分支语句</h1>
+<p>以<code>;</code>结尾 - 一个语句</p>
+<h2 id="分支语句选择结构">分支语句（选择结构）</h2>
+<h3 id="if---else语句">if - else语句</h3>
+<h4 id="语法形式">语法形式</h4>
+<pre><code class="language-c">语法结构
+if (表达式)
+    语句;
+
+
+if (表达式1)
+    语句1;
+else
+    语句2;
+
+
+if (表达式1)
+    语句1;
+else if (表达式2)
+    语句2;
+else
+    语句3;
+
+
+</code></pre>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int age = 10;
+    if (age&lt;18)
+        printf(&quot;未成年\n&quot;);
+    else if (age&gt;=18 &amp;&amp; age&lt;23)//不能写18&lt;=age&lt;23
+        //18&lt;=10  -  假 = 0 &lt;23  -  真 = 1
+        printf(&quot;青年\n&quot;);
+    return 0;
+}
+</code></pre>
+<h4 id="悬空elseif--else--匹配">悬空else（if  else  匹配）</h4>
+<p><code>else </code>和离它最近的在同一个代码块中的未匹配的<code>if</code>匹配</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 0,b = 2;
+    if (a == 1)
+        if (b == 2)
+            printf(&quot;hehe\n&quot;);
+    else    //这个else语句是与上一个if匹配的，不要被缩进迷惑
+        printf(&quot;haha\n&quot;);
+    return 0;
+}
+</code></pre>
+<h4 id="if书写形式的对比">if书写形式的对比</h4>
+<pre><code class="language-c">//代码1
+if (condition){
+    return x;
+}
+return y;
+
+//代码2
+if (condition)
+{
+    return x;
+}
+else
+{
+    return y;
+}
+
+//代码3
+int num = 4;
+if (num = 5)//= - 赋值
+    printf(&quot;hehe\n&quot;);//可以打印
+if (5 = num)//先把值写在前面   可以知道错误
+    printf(&quot;hehe\n&quot;);//error
+</code></pre>
+<h3 id="switch语句">switch语句</h3>
+<h4 id="语法形式-1">语法形式</h4>
+<p>实现多分支结构</p>
+<p><code>case</code>进入</p>
+<p><code>break </code>退出</p>
+<pre><code class="language-c">switch(整型表达式)
+{
+    语句项;
+}
+//语句项
+case 整型常量表达式:
+	语句;
+</code></pre>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int day = 0;
+    scanf(&quot;%d&quot;,&amp;day);
+    switch(day)
+    {
+    case 1:
+        printf(&quot;星期一&quot;);
+        break;
+    case 2:
+        printf(&quot;星期二&quot;);
+        break;
+    case 3:
+        printf(&quot;星期三&quot;);
+        break;
+    case 4:
+        printf(&quot;星期四&quot;);
+        break;
+    case 5:
+        printf(&quot;星期五&quot;);
+        break;
+    case 6:
+        printf(&quot;星期六&quot;);
+        break;
+    case 7:
+        printf(&quot;星期日&quot;);
+        break;
+    }
+    return 0;
+}
+
+</code></pre>
+<h4 id="量的选择---整型">量的选择 - 整型</h4>
+<p><code>switch</code> 后的量必须是整型变量</p>
+<p><code>case</code>后的量必须是整型常量</p>
+<h4 id="break的使用">break的使用</h4>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int day = 0;
+    scanf(&quot;%d&quot;,&amp;day);
+    switch(day)
+    {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        printf(&quot;工作日&quot;);
+        break;
+    case 6:
+    case 7:
+        printf(&quot;休息日&quot;);
+        break;
+    }
+    return 0;
+}
+
+</code></pre>
+<p><code>break</code>的实际效果就是将代码块分割成几块</p>
+<h4 id="default子句默认选项">default子句（默认选项）</h4>
+<p>不满足<code>case</code>的情况</p>
+<p>建议放在<code>case</code>的后面</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int day = 0;
+    scanf(&quot;%d&quot;,&amp;day);
+    switch(day)
+    {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+        printf(&quot;工作日&quot;);
+        break;
+    case 6:
+    case 7:
+        printf(&quot;休息日&quot;);
+        break;
+    }
+    default:
+    	printf(&quot;输入错误！&quot;);
+    	break;
+    return 0;
+}
+
+</code></pre>
+<p>最好加上<code>break</code></p>
+<h2 id="循环语句">循环语句</h2>
+<ul>
+<li>while</li>
+<li>for</li>
+<li>do while</li>
+</ul>
+<h3 id="while语句">while语句</h3>
+<h4 id="语法结构">语法结构</h4>
+<pre><code class="language-c">while(表达式)
+    循环结构;
+</code></pre>
+<p>一个执行很多次的<code>if</code>语句</p>
+<p><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIyMzZweCIgaGVpZ2h0PSIyODZweCIgdmlld0JveD0iLTAuNSAtMC41IDIzNiAyODYiIGNvbnRlbnQ9IiZsdDtteGZpbGUgaG9zdD0mcXVvdDtFbGVjdHJvbiZxdW90OyBtb2RpZmllZD0mcXVvdDsyMDIxLTAxLTMxVDA1OjEwOjE4LjQyNVomcXVvdDsgYWdlbnQ9JnF1b3Q7NS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIGRyYXcuaW8vMTMuOS45IENocm9tZS84NS4wLjQxODMuMTIxIEVsZWN0cm9uLzEwLjEuNSBTYWZhcmkvNTM3LjM2JnF1b3Q7IGV0YWc9JnF1b3Q7a0x2WExnVHNUdFE5ajY4SlNEdS0mcXVvdDsgdmVyc2lvbj0mcXVvdDsxMy45LjkmcXVvdDsgdHlwZT0mcXVvdDtkZXZpY2UmcXVvdDsmZ3Q7Jmx0O2RpYWdyYW0gaWQ9JnF1b3Q7QzVSQnM0M29EYS1LZHpaZU50dXkmcXVvdDsgbmFtZT0mcXVvdDtQYWdlLTEmcXVvdDsmZ3Q7N1ZuZlY1c3dGUDViOXNEamRvQUFiUjl0ZGM2NTdianAxdm1Za2xneUErbENhcWwvdlVHU1FvRFpINGRXZC9SRnVaZWJtK1IrMzhjbDFBS2pPRHZsY0JaOVpRaFR5N1ZSWm9GankzVWQyeDdJZjdsbldYajhubDA0cHB3Z0ZWUTZMc2s5MWlPVmQwNFFUbzFBd1JnVlpHWTZRNVlrT0JTR0QzTE9GbWJZRGFQbXJETTR4UTNIWlFocDB6c21TRVNGdCsvMlN2OG5US2FSbnRrSjFJWmpxSVBWVHRJSUlyYW91TUNKQlVhY01WRmN4ZGtJMDd4NHVpN2pzK1dZZnJrTlRqOS9ULy9DbjhQenEyKy8zaGZKUG00elpMVUZqaE94YytySkgzRjFmbkVXWGR4UFlqZTBTZTlIQU5VUSt3N1N1YXFYMnF0WTZnTGlCQjNsT0VncnBEQk5TV2lCWVNSaUtoMk92SlJyNHN2ZjByQS8rTnE4emsxdEhHZUd0VlJXTVJGR0Rmalc3RktUQ1BJcEZrOXN6VmxCSkxtTldZemw1SExjb2lTQnIzWWZWZkRYUG80cEZPVE9YQnRVWEp5dTBxMW11R0JFcnRxMWxXNDhUK1ZScW5FQzIweVJzamtQc1JwVlJXMU5JcmRYUzFUVW9aRklYbFMyWGJvZVNiRUZRWndHUVhBMjR3MlM4SWpGazdsYzBuQVJFWUV2WnpETTd5emtNOFZraTBxSHVjRFpEcmczOGRSMXNtdDEwbllGNy80VGVMZEJhOVJ5MjhLNUhTZ3JJNklpTEdsZFYrNlVzc3FOamxSVjBQS2xxZ29NVEpDQjI1V3Erb2RWbGRjZ1J5cGkwVlFWbXljSUl3WHRNeWtMRFB6MldsVXdIeHhTV2Y3ektHdlY1eHlqeTVWTmJ6OTlicTBpdmYraEgzYW1YRCtvS1Jkc3BseEpCN2lzaE0zeWdIVHpCZzRDZTZ0MWJSc3ZQVFZoRkN2dTlMRVRkS2ljaW01S0ZiMzFwTzU2a3JjblpvTjY3ek9adHpaZXYybHR2QTh6ZmovTTd1L0liQVRUNkxIQk9pK2Y1dDZ6MHJ6K1BMVDkzV2krTnRHK0R6UzdIbm5YVWNWNW84by9XcUhkVWE4L09GV2FoOTkzandEVytTTGZ1SVZKaWxSd2RvdEhqREl1UFFsTFpPVHdobEJhYzBGS3BrbE9NNGs3bHY1aC92NU9Ra2lQMUkyWUlKUlAwL3IyYjU0UHJIMGRyYjNhQVVEenBFSW5yNFZPOVViWTJRSEFhVGxieTcrdkR4bmcxMXA1eTBlUHd5SURHc2hNT0lhM3J4MlhsaVB6WVhGcGZuQUlXU0pJSXEzWEJZMWYvMDY0UDJpa1dmNDRVUFNrOGljV2NQSUEmbHQ7L2RpYWdyYW0mZ3Q7Jmx0Oy9teGZpbGUmZ3Q7Ij48ZGVmcy8+PGc+PHBhdGggZD0iTSAxMDcgNyBMIDEwNyA0MC42MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJzdHJva2UiLz48cGF0aCBkPSJNIDEwNyA0NS44OCBMIDEwMy41IDM4Ljg4IEwgMTA3IDQwLjYzIEwgMTEwLjUgMzguODggWiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJhbGwiLz48cGF0aCBkPSJNIDEwNyA0NyBMIDE0NyA3MiBMIDEwNyA5NyBMIDY3IDcyIFoiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0iYWxsIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuNSAtMC41KSI+PHN3aXRjaD48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcmVxdWlyZWRGZWF0dXJlcz0iaHR0cDovL3d3dy53My5vcmcvVFIvU1ZHMTEvZmVhdHVyZSNFeHRlbnNpYmlsaXR5Ij48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDc4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogNzJweDsgbWFyZ2luLWxlZnQ6IDY4cHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICMwMDAwMDA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBhbGw7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPmV4cHI8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PHRleHQgeD0iMTA3IiB5PSI3NiIgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSIgZm9udC1zaXplPSIxMnB4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5leHByPC90ZXh0Pjwvc3dpdGNoPjwvZz48cGF0aCBkPSJNIDEwNyA5NyBMIDEwNyAxMjAuNjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ic3Ryb2tlIi8+PHBhdGggZD0iTSAxMDcgMTI1Ljg4IEwgMTAzLjUgMTE4Ljg4IEwgMTA3IDEyMC42MyBMIDExMC41IDExOC44OCBaIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9ImFsbCIvPjxyZWN0IHg9IjYyIiB5PSIxMjciIHdpZHRoPSI5MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjMDAwMDAwIiBwb2ludGVyLWV2ZW50cz0iYWxsIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuNSAtMC41KSI+PHN3aXRjaD48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcmVxdWlyZWRGZWF0dXJlcz0iaHR0cDovL3d3dy53My5vcmcvVFIvU1ZHMTEvZmVhdHVyZSNFeHRlbnNpYmlsaXR5Ij48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDg4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMTUycHg7IG1hcmdpbi1sZWZ0OiA2M3B4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjMDAwMDAwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogYWxsOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj5zdG10PC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0Pjx0ZXh0IHg9IjEwNyIgeT0iMTU2IiBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhIiBmb250LXNpemU9IjEycHgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPnN0bXQ8L3RleHQ+PC9zd2l0Y2g+PC9nPjxwYXRoIGQ9Ik0gMTA3IDE3NyBMIDEwNyAxOTcgUSAxMDcgMjA3IDExNyAyMDcgTCAyMTcgMjA3IFEgMjI3IDIwNyAyMjcgMTk3IEwgMjI3IDgyIFEgMjI3IDcyIDIxNyA3MiBMIDE1My4zNyA3MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJzdHJva2UiLz48cGF0aCBkPSJNIDE0OC4xMiA3MiBMIDE1NS4xMiA2OC41IEwgMTUzLjM3IDcyIEwgMTU1LjEyIDc1LjUgWiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJhbGwiLz48cGF0aCBkPSJNIDY3IDcyIEwgMTcgNzIgUSA3IDcyIDcgODIgTCA3IDIzNyBRIDcgMjQ3IDE3IDI0NyBMIDk3IDI0NyBRIDEwNyAyNDcgMTA3IDI1NyBMIDEwNyAyNzAuNjMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBwb2ludGVyLWV2ZW50cz0ic3Ryb2tlIi8+PHBhdGggZD0iTSAxMDcgMjc1Ljg4IEwgMTAzLjUgMjY4Ljg4IEwgMTA3IDI3MC42MyBMIDExMC41IDI2OC44OCBaIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9ImFsbCIvPjxwYXRoIGQ9Ik0gNjIgMTUyIEwgMTMuMzcgMTUyIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iMyAzIiBwb2ludGVyLWV2ZW50cz0ic3Ryb2tlIi8+PHBhdGggZD0iTSA4LjEyIDE1MiBMIDE1LjEyIDE0OC41IEwgMTMuMzcgMTUyIEwgMTUuMTIgMTU1LjUgWiIgZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50ZXItZXZlbnRzPSJhbGwiLz48cGF0aCBkPSJNIDE1MiAxNTIgTCAyMjAuNjMgMTUyIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iMyAzIiBwb2ludGVyLWV2ZW50cz0ic3Ryb2tlIi8+PHBhdGggZD0iTSAyMjUuODggMTUyIEwgMjE4Ljg4IDE1NS41IEwgMjIwLjYzIDE1MiBMIDIxOC44OCAxNDguNSBaIiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgcG9pbnRlci1ldmVudHM9ImFsbCIvPjxyZWN0IHg9IjExMiIgeT0iOTciIHdpZHRoPSI0MCIgaGVpZ2h0PSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJub25lIiBwb2ludGVyLWV2ZW50cz0iYWxsIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTAuNSAtMC41KSI+PHN3aXRjaD48Zm9yZWlnbk9iamVjdCBzdHlsZT0ib3ZlcmZsb3c6IHZpc2libGU7IHRleHQtYWxpZ246IGxlZnQ7IiBwb2ludGVyLWV2ZW50cz0ibm9uZSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgcmVxdWlyZWRGZWF0dXJlcz0iaHR0cDovL3d3dy53My5vcmcvVFIvU1ZHMTEvZmVhdHVyZSNFeHRlbnNpYmlsaXR5Ij48ZGl2IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sIiBzdHlsZT0iZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IHVuc2FmZSBjZW50ZXI7IGp1c3RpZnktY29udGVudDogdW5zYWZlIGNlbnRlcjsgd2lkdGg6IDM4cHg7IGhlaWdodDogMXB4OyBwYWRkaW5nLXRvcDogMTA3cHg7IG1hcmdpbi1sZWZ0OiAxMTNweDsiPjxkaXYgc3R5bGU9ImJveC1zaXppbmc6IGJvcmRlci1ib3g7IGZvbnQtc2l6ZTogMDsgdGV4dC1hbGlnbjogY2VudGVyOyAiPjxkaXYgc3R5bGU9ImRpc3BsYXk6IGlubGluZS1ibG9jazsgZm9udC1zaXplOiAxMnB4OyBmb250LWZhbWlseTogSGVsdmV0aWNhOyBjb2xvcjogIzAwMDAwMDsgbGluZS1oZWlnaHQ6IDEuMjsgcG9pbnRlci1ldmVudHM6IGFsbDsgd2hpdGUtc3BhY2U6IG5vcm1hbDsgd29yZC13cmFwOiBub3JtYWw7ICI+IT0wPC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0Pjx0ZXh0IHg9IjEzMiIgeT0iMTExIiBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhIiBmb250LXNpemU9IjEycHgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPiE9MDwvdGV4dD48L3N3aXRjaD48L2c+PHJlY3QgeD0iMTciIHk9IjQ3IiB3aWR0aD0iNDAiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0ibm9uZSIgcG9pbnRlci1ldmVudHM9ImFsbCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjUgLTAuNSkiPjxzd2l0Y2g+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlcXVpcmVkRmVhdHVyZXM9Imh0dHA6Ly93d3cudzMub3JnL1RSL1NWRzExL2ZlYXR1cmUjRXh0ZW5zaWJpbGl0eSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiAzOHB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDU3cHg7IG1hcmdpbi1sZWZ0OiAxOHB4OyI+PGRpdiBzdHlsZT0iYm94LXNpemluZzogYm9yZGVyLWJveDsgZm9udC1zaXplOiAwOyB0ZXh0LWFsaWduOiBjZW50ZXI7ICI+PGRpdiBzdHlsZT0iZGlzcGxheTogaW5saW5lLWJsb2NrOyBmb250LXNpemU6IDEycHg7IGZvbnQtZmFtaWx5OiBIZWx2ZXRpY2E7IGNvbG9yOiAjMDAwMDAwOyBsaW5lLWhlaWdodDogMS4yOyBwb2ludGVyLWV2ZW50czogYWxsOyB3aGl0ZS1zcGFjZTogbm9ybWFsOyB3b3JkLXdyYXA6IG5vcm1hbDsgIj49PTA8L2Rpdj48L2Rpdj48L2Rpdj48L2ZvcmVpZ25PYmplY3Q+PHRleHQgeD0iMzciIHk9IjYxIiBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhIiBmb250LXNpemU9IjEycHgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPj09MDwvdGV4dD48L3N3aXRjaD48L2c+PHJlY3QgeD0iMTciIHk9IjEyNyIgd2lkdGg9IjQwIiBoZWlnaHQ9IjIwIiBmaWxsPSJub25lIiBzdHJva2U9Im5vbmUiIHBvaW50ZXItZXZlbnRzPSJhbGwiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMC41IC0wLjUpIj48c3dpdGNoPjxmb3JlaWduT2JqZWN0IHN0eWxlPSJvdmVyZmxvdzogdmlzaWJsZTsgdGV4dC1hbGlnbjogbGVmdDsiIHBvaW50ZXItZXZlbnRzPSJub25lIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiByZXF1aXJlZEZlYXR1cmVzPSJodHRwOi8vd3d3LnczLm9yZy9UUi9TVkcxMS9mZWF0dXJlI0V4dGVuc2liaWxpdHkiPjxkaXYgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGh0bWwiIHN0eWxlPSJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogdW5zYWZlIGNlbnRlcjsganVzdGlmeS1jb250ZW50OiB1bnNhZmUgY2VudGVyOyB3aWR0aDogMzhweDsgaGVpZ2h0OiAxcHg7IHBhZGRpbmctdG9wOiAxMzdweDsgbWFyZ2luLWxlZnQ6IDE4cHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICMwMDAwMDA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBhbGw7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPmJyZWFrPC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0Pjx0ZXh0IHg9IjM3IiB5PSIxNDEiIGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EiIGZvbnQtc2l6ZT0iMTJweCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+YnJlYWs8L3RleHQ+PC9zd2l0Y2g+PC9nPjxyZWN0IHg9IjE2NyIgeT0iMTI3IiB3aWR0aD0iNDAiIGhlaWdodD0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0ibm9uZSIgcG9pbnRlci1ldmVudHM9ImFsbCIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0wLjUgLTAuNSkiPjxzd2l0Y2g+PGZvcmVpZ25PYmplY3Qgc3R5bGU9Im92ZXJmbG93OiB2aXNpYmxlOyB0ZXh0LWFsaWduOiBsZWZ0OyIgcG9pbnRlci1ldmVudHM9Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlcXVpcmVkRmVhdHVyZXM9Imh0dHA6Ly93d3cudzMub3JnL1RSL1NWRzExL2ZlYXR1cmUjRXh0ZW5zaWJpbGl0eSI+PGRpdiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94aHRtbCIgc3R5bGU9ImRpc3BsYXk6IGZsZXg7IGFsaWduLWl0ZW1zOiB1bnNhZmUgY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IHVuc2FmZSBjZW50ZXI7IHdpZHRoOiAzOHB4OyBoZWlnaHQ6IDFweDsgcGFkZGluZy10b3A6IDEzN3B4OyBtYXJnaW4tbGVmdDogMTY4cHg7Ij48ZGl2IHN0eWxlPSJib3gtc2l6aW5nOiBib3JkZXItYm94OyBmb250LXNpemU6IDA7IHRleHQtYWxpZ246IGNlbnRlcjsgIj48ZGl2IHN0eWxlPSJkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IGZvbnQtc2l6ZTogMTJweDsgZm9udC1mYW1pbHk6IEhlbHZldGljYTsgY29sb3I6ICMwMDAwMDA7IGxpbmUtaGVpZ2h0OiAxLjI7IHBvaW50ZXItZXZlbnRzOiBhbGw7IHdoaXRlLXNwYWNlOiBub3JtYWw7IHdvcmQtd3JhcDogbm9ybWFsOyAiPmNvbnRpbnVlPC9kaXY+PC9kaXY+PC9kaXY+PC9mb3JlaWduT2JqZWN0Pjx0ZXh0IHg9IjE4NyIgeT0iMTQxIiBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhIiBmb250LXNpemU9IjEycHgiIHRleHQtYW5jaG9yPSJtaWRkbGUiPmNvbnRpbi4uLjwvdGV4dD48L3N3aXRjaD48L2c+PC9nPjxzd2l0Y2g+PGcgcmVxdWlyZWRGZWF0dXJlcz0iaHR0cDovL3d3dy53My5vcmcvVFIvU1ZHMTEvZmVhdHVyZSNFeHRlbnNpYmlsaXR5Ii8+PGEgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwtNSkiIHhsaW5rOmhyZWY9Imh0dHBzOi8vZGVzay5kcmF3LmlvL3N1cHBvcnQvc29sdXRpb25zL2FydGljbGVzLzE2MDAwMDQyNDg3IiB0YXJnZXQ9Il9ibGFuayI+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMHB4IiB4PSI1MCUiIHk9IjEwMCUiPlZpZXdlciBkb2VzIG5vdCBzdXBwb3J0IGZ1bGwgU1ZHIDEuMTwvdGV4dD48L2E+PC9zd2l0Y2g+PC9zdmc+" alt="while"></p>
+<p><code>break</code>：跳出总循环（终止循环）</p>
+<p><code>continue</code>：跳出当前循环（直接下一次判断）</p>
+<h4 id="一些应用">一些应用</h4>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int ch = 0;
+    while ((ch = getchar()) != EOF)
+        putchar(ch);
+    return 0;
+}
+</code></pre>
+<p><code>getchar</code>：接收输入字符</p>
+<p><code>putchar</code>：输出字符</p>
+<p>EOF - end of file</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://zzzsyyy.github.io/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
+    
+    <a href="https://zzzsyyy.github.io/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsyyy.github.io/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsyyy.github.io/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsyyy.github.io/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2"></span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/z_zzsy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsyyy.github.io/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" class="block">pytorch：模型载存、Datasets、数据预处理</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" class="block">C语言笔记-1：初识C语言</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
+        <br />
+        
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分支语句选择结构">分支语句（选择结构）</a>
+      <ul>
+        <li><a href="#if---else语句">if - else语句</a>
+          <ul>
+            <li><a href="#语法形式">语法形式</a></li>
+            <li><a href="#悬空elseif--else--匹配">悬空else（if  else  匹配）</a></li>
+            <li><a href="#if书写形式的对比">if书写形式的对比</a></li>
+          </ul>
+        </li>
+        <li><a href="#switch语句">switch语句</a>
+          <ul>
+            <li><a href="#语法形式-1">语法形式</a></li>
+            <li><a href="#量的选择---整型">量的选择 - 整型</a></li>
+            <li><a href="#break的使用">break的使用</a></li>
+            <li><a href="#default子句默认选项">default子句（默认选项）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#循环语句">循环语句</a>
+      <ul>
+        <li><a href="#while语句">while语句</a>
+          <ul>
+            <li><a href="#语法结构">语法结构</a></li>
+            <li><a href="#一些应用">一些应用</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <style type="text/css">
+      .love {
+          position:fixed;
+          pointer-events:none;
+          top:0;
+          left:0;
+          height:100%;
+      }
+    </style>
+    <canvas class="love"></canvas>
+    <script src="/js/love.min.js"></script>
+    <script type="text/javascript">
+    love.setCanvasSize();
+    </script>
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>

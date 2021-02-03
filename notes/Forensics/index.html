@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+<title>一些Misc的Writeup - 1 | ZSYのBlog</title>
+<link rel="stylesheet" href="https://zzzsyyy.github.io/css/eureka.min.css">
+<script defer src="https://zzzsyyy.github.io/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
+     media="print"
+    onload="this.media='all';this.onload=null" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"
+     crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+     integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+    
+
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="Misc：Forensics">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"笔记",
+      "item":"https://zzzsyyy.github.io/notes/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"一些Misc的Writeup - 1",
+      "item":"https://zzzsyyy.github.io/notes/Forensics/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsyyy.github.io/notes/Forensics/"
+    },
+    "headline": "一些Misc的Writeup - 1 | ZSYのBlog","datePublished": "2020-12-27T00:00:00+00:00",
+    "dateModified": "2021-01-27T00:00:00+00:00",
+    "wordCount":  1539 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsyyy.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003eMisc：Forensics\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="一些Misc的Writeup - 1 | ZSYのBlog" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://zzzsyyy.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://zzzsyyy.github.io/notes/Forensics/" />
+
+
+
+
+<meta property="og:description" content="Misc：Forensics" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="ZSYのBlog" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2020-12-27T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-01-27T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="notes" />
+
+
+<meta property="article:tag" content="CTF" />
+
+<meta property="article:tag" content="Writeup" />
+
+<meta property="article:tag" content="Forensics" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/Cryptography/" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">ZSYのBlog</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
+            <a href="/authors/Zhang/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>        
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?13ff6b44a46e18f234debd5cdd607d36";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">一些Misc的Writeup - 1</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2020-12-27</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>需要大约4分钟阅读</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://zzzsyyy.github.io/series/CTF/" class="hover:text-eureka">CTF</a>
+        
+    </div>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>Misc：Forensics</p>
+<h1 id="一些misc的writeup---1">一些Misc的Writeup - 1</h1>
+<h2 id="1-git-is-good">1. Git Is Good</h2>
+<h3 id="題目描述">題目描述</h3>
+<p>The flag used to be there. But then I redacted it. Good Luck.</p>
+<p><a href="https://wwx.lanzoux.com/iKE9zjx745i">https://wwx.lanzoux.com/iKE9zjx745</a></p>
+<h3 id="題目思路">題目思路</h3>
+<p>題中說文件被修改，而我們拿到的zip解壓后是一個.git文件夾和一個flag.txt。可以知道，我們要通過git的記録來查看歷史版本。</p>
+<h3 id="題目解答">題目解答</h3>
+<p>解壓，打開git bash ，會用到以下命令：</p>
+<p>可以显示该文件每次提交的<code>diff</code>可使用<code>git log -p filename</code></p>
+<p>根據<code>commit-id</code>查看某個提交<code>git show commit-id</code></p>
+<p>其中<code>commit-id</code>可以從<code>logs</code>文件夾中找到</p>
+<h3 id="題目答案">題目答案</h3>
+<p><font color=white size=3>flag{protect_your_git}</font></p>
+<h2 id="2-forensics-101">2. Forensics 101</h2>
+<h3 id="題目描述-1">題目描述</h3>
+<p>Think the flag is somewhere in there. Would you help me find it?</p>
+<p><a href="https://wwx.lanzoux.com/iP1SXjx7mde">https://wwx.lanzoux.com/iP1SXjx7mde</a></p>
+<h3 id="題目思路-1">題目思路</h3>
+<p>拿到文件是一張圖片，首先hex分析，查看16進制。搜索flag  ctf  等字樣。</p>
+<p>hex工具<a href="https://wwx.lanzoux.com/i43T6jyp9tg">Winhex</a></p>
+<h3 id="題目解決">題目解決</h3>
+<p>noteoad++打開，轉到hex模式，搜索flag，出現。</p>
+<h3 id="題目答案-1">題目答案</h3>
+<p><font color=white size=3>flag{wow!_data_is_cool}</font></p>
+<h2 id="3tux">3.Tux!</h2>
+<h3 id="題目描述-2">題目描述</h3>
+<p>The flag is hidden inside the Penguin! Solve this challenge before solving my 100 point Scope challenge which uses similar techniques as this one.</p>
+<p><a href="https://wwx.lanzoux.com/izuGWjxe9xi">https://wwx.lanzoux.com/izuGWjxe9xi</a></p>
+<h3 id="題目思路-2">題目思路</h3>
+<p>拿到圖片，首先查看屬性，看看有無有用的信息。然後查看hex觀察有效字樣，可以搜索flag等。用這個工具<a href="https://wwx.lanzoux.com/iZMGIjyp8lc">foremost</a>可以分離圖種，進行查看。還可以查看圖像的不同通道。再就是LSB隱寫。</p>
+<h3 id="題目解決-1">題目解決</h3>
+<p>拿到的是一個jpg文件，是Linux的小企鵝。首先查看屬性，并沒有有效信息。hex打開，觀察後發現結尾處有PK字樣，可能是圖種，用foremost工具分離。得到一張圖和一個zip文件。打開zip文件，裏面是flag但是加密 。查看hex，發現大量的無效0000字段，因此採用Winrar的修復功能，得到1k的文件。因為裏面就一個文件，基本排除明文攻擊的可能。懷疑是僞加密，用hex打開，搜索 504B0102 ,將其後的0900/0100改為0000，打開失敗。嘗試暴力枚舉，1~6位沒有成功。於是回頭查看分離出來的jpg文件，觀察hex，發現一串很像base64的字節，解密后得到解壓密碼。於是成功得到flag。</p>
+<h3 id="題目答案-2">題目答案</h3>
+<p><font color=white size=3>CTFlearn{Linux_Is_Awesome}</font></p>
+<h2 id="4-2019ctf---otaku">4. 2019CTF&mdash;otaku</h2>
+<h3 id="題目描述-3">題目描述</h3>
+<p><a href="https://wwx.lanzoux.com/iBwcUjynhib">https://wwx.lanzoux.com/iBwcUjynhib</a></p>
+<p>One day,you and your otaku friend went to the comic expo together and he had a car accident right beside you.Before he died,he gave you a USB hard disk which contained this zip.Please find out his last wish.</p>
+<p>Hint：The txt is GBK encoding.</p>
+<h3 id="題目思路-3">題目思路</h3>
+<p>文件是一個zip，打開裏面是一個Anime_Intro.doc和另一個flag.zip。而flag.zip是加密的，想來是用僞加密或者明文攻擊或者其他的思路吧。</p>
+<h3 id="題目解決-2">題目解決</h3>
+<p>直接解壓文件會顯示錯誤，於是採用Winrar修復並解壓出了flag.zip&amp;Anime_Intro.doc。flag.zip是加密的，先不管，打開doc，發現有空白的地方，選中并改變字體顔色，發現是last words的內容。打開zip文件，發現有last words.txt，又有題中的提示GBK編碼，於是就應該是構造txt進行明文攻擊。</p>
+<p>但是根據查看zip中txt的文件大小，發現文本內容應該較多，而且GBK的暗示也說明會有中文字符。我們需要繼續在doc中尋找明文。由於office就是zip文件，於是乾脆改後綴名打開，在document.xml文件中查找，發現了另一段被隱藏的文字。重新打開doc，直接全選刷一下格式，發現明文出現了。編碼選用GBK創建txt，作為明文攻擊文件。</p>
+<p>打開zip時可以在註釋裏看到創建壓縮文件的軟件及版本、壓縮方法、平臺。然後對明文txt進行相同的壓縮。壓縮後對照一下CRC32的值，一樣就說明對了。</p>
+<p>然後就開始明文攻擊，用這個軟件<a href="https://wwx.lanzoux.com/i67BZjyot2d">ARCHPR</a>進行明文攻擊，成功得到密碼。</p>
+<p>解壓出來的是txt和一個flag.png。對於圖片，我們先查看屬性，hex，圖種分離一遍過，并沒有發現有效信息。於是猜想有可能是LSB隱寫。</p>
+<p>採用這個工具<a href="https://wwx.lanzoux.com/iYtqujyp02f">Stegsolve</a>進項通道分離等操作，各種通道未發現有效信息。選擇Analysis&ndash;&gt;Data Extract，選LSB，勾選GRB的0，點Preview，發現flag信息。</p>
+<h3 id="題目答案-3">題目答案</h3>
+<p><font color=white size=3>ctf{vI0l3t_Ev3rg@RdeN}</font></p>
+<h2 id="5">5.</h2>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://zzzsyyy.github.io/tags/CTF/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#CTF</a>
+    
+    <a href="https://zzzsyyy.github.io/tags/Writeup/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Writeup</a>
+    
+    <a href="https://zzzsyyy.github.io/tags/Forensics/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Forensics</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsyyy.github.io/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsyyy.github.io/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsyyy.github.io/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2"></span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/z_zzsy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" class="block">C语言笔记-1：初识C语言</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsyyy.github.io/notes/Cryptography/" class="block">一些Misc的Writeup - 2</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsyyy.github.io/notes/Forensics/">一些Misc的Writeup - 1</a>
+        <br />
+        
+        <a href="https://zzzsyyy.github.io/notes/Cryptography/">一些Misc的Writeup - 2</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-git-is-good">1. Git Is Good</a>
+      <ul>
+        <li><a href="#題目描述">題目描述</a></li>
+        <li><a href="#題目思路">題目思路</a></li>
+        <li><a href="#題目解答">題目解答</a></li>
+        <li><a href="#題目答案">題目答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-forensics-101">2. Forensics 101</a>
+      <ul>
+        <li><a href="#題目描述-1">題目描述</a></li>
+        <li><a href="#題目思路-1">題目思路</a></li>
+        <li><a href="#題目解決">題目解決</a></li>
+        <li><a href="#題目答案-1">題目答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#3tux">3.Tux!</a>
+      <ul>
+        <li><a href="#題目描述-2">題目描述</a></li>
+        <li><a href="#題目思路-2">題目思路</a></li>
+        <li><a href="#題目解決-1">題目解決</a></li>
+        <li><a href="#題目答案-2">題目答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-2019ctf---otaku">4. 2019CTF&mdash;otaku</a>
+      <ul>
+        <li><a href="#題目描述-3">題目描述</a></li>
+        <li><a href="#題目思路-3">題目思路</a></li>
+        <li><a href="#題目解決-2">題目解決</a></li>
+        <li><a href="#題目答案-3">題目答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#5">5.</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsyyy.github.io/notes/Cryptography/">一些Misc的Writeup - 2</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <style type="text/css">
+      .love {
+          position:fixed;
+          pointer-events:none;
+          top:0;
+          left:0;
+          height:100%;
+      }
+    </style>
+    <canvas class="love"></canvas>
+    <script src="/js/love.min.js"></script>
+    <script type="text/javascript">
+    love.setCanvasSize();
+    </script>
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
+</body>
+
+</html>
