@@ -11,6 +11,8 @@
 <link rel="preload"
   href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
   as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
      media="print"
     onload="this.media='all';this.onload=null" crossorigin>
@@ -315,13 +317,20 @@
         <span>2020-10-16</span>
     </div>
     <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>需要大约3分钟阅读</span>
+        <i class="fas fa-wpforms mr-1"></i>
+        <span>561字</span>
     </div>
-    
+    <div class="mr-6 my-2">
+        <i class="fa fa-clock mr-1"></i>
+        <span>3分钟</span>
+    </div>
+
     
 
     
+    <div class="mr-6 my-2">
+        <span id="busuanzi_value_page_pv"></span>阅读
+    </div>
 </div>
             </div>
             <div class="flex">
@@ -430,8 +439,33 @@
     love.setCanvasSize();
     </script>
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
-</div></div>
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a><br/>
+    <span id="span_dt_dt"><SCRIPT language=javascript>
+    function show_date_time(){
+    window.setTimeout("show_date_time()", 1000);
+    BirthDay=new Date("1/16/2021 20:00:00");
+    today=new Date();
+    timeold=(today.getTime()-BirthDay.getTime());
+    sectimeold=timeold/1000
+    secondsold=Math.floor(sectimeold);
+    msPerDay=24*60*60*1000
+    e_daysold=timeold/msPerDay
+    daysold=Math.floor(e_daysold);
+    e_hrsold=(e_daysold-daysold)*24;
+    hrsold=Math.floor(e_hrsold);
+    e_minsold=(e_hrsold-hrsold)*60;
+    minsold=Math.floor((e_hrsold-hrsold)*60);
+    seconds=Math.floor((e_minsold-minsold)*60);
+    span_dt_dt.innerHTML=""+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+    }
+    show_date_time();</SCRIPT></span>
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">本站总访问量<span id       ="busuanzi_value_site_pv"></span>次</span>
+    <span id="busuanzi_container_site_uv">
+    本站访客数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</p></div></div>
   </footer>
 </body>
 
