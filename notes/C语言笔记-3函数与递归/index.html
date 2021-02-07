@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Analyse笔记1 | ZSYのBlog</title>
+<title>C语言笔记-3：函数与递归 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsyyy.github.io/css/eureka.min.css">
 <script defer src="https://zzzsyyy.github.io/js/eureka.min.js"></script>
 
@@ -19,32 +19,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
      integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
     
-    <script>
-      MathJax = {
-        tex: {
-          inlineMath: [["$", "$"]],
-          displayMath: [["$$", "$$"],["\[\[", "\]\]"]],
-          processEscapes: true,
-        },
-        svg: {
-          fontCache: "global",
-        },
-        options: {
-          enableMenu: false,
-          skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        },
-      };
-    </script>
-    <style>
-      .MathJax{outline:0;}
-    </style>
-    <script
-      rel="preload"
-      id="MathJax-script"
-      async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"
-    ></script>
-    
 
 
 
@@ -52,7 +26,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="淑芬笔记：数列的极限">
+  content="C语言笔记-3：函数与递归">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,8 +38,8 @@
       "item":"https://zzzsyyy.github.io/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Analyse笔记1",
-      "item":"https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/"}]
+      "name":"C语言笔记-3：函数与递归",
+      "item":"https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"}]
 }
 </script>
 
@@ -77,11 +51,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/"
+        "@id": "https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"
     },
-    "headline": "Analyse笔记1 | ZSYのBlog","datePublished": "2021-02-01T00:00:00+00:00",
-    "dateModified": "2021-02-01T00:00:00+00:00",
-    "wordCount":  759 ,
+    "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
+    "dateModified": "2021-02-07T00:00:00+00:00",
+    "wordCount":  39 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -94,21 +68,21 @@
             "url": "https://zzzsyyy.github.io/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e淑芬笔记：数列的极限\u003c\/p\u003e"
+    "description": "\u003cp\u003eC语言笔记-3：函数与递归\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="Analyse笔记1 | ZSYのBlog" />
+</script><meta property="og:title" content="C语言笔记-3：函数与递归 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsyyy.github.io/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/" />
+<meta property="og:url" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/" />
 
 
 
 
-<meta property="og:description" content="淑芬笔记：数列的极限" />
+<meta property="og:description" content="C语言笔记-3：函数与递归" />
 
 
 
@@ -125,27 +99,35 @@
 
 
 
-<meta property="article:published_time" content="2021-02-01T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-02-07T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-02-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-02-07T00:00:00&#43;00:00" />
 
 
 
 <meta property="article:section" content="notes" />
 
 
-<meta property="article:tag" content="数学" />
+<meta property="article:tag" content="C" />
 
-<meta property="article:tag" content="Analyse" />
-
-
+<meta property="article:tag" content="笔记" />
 
 
 
 
 
 
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" />
 
 
 
@@ -234,19 +216,19 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Analyse笔记1</h1>
+        <h1 class="font-bold text-3xl text-primary-text">C语言笔记-3：函数与递归</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-01</span>
+        <span>2021-02-07</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>759字</span>
+        <span>39字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>1分钟</span>
     </div>
 
     
@@ -255,7 +237,7 @@
     <div class="mr-6 my-2">
         <i class="fas fa-th-list mr-1"></i>
         
-        <a href="https://zzzsyyy.github.io/series/Analyse/" class="hover:text-eureka">Analyse</a>
+        <a href="https://zzzsyyy.github.io/series/C/" class="hover:text-eureka">C</a>
         
     </div>
     
@@ -266,47 +248,25 @@
         
 
         <div class="content">
-            <p>淑芬笔记：数列的极限</p>
-<h2 id="第一章-数列极限">第一章 数列极限</h2>
-<h3 id="数列极限的定义与基本性质">数列极限的定义与基本性质</h3>
-<p>[toc]</p>
-<h4 id="数列极限的定义">数列极限的定义</h4>
-<p>无穷次逐步逼近</p>
-<p><strong>数列定义</strong>：按自然数编号一次排列的一列数
-$$
-\qquad\qquad x_1, x_2,\cdots ,x_n,\cdots
-$$
-称为<strong>无穷数列</strong>，简称<strong>数列</strong>，记为${x_n}$</p>
-<p>eg1.2.1</p>
-<p>​	分析数列$a_n=\dfrac{(-1)^n}{n}\sin{\dfrac{1}{n}}$的变换趋势.</p>
-<p>​	取$\varepsilon=\dfrac{1}{2}$，当$n&gt;2$，有$|a_n-0|&lt;\dfrac{1}{n}&lt;\varepsilon$，</p>
-<p>​	取$\varepsilon=\dfrac{1}{2^2}$，当$n&gt;2^2$，有$|a_n-0|\leq \dfrac{1}{n}&lt;\varepsilon$，</p>
-<p>​	取$\varepsilon=\dfrac{1}{2^k}$，当$n&gt;2^k$，有$|a_n-0|&lt;\varepsilon$.</p>
-<p>一般情况：</p>
-<p>$$
-|a_n-0|&lt;\dfrac{1}{n}&lt;\varepsilon\implies n&gt;\dfrac{1}{\varepsilon}
-$$
-$$
-\color{red}{N=[\dfrac{1}{\varepsilon}]}\color{black}{,n&gt;N,满足|a_n-0|&lt;\varepsilon}
-$$</p>
-<h5 id="数列极限定义">数列极限定义</h5>
-<p>给定数列${a_n}$，$a$为常数，如果对任意$\varepsilon&gt;0$，都存在一个自然数$N$，使得$n&gt;N$时，成立
-$$
-|a_n-a|&lt;\varepsilon
-$$
-则称数列${a_n}$以$a$为极限，记为$\displaystyle\lim_{n\to\infty}{a_n}=a$</p>
-<p>如果数列是没有极限的，就称数列是发散的。</p>
-<ul>
-<li>定义中的$\varepsilon$刻画了$x_n$与$a$的逼近程度，定义中$\varepsilon$可以限制$\varepsilon\leq a$</li>
-<li>定义中的$N$和$\varepsilon$有关，仅要求存在，一般$\varepsilon$越小，$N$越大.</li>
-</ul>
+            <p>C语言笔记-3：函数与递归</p>
+<h1 id="函数与递归">函数与递归</h1>
+<h2 id="函数的定义">函数的定义</h2>
+<blockquote>
+<p>子程序</p>
+</blockquote>
+<h3 id="分类">分类</h3>
+<ol>
+<li>库函数</li>
+<li>自定义函数</li>
+</ol>
+<h3 id="库函数">库函数</h3>
         </div>
         
         <div class="my-4">
     
-    <a href="https://zzzsyyy.github.io/tags/%E6%95%B0%E5%AD%A6/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#数学</a>
+    <a href="https://zzzsyyy.github.io/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
     
-    <a href="https://zzzsyyy.github.io/tags/Analyse/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Analyse</a>
+    <a href="https://zzzsyyy.github.io/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
     
 </div>
         
@@ -361,14 +321,11 @@ $$
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">上一页</span>
-        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/" class="block">C语言笔记-3：函数与递归</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsyyy.github.io/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/" class="block">pytorch：模型载存、Datasets、数据预处理</a>
+        <a href="https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/" class="block">Analyse笔记1</a>
         
     </div>
 </div>
@@ -384,7 +341,13 @@ $$
     <div class="content">
         
         
-        <a href="https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/">Analyse笔记1</a>
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/">C语言笔记-3：函数与递归</a>
+        <br />
+        
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
+        <br />
+        
+        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
         <br />
         
         
@@ -398,13 +361,10 @@ $$
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#第一章-数列极限">第一章 数列极限</a>
+    <li><a href="#函数的定义">函数的定义</a>
       <ul>
-        <li><a href="#数列极限的定义与基本性质">数列极限的定义与基本性质</a>
-          <ul>
-            <li><a href="#数列极限的定义">数列极限的定义</a></li>
-          </ul>
-        </li>
+        <li><a href="#分类">分类</a></li>
+        <li><a href="#库函数">库函数</a></li>
       </ul>
     </li>
   </ul>
@@ -420,6 +380,20 @@ $$
     
 
     
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
+            <br />
+            
+            <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+            <br />
+            
+        </div>
+    </div>
     
 </div>
 <script>
