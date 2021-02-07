@@ -72,7 +72,7 @@
     },
     "headline": "机器学习笔记-1 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  1423 ,
+    "wordCount":  2050 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -233,11 +233,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1423字</span>
+        <span>2050字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>3分钟</span>
+        <span>5分钟</span>
     </div>
 
     
@@ -265,7 +265,7 @@
 划分
 泛化能力</p>
 </blockquote>
-<h2 id="机器学习的分类与性能度量">机器学习的分类与性能度量</h2>
+<h2 id="机器学习的分类">机器学习的分类</h2>
 <blockquote>
 <p>监督学习</p>
 <p>无监督学习</p>
@@ -355,13 +355,135 @@
 <p>数据集D中包含m个数据，对D进行m次有放回采样，得到训练集D’，未出现在D’中的数据作为测试集。</p>
 <p>样本不出现在D’中的概率为：
 $$
-p=\left(1-\dfrac{1}{m}\right)^m\quad\underrightarrow{对m求极限}\quad\lim_{n\to\infty}\left(1-\dfrac{1}{m}\right)^m\to \dfrac{1}{e}\approx0.368
+p=\left(1-\dfrac{1}{m}\right)^m\quad\xrightarrow{对m求极限}\quad\lim_{n\to\infty}\left(1-\dfrac{1}{m}\right)^m\to \dfrac{1}{e}\approx0.368
 $$</p>
 <ul>
 <li>适用于小数据集</li>
 <li>不会减小数据集规模</li>
 <li>改变了数据分布，易引起估计偏差</li>
 </ul>
+<h2 id="机器学习的性能度量">机器学习的性能度量</h2>
+<h3 id="分类问题">分类问题</h3>
+<h4 id="混淆矩阵confusion-matrix">混淆矩阵（confusion matrix）</h4>
+<blockquote>
+<p>误差矩阵</p>
+</blockquote>
+<p>功能：主要用于比较分类结果和实例的真实信息</p>
+<p>如：二分类</p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0cjc{background-color:#67fd9a;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-xih1{background-color:#cd9934;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-706m{background-color:#009901;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-xnsj{background-color:#34ff34;border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-ik58{background-color:#ffcb2f;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow" colspan="2" rowspan="2">混淆矩阵</th>
+    <th class="tg-706m" colspan="2">真实值</th>
+  </tr>
+  <tr>
+    <td class="tg-0cjc">正</td>
+    <td class="tg-xnsj">负</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-xih1" rowspan="2">预测值</td>
+    <td class="tg-ik58">正</td>
+    <td class="tg-0pky">TP</td>
+    <td class="tg-0pky">FP</td>
+  </tr>
+  <tr>
+    <td class="tg-ik58">负</td>
+    <td class="tg-0pky">FN</td>
+    <td class="tg-0pky">TN</td>
+  </tr>
+</tbody>
+</table>
+<ul>
+<li><strong>准确率</strong>（accuracy）：正确预测的正反例数 / 总数</li>
+</ul>
+<p>$$
+\mathrm{Accuracy=\dfrac{TP+TN}{TP+TN+FN+FP}}
+$$</p>
+<ul>
+<li><strong>精确率</strong>（precision）：正确预测的正例数 / 预测正例总数</li>
+</ul>
+<p>$$
+\mathrm{Precision=\dfrac{TP}{TP+FP}}
+$$</p>
+<ul>
+<li><strong>召回率</strong>（recall）：正确预测的正例数 / 实际正例总数</li>
+</ul>
+<p>$$
+\mathrm{Recall=\dfrac{TP}{TP+FN}}
+$$</p>
+<h4 id="f-score">F-score</h4>
+<blockquote>
+<p>precision和recall的调和值</p>
+</blockquote>
+<p>$$
+\mathrm{F-score=(1+\beta^2)\dfrac{Precision\times Recall}{\beta^2\times Precision+Recall}}
+$$</p>
+<p>$\beta=1$时，$\mathrm{F1-score}$ $\mathrm{或F1-Measure}$，精确率和召回率权重相等</p>
+<p>$\beta&lt;1$时，精确率更重要</p>
+<p>$\beta&gt;1$时，召回率更重要</p>
+<h4 id="roc曲线">ROC曲线</h4>
+<blockquote>
+<p>receive operating characteristic curve</p>
+</blockquote>
+<ul>
+<li>真正率（TPR）：预测为正的正样本数 / 正样本实际数  $\quad\mathrm{TPR=TP/(TP+FN)}$</li>
+<li>假正率（FPR）：预测为正的负样本数 / 负样本实际数 $\quad\mathrm{FRP=TP/(FP+TN)}$</li>
+</ul>
+<p>ROC曲线以TPR为纵坐标，以FPR为横坐标。</p>
+<h4 id="auc">AUC</h4>
+<blockquote>
+<p>area under curver</p>
+</blockquote>
+<p>ROC的积分</p>
+<p>二分类时AUC=0.5即随机猜测</p>
+<h4 id="pr曲线">PR曲线</h4>
+<blockquote>
+<p>precision recall curver</p>
+</blockquote>
+<p>以precision为纵坐标，以TPR（recall）为横坐标</p>
+<ul>
+<li>在同一测试集中，上面的曲线要比下面的曲线好</li>
+<li>光滑曲线比不光滑曲线好</li>
+</ul>
+<h3 id="回归问题">回归问题</h3>
+<h4 id="误差-1">误差</h4>
+<ul>
+<li>
+<p><strong>平均绝对误差</strong>（mean absolute error, MAE）：L1范数损失（L1-norm loss）
+$$
+\mathrm{MAE}(y,\hat{y})=\dfrac{1}{n_{samples}}\displaystyle\sum_{i=1}^{n_{samples}}\vert y_i-\hat{y}_i\vert
+$$</p>
+</li>
+<li>
+<p><strong>平均平方误差</strong>（mean squared error, MSE）：L2范数损失（L2-norm loss）
+$$
+\mathrm{MSE}(y,\hat{y})=\dfrac{1}{n_{samples}}\displaystyle\sum_{i=1}^{n_{samples}}(y_i-\hat{y}_i)^2
+$$</p>
+</li>
+<li>
+<p><strong>均方根误差</strong>（RMSE）：
+$$
+\mathrm{RMSE}=\sqrt{\dfrac{1}{n_{samples}}\displaystyle\sum_{i=1}^{n_{samples}}(y_i-\hat{y}_i)^2}
+$$</p>
+</li>
+</ul>
+<h4 id="解释变异explained-variation">解释变异（explained variation）</h4>
         </div>
         
         <div class="my-4">
@@ -461,7 +583,7 @@ $$</p>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#定义">定义</a></li>
-    <li><a href="#机器学习的分类与性能度量">机器学习的分类与性能度量</a>
+    <li><a href="#机器学习的分类">机器学习的分类</a>
       <ul>
         <li><a href="#数据集">数据集</a></li>
         <li><a href="#分类">分类</a>
@@ -478,6 +600,25 @@ $$</p>
             <li><a href="#留出法">留出法</a></li>
             <li><a href="#交叉验证法">交叉验证法</a></li>
             <li><a href="#自助法">自助法</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#机器学习的性能度量">机器学习的性能度量</a>
+      <ul>
+        <li><a href="#分类问题">分类问题</a>
+          <ul>
+            <li><a href="#混淆矩阵confusion-matrix">混淆矩阵（confusion matrix）</a></li>
+            <li><a href="#f-score">F-score</a></li>
+            <li><a href="#roc曲线">ROC曲线</a></li>
+            <li><a href="#auc">AUC</a></li>
+            <li><a href="#pr曲线">PR曲线</a></li>
+          </ul>
+        </li>
+        <li><a href="#回归问题">回归问题</a>
+          <ul>
+            <li><a href="#误差-1">误差</a></li>
+            <li><a href="#解释变异explained-variation">解释变异（explained variation）</a></li>
           </ul>
         </li>
       </ul>
