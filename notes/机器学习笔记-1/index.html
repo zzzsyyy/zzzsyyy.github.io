@@ -72,7 +72,7 @@
     },
     "headline": "机器学习笔记-1 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  2050 ,
+    "wordCount":  2538 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -233,11 +233,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>2050字</span>
+        <span>2538字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>5分钟</span>
+        <span>6分钟</span>
     </div>
 
     
@@ -281,8 +281,9 @@
 <p>当模型无需人为设定超参数，所有参数都通过学习得到，则不需要验证集。</p>
 </blockquote>
 <h3 id="分类">分类</h3>
-<h4 id="监督学习supervised-learning-">监督学习（supervised learning ）</h4>
+<h4 id="监督学习">监督学习</h4>
 <blockquote>
+<p>supervised learning</p>
 <p>有导师学习：分类与回归</p>
 </blockquote>
 <p>从给定的训练数据集中学习出一个函数（模型参数），当输入新数据时，可以根据这个函数预测结果。</p>
@@ -290,8 +291,9 @@
 <li><strong>分类</strong>（classification）：输出时<strong>离散型变量</strong>，是一种<strong>定性输出</strong>。（如预测明天天气晴、阴、雨）</li>
 <li><strong>回归</strong>（regression）：输出是<strong>连续型变量</strong>，是一种<strong>定量输出</strong>。（如预测明天是多少度）</li>
 </ul>
-<h4 id="无监督学习unsupervised-learning">无监督学习（unsupervised learning）</h4>
+<h4 id="无监督学习">无监督学习</h4>
 <blockquote>
+<p>unsupervised learning</p>
 <p>无导师学习：聚类和维度约简</p>
 </blockquote>
 <p>输入数据没有标签，样本数据类别未知，需要根据样本间的相似性对样本进行划分使<strong>类内差距最小化</strong>，<strong>类间差距最大化</strong>。</p>
@@ -299,8 +301,9 @@
 <li>基于概率密度函数估计的直接方法。</li>
 <li>基于样本间相似性度量的聚类方法。</li>
 </ul>
-<h4 id="强化学习reinforcement-learning">强化学习（reinforcement learning）</h4>
+<h4 id="强化学习">强化学习</h4>
 <blockquote>
+<p>reinforcement learning</p>
 <p>再励学习、评价学习或增强学习</p>
 </blockquote>
 <p>用于描述和解决智能体（agent）在与环境交互过程中通过学习策略以达成回报最大或实现特定目标的问题。</p>
@@ -364,8 +367,9 @@ $$</p>
 </ul>
 <h2 id="机器学习的性能度量">机器学习的性能度量</h2>
 <h3 id="分类问题">分类问题</h3>
-<h4 id="混淆矩阵confusion-matrix">混淆矩阵（confusion matrix）</h4>
+<h4 id="混淆矩阵">混淆矩阵</h4>
 <blockquote>
+<p>confusion matrix</p>
 <p>误差矩阵</p>
 </blockquote>
 <p>功能：主要用于比较分类结果和实例的真实信息</p>
@@ -483,7 +487,71 @@ $$
 $$</p>
 </li>
 </ul>
-<h4 id="解释变异explained-variation">解释变异（explained variation）</h4>
+<h4 id="解释变异">解释变异</h4>
+<blockquote>
+<p>explained variation</p>
+</blockquote>
+<p>给定数据中的变异能被数学模型所解释的部分，通常用方差来量化变异。
+$$
+\mathrm{explainedvariance}(y,\hat{y})=1-\dfrac{Var(y-\hat{y})}{Var,y}
+$$</p>
+<h4 id="决定系数">决定系数</h4>
+<blockquote>
+<p>coefficient of determination</p>
+</blockquote>
+<p>回归关系已经解释的y值变异 在其总变异中所占的比率
+$$
+R^2(y,\hat{y})=1-\dfrac{\sum_{i=1}^{n_{samples}}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{n_{samples}}(y_i-\bar{y}_i)^2}
+$$
+其中$\bar{y}=\dfrac{1}{n_{samples}}\displaystyle\sum_{n=1}^{n_{samples}}y_i$</p>
+<h3 id="聚类问题">聚类问题</h3>
+<h4 id="兰德指数">兰德指数</h4>
+<blockquote>
+<p>rand index</p>
+</blockquote>
+<p>给定实际类别信息C，假设K是聚类结果，a表示C与K都是同类别的元素对数，b表示C与K中都是不同类别的元素对数
+$$
+\mathrm{RI}=\dfrac{a+b}{C_{2}^{n_{samples}}}\qquad\qquad\text{RI取值范围为[0, 1]}
+$$</p>
+<h4 id="调整兰德指数">调整兰德指数</h4>
+<blockquote>
+<p>adjust rand index</p>
+</blockquote>
+<p>$$
+\mathrm{ARI=\dfrac{RI-E(RI)}{\max{(RI)}-E(RI)}}\qquad\qquad\text{ARI的取值范围为[-1, 1]}
+$$</p>
+<h4 id="互信息">互信息</h4>
+<blockquote>
+<p>mutual information, MI</p>
+<p>用来衡量两个数据分布的吻合程度</p>
+</blockquote>
+<p>假设U和V是对N个样本标签的分布情况
+$$
+\mathrm{MI}(U,V)=\displaystyle\sum_{i=1}^{\vert U\vert}\sum_{j=1}^{\vert V\vert}P(i,j)\log\left(\dfrac{P(i,j)}{P(i)P(j)}\right)
+$$</p>
+<h4 id="标准化的互信息">标准化的互信息</h4>
+<blockquote>
+<p>normalized mutual information , NMI</p>
+</blockquote>
+<p>$$
+\mathrm{NMI}(U,V)=\dfrac{\mathrm{MI}(U,V)}{\sqrt{H(U)H(V)}}
+$$</p>
+<h4 id="调整互信息">调整互信息</h4>
+<blockquote>
+<p>adjust mutual information , AMI</p>
+</blockquote>
+<p>$$
+\mathrm{AMI}=\dfrac{\mathrm{MI}-E[\mathrm{MI}]}{\max{(H(U),H(V))-E[\mathrm{MI}]}}
+$$</p>
+<h4 id="轮廓系数">轮廓系数</h4>
+<blockquote>
+<p>silhouette coefficient</p>
+</blockquote>
+<p>对于单个样本，设$a$是与它同类别中其他样本的平均距离，$b$是与它距离最近的不同类别中样本的平均距离
+$$
+S=\dfrac{b-a}{\max(a,b)}\qquad\qquad\qquad\text{范围为[-1, 1]}
+$$
+适用于实际类别信息未知的情况</p>
         </div>
         
         <div class="my-4">
@@ -588,9 +656,9 @@ $$</p>
         <li><a href="#数据集">数据集</a></li>
         <li><a href="#分类">分类</a>
           <ul>
-            <li><a href="#监督学习supervised-learning-">监督学习（supervised learning ）</a></li>
-            <li><a href="#无监督学习unsupervised-learning">无监督学习（unsupervised learning）</a></li>
-            <li><a href="#强化学习reinforcement-learning">强化学习（reinforcement learning）</a></li>
+            <li><a href="#监督学习">监督学习</a></li>
+            <li><a href="#无监督学习">无监督学习</a></li>
+            <li><a href="#强化学习">强化学习</a></li>
           </ul>
         </li>
         <li><a href="#误差">误差</a></li>
@@ -608,7 +676,7 @@ $$</p>
       <ul>
         <li><a href="#分类问题">分类问题</a>
           <ul>
-            <li><a href="#混淆矩阵confusion-matrix">混淆矩阵（confusion matrix）</a></li>
+            <li><a href="#混淆矩阵">混淆矩阵</a></li>
             <li><a href="#f-score">F-score</a></li>
             <li><a href="#roc曲线">ROC曲线</a></li>
             <li><a href="#auc">AUC</a></li>
@@ -618,7 +686,18 @@ $$</p>
         <li><a href="#回归问题">回归问题</a>
           <ul>
             <li><a href="#误差-1">误差</a></li>
-            <li><a href="#解释变异explained-variation">解释变异（explained variation）</a></li>
+            <li><a href="#解释变异">解释变异</a></li>
+            <li><a href="#决定系数">决定系数</a></li>
+          </ul>
+        </li>
+        <li><a href="#聚类问题">聚类问题</a>
+          <ul>
+            <li><a href="#兰德指数">兰德指数</a></li>
+            <li><a href="#调整兰德指数">调整兰德指数</a></li>
+            <li><a href="#互信息">互信息</a></li>
+            <li><a href="#标准化的互信息">标准化的互信息</a></li>
+            <li><a href="#调整互信息">调整互信息</a></li>
+            <li><a href="#轮廓系数">轮廓系数</a></li>
           </ul>
         </li>
       </ul>
