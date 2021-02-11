@@ -72,7 +72,7 @@
     },
     "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  39 ,
+    "wordCount":  365 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -241,7 +241,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>39字</span>
+        <span>365字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -277,6 +277,70 @@
 <li>自定义函数</li>
 </ol>
 <h3 id="库函数">库函数</h3>
+<p>如同Python的库，轮子</p>
+<p>C Library中的一些函数</p>
+<ul>
+<li>IO函数（输入输出函数）</li>
+<li>字符串操作函数</li>
+<li>字符操作函数</li>
+<li>内存操作函数</li>
+<li>时间/日期函数</li>
+<li>数学函数</li>
+<li>其他库函数</li>
+</ul>
+<p>使用库函数，必须引用相应的头文件&lt;xxx.h&gt;</p>
+<h3 id="自定义函数">自定义函数</h3>
+<h4 id="构成">构成</h4>
+<p>和库函数一样，有函数名、返回值类型、函数参数</p>
+<pre><code class="language-c">ret_type fun_name(para1, *)
+{
+    statement;语句项
+}
+/*ret_type - 返回类型
+  fun_name - 函数名
+  para1 - 函数参数
+*/
+</code></pre>
+<h4 id="形参与实参">形参与实参</h4>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+void Swap1(int x, int y)//形参
+{
+    int tmp = x;
+    x = y;
+    y = tmp;
+}
+//以上的x，y有自己的空间
+int main()
+{
+    int a = 10;
+    int b = 20;
+    printf(&quot;a=%d,b=%d\n&quot;,a,b);//10，20
+    Swap1(a,b);//实参
+    printf(&quot;a=%d,b=%d\n&quot;,a,b);//10,20
+    return 0;
+}
+</code></pre>
+<h4 id="用指针的函数操作">用指针的函数操作</h4>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+void Swap2(int* pa, int* pb)
+{
+    int tmp = *pa;
+    *pa = *pb;
+    *pb = tmp;
+}
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    printf(&quot;a=%d,b=%d\n&quot;,a,b);//10,20
+    Swap2(&amp;a,&amp;b);
+    printf(&quot;a=%d,b=%d\n&quot;,a,b);//20,10
+    return 0;
+}
+</code></pre>
         </div>
         
         <div class="my-4">
@@ -382,6 +446,13 @@
       <ul>
         <li><a href="#分类">分类</a></li>
         <li><a href="#库函数">库函数</a></li>
+        <li><a href="#自定义函数">自定义函数</a>
+          <ul>
+            <li><a href="#构成">构成</a></li>
+            <li><a href="#形参与实参">形参与实参</a></li>
+            <li><a href="#用指针的函数操作">用指针的函数操作</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
