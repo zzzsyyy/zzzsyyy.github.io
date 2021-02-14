@@ -72,7 +72,7 @@
     },
     "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  365 ,
+    "wordCount":  1177 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -241,11 +241,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>365字</span>
+        <span>1177字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -290,7 +290,7 @@
 </ul>
 <p>使用库函数，必须引用相应的头文件&lt;xxx.h&gt;</p>
 <h3 id="自定义函数">自定义函数</h3>
-<h4 id="构成">构成</h4>
+<h4 id="函数的构成">函数的构成</h4>
 <p>和库函数一样，有函数名、返回值类型、函数参数</p>
 <pre><code class="language-c">ret_type fun_name(para1, *)
 {
@@ -301,7 +301,26 @@
   para1 - 函数参数
 */
 </code></pre>
-<h4 id="形参与实参">形参与实参</h4>
+<h4 id="函数的参数">函数的参数</h4>
+<h5 id="形式参数">形式参数</h5>
+<blockquote>
+<p>函数名后的变量</p>
+<p>形参，当函数调用完后会被销毁
+只在函数中有效</p>
+</blockquote>
+<h5 id="实际参数">实际参数</h5>
+<blockquote>
+<p>真实传递给函数的参数</p>
+<p>实参可以是：常量、变量、表达式、函数等
+它是实际的量，有确定的值</p>
+</blockquote>
+<p>当实参传给形参时，形参其实是实参的一份<em><strong>临时拷贝</strong></em>。对形参的改变是不会影响实参的。</p>
+<h4 id="函数的调用">函数的调用</h4>
+<p>当需要对变量进行直接操作时，往往考虑传址调用。</p>
+<h5 id="传值调用">传值调用</h5>
+<blockquote>
+<p>函数的形参和实参分别占有不同内存块，对形参的修改不会影响实参</p>
+</blockquote>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
 
 void Swap1(int x, int y)//形参
@@ -321,7 +340,10 @@ int main()
     return 0;
 }
 </code></pre>
-<h4 id="用指针的函数操作">用指针的函数操作</h4>
+<h4 id="传址调用">传址调用</h4>
+<blockquote>
+<p>将外部变量的地址传入函数，建立真正的联系</p>
+</blockquote>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
 
 void Swap2(int* pa, int* pb)
@@ -341,6 +363,122 @@ int main()
     return 0;
 }
 </code></pre>
+<h4 id="函数传入的数组">函数：传入的数组？</h4>
+<p>实现二分查找</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int binsry_search(int arr[], int k)
+{
+    int sz = sizeof(arr)/sizeof(arr[0]);
+    int left = 0;
+    int right = sz-1;
+    
+    while (left&lt;=right)
+    {
+        int mid = (left+right)/2;
+        if (arr[mid]&lt;k)
+            left = mid+1;
+        else if (arr[mid]&gt;k)
+            right = mid-1;
+        else
+            return mid;
+    }
+    return -1;
+}
+
+int main()
+{
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int k = 7;
+    int ret = binary_search(arr,k);
+    if (-ret)
+        printf(&quot;找不到指定的数字\n&quot;);
+    else
+        printf(&quot;找到了，下标是：%d\n&quot;,ret);
+    return 0;
+}
+</code></pre>
+<p>第五行<code>int sz = sizeof(arr)/sizeof(arr[0]);</code> 对于传入函数的数组，实际传入的只是<em><strong>数组第一个元素的地址</strong></em>。因此不能求得元素个数。</p>
+<p>拿到外面计算</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int binary_search(int arr[], int k, int sz)
+{
+    int left = 0;
+    int right = sz-1;
+    
+    while (left&lt;=right)//= - 同时等于
+    {
+        int mid = (left+right)/2;//中间元素的下标
+        if (arr[mid] &lt; k)
+            left = mid+1;
+        else if (arr[mid] &gt; k)
+            right = mid-1;
+        else
+            return mid;
+    }
+    return -1;
+}
+
+int main()
+{
+    int arr[] = {1,2,3,4,5,6,7,8,9,10};
+    int k = 7;
+    int sz = sizeof(arr)/sizeof(arr[0]);
+    int ret = binary_search(arr,k,sz);
+    if (ret == -1)
+        printf(&quot;找不到指定的数字\n&quot;);
+    else
+        printf(&quot;找到了，下标是：%d\n&quot;,ret);
+    return 0;
+}
+</code></pre>
+<h4 id="函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</h4>
+<p>函数之间的有机结合</p>
+<h5 id="嵌套调用">嵌套调用</h5>
+<p>在函数中调用另一个函数</p>
+<h5 id="链式访问">链式访问</h5>
+<blockquote>
+<p>把一个函数的返回值作为另外一个函数的参数</p>
+</blockquote>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    printf(&quot;%d\n&quot;,printf(&quot;%d\n&quot;,printf(&quot;%d\n&quot;,43)));
+    return 0;
+}
+//4321
+</code></pre>
+<p><code>printf()</code>的返回值是打印的字符的个数。</p>
+<h4 id="函数的声明和定义">函数的声明和定义</h4>
+<pre><code class="language-c">//函数声明
+int Add(int, int);//也可以加上变量名
+
+//主函数
+int main()
+{
+    int a = 10;
+    int b = 20;
+    //函数调用
+    int sum = Add(a, b);
+    printf(&quot;%d&quot;,sum);
+}
+
+//函数的定义
+int Add(int x, int y)
+{
+    int z = x+y;
+    returnn z;
+}
+</code></pre>
+<p>函数声明在使用之前
+函数在主函数前就不用声明</p>
+<p>函数声明在<code>.h</code>文件中
+函数定义在<code>.c</code>文件中
+和在一块儿叫<strong>模块</strong></p>
+<p>然后引用头文件就行了：<code>#include &quot;xxx.h&quot;</code></p>
+<p>用双引号</p>
         </div>
         
         <div class="my-4">
@@ -456,9 +594,13 @@ int main()
         <li><a href="#库函数">库函数</a></li>
         <li><a href="#自定义函数">自定义函数</a>
           <ul>
-            <li><a href="#构成">构成</a></li>
-            <li><a href="#形参与实参">形参与实参</a></li>
-            <li><a href="#用指针的函数操作">用指针的函数操作</a></li>
+            <li><a href="#函数的构成">函数的构成</a></li>
+            <li><a href="#函数的参数">函数的参数</a></li>
+            <li><a href="#函数的调用">函数的调用</a></li>
+            <li><a href="#传址调用">传址调用</a></li>
+            <li><a href="#函数传入的数组">函数：传入的数组？</a></li>
+            <li><a href="#函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</a></li>
+            <li><a href="#函数的声明和定义">函数的声明和定义</a></li>
           </ul>
         </li>
       </ul>
