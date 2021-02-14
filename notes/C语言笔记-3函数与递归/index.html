@@ -72,7 +72,7 @@
     },
     "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  1177 ,
+    "wordCount":  1174 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -241,7 +241,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1177字</span>
+        <span>1174字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -290,7 +290,7 @@
 </ul>
 <p>使用库函数，必须引用相应的头文件&lt;xxx.h&gt;</p>
 <h3 id="自定义函数">自定义函数</h3>
-<h4 id="函数的构成">函数的构成</h4>
+<h4 id="构成">构成</h4>
 <p>和库函数一样，有函数名、返回值类型、函数参数</p>
 <pre><code class="language-c">ret_type fun_name(para1, *)
 {
@@ -301,23 +301,23 @@
   para1 - 函数参数
 */
 </code></pre>
-<h4 id="函数的参数">函数的参数</h4>
-<h5 id="形式参数">形式参数</h5>
+<h2 id="函数的参数">函数的参数</h2>
+<h3 id="形式参数">形式参数</h3>
 <blockquote>
 <p>函数名后的变量</p>
 <p>形参，当函数调用完后会被销毁
 只在函数中有效</p>
 </blockquote>
-<h5 id="实际参数">实际参数</h5>
+<h3 id="实际参数">实际参数</h3>
 <blockquote>
 <p>真实传递给函数的参数</p>
 <p>实参可以是：常量、变量、表达式、函数等
 它是实际的量，有确定的值</p>
 </blockquote>
 <p>当实参传给形参时，形参其实是实参的一份<em><strong>临时拷贝</strong></em>。对形参的改变是不会影响实参的。</p>
-<h4 id="函数的调用">函数的调用</h4>
+<h2 id="函数的调用">函数的调用</h2>
 <p>当需要对变量进行直接操作时，往往考虑传址调用。</p>
-<h5 id="传值调用">传值调用</h5>
+<h3 id="传值调用">传值调用</h3>
 <blockquote>
 <p>函数的形参和实参分别占有不同内存块，对形参的修改不会影响实参</p>
 </blockquote>
@@ -340,7 +340,7 @@ int main()
     return 0;
 }
 </code></pre>
-<h4 id="传址调用">传址调用</h4>
+<h3 id="传址调用">传址调用</h3>
 <blockquote>
 <p>将外部变量的地址传入函数，建立真正的联系</p>
 </blockquote>
@@ -363,7 +363,7 @@ int main()
     return 0;
 }
 </code></pre>
-<h4 id="函数传入的数组">函数：传入的数组？</h4>
+<h2 id="函数传入的数组">函数：传入的数组？</h2>
 <p>实现二分查找</p>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
 
@@ -433,11 +433,11 @@ int main()
     return 0;
 }
 </code></pre>
-<h4 id="函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</h4>
+<h2 id="函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</h2>
 <p>函数之间的有机结合</p>
-<h5 id="嵌套调用">嵌套调用</h5>
+<h3 id="嵌套调用">嵌套调用</h3>
 <p>在函数中调用另一个函数</p>
-<h5 id="链式访问">链式访问</h5>
+<h3 id="链式访问">链式访问</h3>
 <blockquote>
 <p>把一个函数的返回值作为另外一个函数的参数</p>
 </blockquote>
@@ -451,7 +451,7 @@ int main()
 //4321
 </code></pre>
 <p><code>printf()</code>的返回值是打印的字符的个数。</p>
-<h4 id="函数的声明和定义">函数的声明和定义</h4>
+<h2 id="函数的声明和定义">函数的声明和定义</h2>
 <pre><code class="language-c">//函数声明
 int Add(int, int);//也可以加上变量名
 
@@ -594,17 +594,31 @@ int Add(int x, int y)
         <li><a href="#库函数">库函数</a></li>
         <li><a href="#自定义函数">自定义函数</a>
           <ul>
-            <li><a href="#函数的构成">函数的构成</a></li>
-            <li><a href="#函数的参数">函数的参数</a></li>
-            <li><a href="#函数的调用">函数的调用</a></li>
-            <li><a href="#传址调用">传址调用</a></li>
-            <li><a href="#函数传入的数组">函数：传入的数组？</a></li>
-            <li><a href="#函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</a></li>
-            <li><a href="#函数的声明和定义">函数的声明和定义</a></li>
+            <li><a href="#构成">构成</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#函数的参数">函数的参数</a>
+      <ul>
+        <li><a href="#形式参数">形式参数</a></li>
+        <li><a href="#实际参数">实际参数</a></li>
+      </ul>
+    </li>
+    <li><a href="#函数的调用">函数的调用</a>
+      <ul>
+        <li><a href="#传值调用">传值调用</a></li>
+        <li><a href="#传址调用">传址调用</a></li>
+      </ul>
+    </li>
+    <li><a href="#函数传入的数组">函数：传入的数组？</a></li>
+    <li><a href="#函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</a>
+      <ul>
+        <li><a href="#嵌套调用">嵌套调用</a></li>
+        <li><a href="#链式访问">链式访问</a></li>
+      </ul>
+    </li>
+    <li><a href="#函数的声明和定义">函数的声明和定义</a></li>
   </ul>
 </nav>
 </div>
