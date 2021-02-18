@@ -4,8 +4,8 @@
 
 
 <title>C语言笔记-3：函数与递归 | ZSYのBlog</title>
-<link rel="stylesheet" href="https://zzzsyyy.github.io/css/eureka.min.css">
-<script defer src="https://zzzsyyy.github.io/js/eureka.min.js"></script>
+<link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
+<script defer src="https://zzzsy.top/js/eureka.min.js"></script>
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload"
@@ -39,8 +39,8 @@
 </script>
 
 
-<link rel="icon" type="image/png" sizes="32x32" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://zzzsyyy.github.io/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://zzzsy.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
   content="C语言笔记-3：函数与递归">
@@ -52,11 +52,11 @@
       "@type": "ListItem",
       "position": 1 ,
       "name":"笔记",
-      "item":"https://zzzsyyy.github.io/notes/"},{
+      "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
       "name":"C语言笔记-3：函数与递归",
-      "item":"https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"}]
+      "item":"https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"}]
 }
 </script>
 
@@ -68,7 +68,7 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"
+        "@id": "https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"
     },
     "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
@@ -82,7 +82,7 @@
         "name": "zhangshanying",
         "logo": {
             "@type": "ImageObject",
-            "url": "https://zzzsyyy.github.io/images/icon.png"
+            "url": "https://zzzsy.top/images/icon.png"
         }
         },
     "description": "\u003cp\u003eC语言笔记-3：函数与递归\u003c\/p\u003e"
@@ -91,10 +91,10 @@
 <meta property="og:type" content="article" />
 
 
-<meta property="og:image" content="https://zzzsyyy.github.io/images/icon.png">
+<meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/" />
+<meta property="og:url" content="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/" />
 
 
 
@@ -140,11 +140,11 @@
 
 
 
-<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" />
+<meta property="og:see_also" content="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" />
 
 
 
-<meta property="og:see_also" content="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" />
+<meta property="og:see_also" content="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" />
 
 
 
@@ -219,7 +219,7 @@
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?13ff6b44a46e18f234debd5cdd607d36";
+        hm.src = "https://hm.baidu.com/hm.js?4452f3d444d7453ed05f501e532334bc";
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();
@@ -254,7 +254,7 @@
     <div class="mr-6 my-2">
         <i class="fas fa-th-list mr-1"></i>
         
-        <a href="https://zzzsyyy.github.io/series/C/" class="hover:text-eureka">C</a>
+        <a href="https://zzzsy.top/series/C/" class="hover:text-eureka">C</a>
         
     </div>
     
@@ -479,13 +479,14 @@ int Add(int x, int y)
 和在一块儿叫<strong>模块</strong></p>
 <p>然后引用头文件就行了：<code>#include &quot;xxx.h&quot;</code></p>
 <p>用双引号</p>
+<h2 id="heading"></h2>
         </div>
         
         <div class="my-4">
     
-    <a href="https://zzzsyyy.github.io/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
+    <a href="https://zzzsy.top/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
     
-    <a href="https://zzzsyyy.github.io/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
+    <a href="https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
     
 </div>
         
@@ -496,14 +497,14 @@ int Add(int x, int y)
         <div class="py-2">
     
     <div class="flex flex-col md:flex-row items-center my-8">
-        <a href="https://zzzsyyy.github.io/authors/Zhang/" class="w-24 h-24 md:mr-4">
+        <a href="https://zzzsy.top/authors/Zhang/" class="w-24 h-24 md:mr-4">
             
             
-            <img src="https://zzzsyyy.github.io/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            <img src="https://zzzsy.top/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
             
         </a>
         <div class="w-full md:w-auto mt-4 md:mt-0">
-            <a href="https://zzzsyyy.github.io/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <a href="https://zzzsy.top/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
             <span class="block pb-2"></span>
             
             
@@ -552,7 +553,7 @@ int Add(int x, int y)
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsyyy.github.io/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/" class="block">机器学习笔记-1</a>
+        <a href="https://zzzsy.top/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/" class="block">机器学习笔记-1</a>
         
     </div>
 </div>
@@ -568,13 +569,13 @@ int Add(int x, int y)
     <div class="content">
         
         
-        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/">C语言笔记-3：函数与递归</a>
+        <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/">C语言笔记-3：函数与递归</a>
         <br />
         
-        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
+        <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
         <br />
         
-        <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+        <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
         <br />
         
         
@@ -619,6 +620,7 @@ int Add(int x, int y)
       </ul>
     </li>
     <li><a href="#函数的声明和定义">函数的声明和定义</a></li>
+    <li><a href="#heading"></a></li>
   </ul>
 </nav>
 </div>
@@ -638,13 +640,13 @@ int Add(int x, int y)
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
-            <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
+            <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
             <br />
             
-            <a href="https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+            <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
             <br />
             
-            <a href="https://zzzsyyy.github.io/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">机器学习笔记-1</a>
+            <a href="https://zzzsy.top/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">机器学习笔记-1</a>
             <br />
             
         </div>

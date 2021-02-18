@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Forensics on ZSYのBlog</title>
-    <link>https://zzzsyyy.github.io/tags/Forensics/</link>
+    <link>https://zzzsy.top/tags/Forensics/</link>
     <description>Recent content in Forensics on ZSYのBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsyyy.github.io/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsyyy.github.io/tags/Forensics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/Forensics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一些Misc的Writeup - 1</title>
-      <link>https://zzzsyyy.github.io/notes/Forensics/</link>
+      <link>https://zzzsy.top/notes/Forensics/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/Forensics/</guid>
+      <guid>https://zzzsy.top/notes/Forensics/</guid>
       <description>&lt;p&gt;Misc：Forensics&lt;/p&gt;</description>
     </item>
     

@@ -2,162 +2,162 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ZSYのBlog</title>
-    <link>https://zzzsyyy.github.io/</link>
+    <link>https://zzzsy.top/</link>
     <description>Recent content on ZSYのBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsyyy.github.io/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsyyy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C语言笔记-3：函数与递归</title>
-      <link>https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/</link>
+      <link>https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/</guid>
+      <guid>https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/</guid>
       <description>&lt;p&gt;C语言笔记-3：函数与递归&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习笔记-1</title>
-      <link>https://zzzsyyy.github.io/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
+      <link>https://zzzsy.top/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
+      <guid>https://zzzsy.top/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
       <description>&lt;p&gt;机器学习 笔记-1&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Analyse笔记1</title>
-      <link>https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/</link>
+      <link>https://zzzsy.top/notes/Analyse%E7%AC%94%E8%AE%B0-1/</link>
       <pubDate>Mon, 01 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/Analyse%E7%AC%94%E8%AE%B0-1/</guid>
+      <guid>https://zzzsy.top/notes/Analyse%E7%AC%94%E8%AE%B0-1/</guid>
       <description>&lt;p&gt;淑芬笔记：数列的极限&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>pytorch：模型载存、Datasets、数据预处理</title>
-      <link>https://zzzsyyy.github.io/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <link>https://zzzsy.top/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+      <guid>https://zzzsy.top/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</guid>
       <description>&lt;p&gt;pytorch：模型载存、Datasets、数据预处理&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>C语言笔记-2：循环和分支语句</title>
-      <link>https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/</link>
+      <link>https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/</guid>
+      <guid>https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/</guid>
       <description>&lt;p&gt;C语言笔记-2：循环和分支语句&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>C语言笔记-1：初识C语言</title>
-      <link>https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/</link>
+      <link>https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/</guid>
+      <guid>https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/</guid>
       <description>&lt;p&gt;C语言笔记-1：初识C语言&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>一些Misc的Writeup - 1</title>
-      <link>https://zzzsyyy.github.io/notes/Forensics/</link>
+      <link>https://zzzsy.top/notes/Forensics/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/Forensics/</guid>
+      <guid>https://zzzsy.top/notes/Forensics/</guid>
       <description>&lt;p&gt;Misc：Forensics&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>一些Misc的Writeup - 2</title>
-      <link>https://zzzsyyy.github.io/notes/Cryptography/</link>
+      <link>https://zzzsy.top/notes/Cryptography/</link>
       <pubDate>Sun, 27 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/Cryptography/</guid>
+      <guid>https://zzzsy.top/notes/Cryptography/</guid>
       <description>&lt;p&gt;Misc：Cryptography&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Math Support</title>
-      <link>https://zzzsyyy.github.io/others/math-support/</link>
+      <link>https://zzzsy.top/others/math-support/</link>
       <pubDate>Fri, 20 Nov 2020 22:52:56 +0800</pubDate>
       
-      <guid>https://zzzsyyy.github.io/others/math-support/</guid>
+      <guid>https://zzzsy.top/others/math-support/</guid>
       <description>&lt;p&gt;Eureka supports the rendering of mathematical formulas by using KaTeX.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 1</title>
-      <link>https://zzzsyyy.github.io/docs/example-doc/chapter-1/</link>
+      <link>https://zzzsy.top/docs/example-doc/chapter-1/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/docs/example-doc/chapter-1/</guid>
+      <guid>https://zzzsy.top/docs/example-doc/chapter-1/</guid>
       <description>&lt;p&gt;This is chapter 1 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 1</title>
-      <link>https://zzzsyyy.github.io/docs/example-doc/nested-chapter/chapter-1/</link>
+      <link>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-1/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/docs/example-doc/nested-chapter/chapter-1/</guid>
+      <guid>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-1/</guid>
       <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 2</title>
-      <link>https://zzzsyyy.github.io/docs/example-doc/chapter-2/</link>
+      <link>https://zzzsy.top/docs/example-doc/chapter-2/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/docs/example-doc/chapter-2/</guid>
+      <guid>https://zzzsy.top/docs/example-doc/chapter-2/</guid>
       <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chapter 2</title>
-      <link>https://zzzsyyy.github.io/docs/example-doc/nested-chapter/chapter-2/</link>
+      <link>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-2/</link>
       <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/docs/example-doc/nested-chapter/chapter-2/</guid>
+      <guid>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-2/</guid>
       <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Featured Image</title>
-      <link>https://zzzsyyy.github.io/others/featured-image/</link>
+      <link>https://zzzsy.top/others/featured-image/</link>
       <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/others/featured-image/</guid>
+      <guid>https://zzzsy.top/others/featured-image/</guid>
       <description>&lt;p&gt;Maecenas maximus, elit in ornare porttitor, nisi eros hendrerit nisl, sed fermentum nulla urna blandit tellus.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://zzzsyyy.github.io/others/markdown-syntax/</link>
+      <link>https://zzzsy.top/others/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/others/markdown-syntax/</guid>
+      <guid>https://zzzsy.top/others/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Placeholder Text</title>
-      <link>https://zzzsyyy.github.io/others/placeholder-text/</link>
+      <link>https://zzzsy.top/others/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/others/placeholder-text/</guid>
+      <guid>https://zzzsy.top/others/placeholder-text/</guid>
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emoji Support</title>
-      <link>https://zzzsyyy.github.io/others/emoji-support/</link>
+      <link>https://zzzsy.top/others/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/others/emoji-support/</guid>
+      <guid>https://zzzsy.top/others/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     

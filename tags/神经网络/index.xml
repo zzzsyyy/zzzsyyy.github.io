@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>神经网络 on ZSYのBlog</title>
-    <link>https://zzzsyyy.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+    <link>https://zzzsy.top/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
     <description>Recent content in 神经网络 on ZSYのBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsyyy.github.io/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsyyy.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pytorch：模型载存、Datasets、数据预处理</title>
-      <link>https://zzzsyyy.github.io/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <link>https://zzzsy.top/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsyyy.github.io/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+      <guid>https://zzzsy.top/notes/pytorch%E6%A8%A1%E5%9E%8B%E8%BD%BD%E5%AD%98Datasets%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86/</guid>
       <description>&lt;p&gt;pytorch：模型载存、Datasets、数据预处理&lt;/p&gt;</description>
     </item>
     
