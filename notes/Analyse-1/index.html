@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>C语言笔记-3：函数与递归 | ZSYのBlog</title>
+<title>Analyse笔记1 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
 
@@ -43,7 +43,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="C语言笔记-3：函数与递归">
+  content="淑芬笔记：数列的极限">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,8 +55,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"C语言笔记-3：函数与递归",
-      "item":"https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"}]
+      "name":"Analyse笔记1",
+      "item":"https://zzzsy.top/notes/Analyse-1/"}]
 }
 </script>
 
@@ -68,11 +68,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/"
+        "@id": "https://zzzsy.top/notes/Analyse-1/"
     },
-    "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
-    "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  1174 ,
+    "headline": "Analyse笔记1 | ZSYのBlog","datePublished": "2021-02-01T00:00:00+00:00",
+    "dateModified": "2021-02-01T00:00:00+00:00",
+    "wordCount":  781 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -85,21 +85,21 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "\u003cp\u003eC语言笔记-3：函数与递归\u003c\/p\u003e"
+    "description": "\u003cp\u003e淑芬笔记：数列的极限\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="C语言笔记-3：函数与递归 | ZSYのBlog" />
+</script><meta property="og:title" content="Analyse笔记1 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/" />
+<meta property="og:url" content="https://zzzsy.top/notes/Analyse-1/" />
 
 
 
 
-<meta property="og:description" content="C语言笔记-3：函数与递归" />
+<meta property="og:description" content="淑芬笔记：数列的极限" />
 
 
 
@@ -116,21 +116,19 @@
 
 
 
-<meta property="article:published_time" content="2021-02-07T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-02-01T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-02-07T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-02-01T00:00:00&#43;00:00" />
 
 
 
 <meta property="article:section" content="notes" />
 
 
-<meta property="article:tag" content="C" />
+<meta property="article:tag" content="数学" />
 
-<meta property="article:tag" content="笔记" />
-
-
+<meta property="article:tag" content="Analyse" />
 
 
 
@@ -139,12 +137,6 @@
 
 
 
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/" />
 
 
 
@@ -233,19 +225,19 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">C语言笔记-3：函数与递归</h1>
+        <h1 class="font-bold text-3xl text-primary-text">Analyse笔记1</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-07</span>
+        <span>2021-02-01</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1174字</span>
+        <span>781字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>3分钟</span>
+        <span>2分钟</span>
     </div>
 
     
@@ -254,7 +246,7 @@
     <div class="mr-6 my-2">
         <i class="fas fa-th-list mr-1"></i>
         
-        <a href="https://zzzsy.top/series/C/" class="hover:text-eureka">C</a>
+        <a href="https://zzzsy.top/series/Analyse/" class="hover:text-eureka">Analyse</a>
         
     </div>
     
@@ -265,228 +257,44 @@
         
 
         <div class="content">
-            <p>C语言笔记-3：函数与递归</p>
-<h1 id="函数与递归">函数与递归</h1>
-<h2 id="函数的定义">函数的定义</h2>
-<blockquote>
-<p>子程序</p>
-</blockquote>
-<h3 id="分类">分类</h3>
-<ol>
-<li>库函数</li>
-<li>自定义函数</li>
-</ol>
-<h3 id="库函数">库函数</h3>
-<p>如同Python的库，轮子</p>
-<p>C Library中的一些函数</p>
+            <p>淑芬笔记：数列的极限</p>
+<h2 id="第一章-数列极限">第一章 数列极限</h2>
+<h3 id="数列极限的定义与基本性质">数列极限的定义与基本性质</h3>
+<p>[toc]</p>
+<h4 id="数列极限的定义">数列极限的定义</h4>
+<p>无穷次逐步逼近</p>
+<p><strong>数列定义</strong>：按自然数编号一次排列的一列数
+$$
+\qquad\qquad x_1, x_2,\cdots ,x_n,\cdots
+$$
+称为<strong>无穷数列</strong>，简称<strong>数列</strong>，记为${x_n}$</p>
+<p>eg1.2.1</p>
+<p>​	分析数列$a_n=\dfrac{(-1)^n}{n}\sin{\dfrac{1}{n}}$的变换趋势.</p>
+<p>​	取$\varepsilon=\dfrac{1}{2}$，当$n&gt;2$，有$|a_n-0|&lt;\dfrac{1}{n}&lt;\varepsilon$，</p>
+<p>​	取$\varepsilon=\dfrac{1}{2^2}$，当$n&gt;2^2$，有$|a_n-0|\leq \dfrac{1}{n}&lt;\varepsilon$，</p>
+<p>​	取$\varepsilon=\dfrac{1}{2^k}$，当$n&gt;2^k$，有$|a_n-0|&lt;\varepsilon$.</p>
+<p>一般情况：</p>
+<p>$$
+|a_n-0|&lt;\dfrac{1}{n}&lt;\varepsilon\implies n&gt;\dfrac{1}{\varepsilon}\\{\color{red}{N=[\dfrac{1}{\varepsilon}]}}{,n&gt;N,\text{满足}|a_n-0|&lt;\varepsilon}
+$$</p>
+<h5 id="数列极限定义">数列极限定义</h5>
+<p>给定数列${a_n}$，$a$为常数，如果对任意$\varepsilon&gt;0$，都存在一个自然数$N$，使得$n&gt;N$时，成立
+$$
+|a_n-a|&lt;\varepsilon
+$$
+则称数列${a_n}$以$a$为极限，记为$\displaystyle\lim_{n\to\infty}{a_n}=a$</p>
+<p>如果数列是没有极限的，就称数列是发散的。</p>
 <ul>
-<li>IO函数（输入输出函数）</li>
-<li>字符串操作函数</li>
-<li>字符操作函数</li>
-<li>内存操作函数</li>
-<li>时间/日期函数</li>
-<li>数学函数</li>
-<li>其他库函数</li>
+<li>定义中的$\varepsilon$刻画了$x_n$与$a$的逼近程度，定义中$\varepsilon$可以限制$\varepsilon\leq a$</li>
+<li>定义中的$N$和$\varepsilon$有关，仅要求存在，一般$\varepsilon$越小，$N$越大.</li>
 </ul>
-<p>使用库函数，必须引用相应的头文件&lt;xxx.h&gt;</p>
-<h3 id="自定义函数">自定义函数</h3>
-<h4 id="构成">构成</h4>
-<p>和库函数一样，有函数名、返回值类型、函数参数</p>
-<pre><code class="language-c">ret_type fun_name(para1, *)
-{
-    statement;语句项
-}
-/*ret_type - 返回类型
-  fun_name - 函数名
-  para1 - 函数参数
-*/
-</code></pre>
-<h2 id="函数的参数">函数的参数</h2>
-<h3 id="形式参数">形式参数</h3>
-<blockquote>
-<p>函数名后的变量</p>
-<p>形参，当函数调用完后会被销毁
-只在函数中有效</p>
-</blockquote>
-<h3 id="实际参数">实际参数</h3>
-<blockquote>
-<p>真实传递给函数的参数</p>
-<p>实参可以是：常量、变量、表达式、函数等
-它是实际的量，有确定的值</p>
-</blockquote>
-<p>当实参传给形参时，形参其实是实参的一份<em><strong>临时拷贝</strong></em>。对形参的改变是不会影响实参的。</p>
-<h2 id="函数的调用">函数的调用</h2>
-<p>当需要对变量进行直接操作时，往往考虑传址调用。</p>
-<h3 id="传值调用">传值调用</h3>
-<blockquote>
-<p>函数的形参和实参分别占有不同内存块，对形参的修改不会影响实参</p>
-</blockquote>
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-void Swap1(int x, int y)//形参
-{
-    int tmp = x;
-    x = y;
-    y = tmp;
-}
-//以上的x，y有自己的空间
-int main()
-{
-    int a = 10;
-    int b = 20;
-    printf(&quot;a=%d,b=%d\n&quot;,a,b);//10，20
-    Swap1(a,b);//实参
-    printf(&quot;a=%d,b=%d\n&quot;,a,b);//10,20
-    return 0;
-}
-</code></pre>
-<h3 id="传址调用">传址调用</h3>
-<blockquote>
-<p>将外部变量的地址传入函数，建立真正的联系</p>
-</blockquote>
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-void Swap2(int* pa, int* pb)
-{
-    int tmp = *pa;
-    *pa = *pb;
-    *pb = tmp;
-}
-
-int main()
-{
-    int a = 10;
-    int b = 20;
-    printf(&quot;a=%d,b=%d\n&quot;,a,b);//10,20
-    Swap2(&amp;a,&amp;b);
-    printf(&quot;a=%d,b=%d\n&quot;,a,b);//20,10
-    return 0;
-}
-</code></pre>
-<h2 id="函数传入的数组">函数：传入的数组？</h2>
-<p>实现二分查找</p>
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int binsry_search(int arr[], int k)
-{
-    int sz = sizeof(arr)/sizeof(arr[0]);
-    int left = 0;
-    int right = sz-1;
-    
-    while (left&lt;=right)
-    {
-        int mid = (left+right)/2;
-        if (arr[mid]&lt;k)
-            left = mid+1;
-        else if (arr[mid]&gt;k)
-            right = mid-1;
-        else
-            return mid;
-    }
-    return -1;
-}
-
-int main()
-{
-    int arr[] = {1,2,3,4,5,6,7,8,9,10};
-    int k = 7;
-    int ret = binary_search(arr,k);
-    if (-ret)
-        printf(&quot;找不到指定的数字\n&quot;);
-    else
-        printf(&quot;找到了，下标是：%d\n&quot;,ret);
-    return 0;
-}
-</code></pre>
-<p>第五行<code>int sz = sizeof(arr)/sizeof(arr[0]);</code> 对于传入函数的数组，实际传入的只是<em><strong>数组第一个元素的地址</strong></em>。因此不能求得元素个数。</p>
-<p>拿到外面计算</p>
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int binary_search(int arr[], int k, int sz)
-{
-    int left = 0;
-    int right = sz-1;
-    
-    while (left&lt;=right)//= - 同时等于
-    {
-        int mid = (left+right)/2;//中间元素的下标
-        if (arr[mid] &lt; k)
-            left = mid+1;
-        else if (arr[mid] &gt; k)
-            right = mid-1;
-        else
-            return mid;
-    }
-    return -1;
-}
-
-int main()
-{
-    int arr[] = {1,2,3,4,5,6,7,8,9,10};
-    int k = 7;
-    int sz = sizeof(arr)/sizeof(arr[0]);
-    int ret = binary_search(arr,k,sz);
-    if (ret == -1)
-        printf(&quot;找不到指定的数字\n&quot;);
-    else
-        printf(&quot;找到了，下标是：%d\n&quot;,ret);
-    return 0;
-}
-</code></pre>
-<h2 id="函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</h2>
-<p>函数之间的有机结合</p>
-<h3 id="嵌套调用">嵌套调用</h3>
-<p>在函数中调用另一个函数</p>
-<h3 id="链式访问">链式访问</h3>
-<blockquote>
-<p>把一个函数的返回值作为另外一个函数的参数</p>
-</blockquote>
-<pre><code class="language-c">#include&lt;stdio.h&gt;
-
-int main()
-{
-    printf(&quot;%d\n&quot;,printf(&quot;%d\n&quot;,printf(&quot;%d\n&quot;,43)));
-    return 0;
-}
-//4321
-</code></pre>
-<p><code>printf()</code>的返回值是打印的字符的个数。</p>
-<h2 id="函数的声明和定义">函数的声明和定义</h2>
-<pre><code class="language-c">//函数声明
-int Add(int, int);//也可以加上变量名
-
-//主函数
-int main()
-{
-    int a = 10;
-    int b = 20;
-    //函数调用
-    int sum = Add(a, b);
-    printf(&quot;%d&quot;,sum);
-}
-
-//函数的定义
-int Add(int x, int y)
-{
-    int z = x+y;
-    returnn z;
-}
-</code></pre>
-<p>函数声明在使用之前
-函数在主函数前就不用声明</p>
-<p>函数声明在<code>.h</code>文件中
-函数定义在<code>.c</code>文件中
-和在一块儿叫<strong>模块</strong></p>
-<p>然后引用头文件就行了：<code>#include &quot;xxx.h&quot;</code></p>
-<p>用双引号</p>
-<h2 id="heading"></h2>
         </div>
         
         <div class="my-4">
     
-    <a href="https://zzzsy.top/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
+    <a href="https://zzzsy.top/tags/%E6%95%B0%E5%AD%A6/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#数学</a>
     
-    <a href="https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
+    <a href="https://zzzsy.top/tags/Analyse/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Analyse</a>
     
 </div>
         
@@ -535,7 +343,7 @@ int Add(int x, int y)
             
             
             
-            <a href="https://zsy-pan.herokuapp.com/" class="mr-1">
+            <a href="https://pan.zzzsy.top" class="mr-1">
                 <i class="fab fa-google-drive"></i>
             </a>
             
@@ -549,11 +357,14 @@ int Add(int x, int y)
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsy.top/notes/ML-1/" class="block">机器学习笔记-1</a>
+        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/" class="block">机器学习笔记-1</a>
+        <a href="https://zzzsy.top/notes/pytorch-1/" class="block">pytorch：模型载存、Datasets、数据预处理</a>
         
     </div>
 </div>
@@ -569,13 +380,7 @@ int Add(int x, int y)
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-3%E5%87%BD%E6%95%B0%E4%B8%8E%E9%80%92%E5%BD%92/">C语言笔记-3：函数与递归</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
+        <a href="https://zzzsy.top/notes/Analyse-1/">Analyse笔记1</a>
         <br />
         
         
@@ -589,38 +394,15 @@ int Add(int x, int y)
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#函数的定义">函数的定义</a>
+    <li><a href="#第一章-数列极限">第一章 数列极限</a>
       <ul>
-        <li><a href="#分类">分类</a></li>
-        <li><a href="#库函数">库函数</a></li>
-        <li><a href="#自定义函数">自定义函数</a>
+        <li><a href="#数列极限的定义与基本性质">数列极限的定义与基本性质</a>
           <ul>
-            <li><a href="#构成">构成</a></li>
+            <li><a href="#数列极限的定义">数列极限的定义</a></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#函数的参数">函数的参数</a>
-      <ul>
-        <li><a href="#形式参数">形式参数</a></li>
-        <li><a href="#实际参数">实际参数</a></li>
-      </ul>
-    </li>
-    <li><a href="#函数的调用">函数的调用</a>
-      <ul>
-        <li><a href="#传值调用">传值调用</a></li>
-        <li><a href="#传址调用">传址调用</a></li>
-      </ul>
-    </li>
-    <li><a href="#函数传入的数组">函数：传入的数组？</a></li>
-    <li><a href="#函数的嵌套调用和链式访问">函数的嵌套调用和链式访问</a>
-      <ul>
-        <li><a href="#嵌套调用">嵌套调用</a></li>
-        <li><a href="#链式访问">链式访问</a></li>
-      </ul>
-    </li>
-    <li><a href="#函数的声明和定义">函数的声明和定义</a></li>
-    <li><a href="#heading"></a></li>
   </ul>
 </nav>
 </div>
@@ -634,23 +416,6 @@ int Add(int x, int y)
     
 
     
-    
-    <div
-        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
-        <h2 class="text-lg font-semibold mb-4">相关</h2>
-        <div class="content">
-            
-            <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-2%E5%BE%AA%E7%8E%AF%E5%92%8C%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5/">C语言笔记-2：循环和分支语句</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/C%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0-1%E5%88%9D%E8%AF%86C%E8%AF%AD%E8%A8%80/">C语言笔记-1：初识C语言</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">机器学习笔记-1</a>
-            <br />
-            
-        </div>
-    </div>
     
 </div>
 <script>
@@ -679,7 +444,7 @@ int Add(int x, int y)
     love.setCanvasSize();
     </script>
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" target="_blank" class="hover:text-eureka">Hugo</a>&<a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" class="hover:text-eureka">Eureka</a><br/>
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" target="_blank" class="hover:text-eureka">Hugo</a> & <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" class="hover:text-eureka">Eureka</a><br/>
     <span id="span_dt_dt"><SCRIPT language=javascript>
     function show_date_time(){
     window.setTimeout("show_date_time()", 1000);
