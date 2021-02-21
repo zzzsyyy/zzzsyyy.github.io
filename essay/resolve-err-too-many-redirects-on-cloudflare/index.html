@@ -227,7 +227,8 @@
 
         <div class="content">
             <p>今天打开网站，发现出现错误“ERR_TOO_MANY_REDIRECTS”，意思是“重定向次数过多”。估计是将域名解析放在Cloudflare上的问题。</p>
-<p>这个错误在以前打开<a href="https://www.codewars.com/dashboard" target="_blank">CodeWars</a>时也遇见过，当时查好像和服务器什么的有关系。查找一通发现和我问题一样的<u>情况</u><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<p>这个错误在以前打开
+<a href="https://www.codewars.com/dashboard" target="_blank">CodeWars</a>时也遇见过，当时查好像和服务器什么的有关系。查找一通发现和我问题一样的<u>情况</u><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
 <p>原因就是服务器的SSL与Cloudflare的配置冲突，这在<u>官方的文档</u><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>也有描述。</p>
 <blockquote>
 <p>The <em>Flexible</em> <strong>SSL</strong> encryption mode in the Cloudflare <strong>SSL/TLS</strong> app <strong>Overview</strong> tab encrypts traffic between the browser and the Cloudflare network over HTTPS. However, when the <em>Flexible</em> <strong>SSL</strong> option is enabled, Cloudflare sends requests to your origin web server unencrypted over HTTP. Redirect loops occur if your origin web server is configured to redirect all HTTP requests to HTTPS when using the <em>Flexible</em> <strong>SSL</strong> option.</p>
@@ -240,10 +241,12 @@
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p><a href="https://www.heartnn.com/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/" target="_blank">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>
+<a href="https://www.heartnn.com/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/" target="_blank">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p><a href="https://support.cloudflare.com/hc/en-us/articles/115000219871" target="_blank">Why does Flexible SSL cause a redirect loop?</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>
+<a href="https://support.cloudflare.com/hc/en-us/articles/115000219871" target="_blank">Why does Flexible SSL cause a redirect loop?</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>

@@ -273,7 +273,8 @@
 <p>我們觀察編碼，很容易發現它的特徵：UTF-8.有數字和字母，而且已經兩兩斷開，字母是大寫。</p>
 <h3 id="題目解決">題目解決</h3>
 <p>我們需要將空格換成百分號%，這裏可以用word的查找替換。</p>
-<p>最後放入<a href="https://tool.chinaz.com/tools/utf-8.aspx" target="_blank">UTF-8解碼工具</a>中</p>
+<p>最後放入
+<a href="https://tool.chinaz.com/tools/utf-8.aspx" target="_blank">UTF-8解碼工具</a>中</p>
 <h3 id="題目答案">題目答案</h3>
 <p><font color=white size=3>ABCTF{45C11_15_U53FUL}</font></p>
 <h2 id="2-hextroadinary">2. Hextroadinary</h2>
@@ -284,7 +285,8 @@
 <p>題中給出了兩個16進制數，讓我們輸出的也是十六進制數（Your answer should start with 0x.）經過觀察發現題目中的名字ROXy別具深意，ROX 倒過來是 xor 異或。所以我們想到了將其轉化為二進制求兩個數的異或，再轉換回十六進制。</p>
 <p>要注意的是，輸出的格式是 CTFlearn{&hellip;}</p>
 <h3 id="題目解決-1">題目解決</h3>
-<p><a href="https://tool.lu/hexconvert/" target="_blank">進制轉換</a></p>
+<p>
+<a href="https://tool.lu/hexconvert/" target="_blank">進制轉換</a></p>
 <p>4cf8&ndash;&gt;100110011111000</p>
 <p>c4115&ndash;&gt;11000100000100010101</p>
 <p>求異或</p>
@@ -297,7 +299,8 @@
 <p>觀察題目，發現Base  6  2  2  ，嚴重懷疑是base64編碼。而且給出的字符串也具有base64的特徵，有大小寫，字母和數字。</p>
 <h3 id="題目解決-2">題目解決</h3>
 <p>base64的編碼一定會被4整除，不能的後面加等號=。</p>
-<p><a href="https://tool.oschina.net/encrypt?type=3" target="_blank">在綫base64解碼</a></p>
+<p>
+<a href="https://tool.oschina.net/encrypt?type=3" target="_blank">在綫base64解碼</a></p>
 <h3 id="題目答案-2">題目答案</h3>
 <p><font color=white size=3>CTF{FlaggyWaggyRaggy}</font></p>
 <h2 id="4-morse-code">4. Morse Code</h2>
@@ -306,7 +309,8 @@
 <h3 id="題目思路-3">題目思路</h3>
 <p>由題目可知，這就是簡單的莫斯密碼。</p>
 <h3 id="題目解決-3">題目解決</h3>
-<p><a href="https://www.jb51.net/tools/morse.htm" target="_blank">莫斯密碼解密</a></p>
+<p>
+<a href="https://www.jb51.net/tools/morse.htm" target="_blank">莫斯密碼解密</a></p>
 <h3 id="題目答案-3">題目答案</h3>
 <p><font color=white size=3>FLAGSAMUELMORSEISCOOLBYTHEWAYILIKECHEES</font></p>
 <h2 id="5-vigenere-cipher">5. Vigenere Cipher</h2>
@@ -397,7 +401,8 @@ if __name__=='__main__':
 <p><font color=white size=3>flag{CiphersAreAwesome}</font></p>
 <h2 id="6-rsa-twins">6. RSA Twins!</h2>
 <h3 id="題目描述-5">題目描述</h3>
-<p><a href="https://wwx.lanzoux.com/iVaI8jxyplc" target="_blank">https://wwx.lanzoux.com/iVaI8jxyplc</a>Aww, twins :). Theyâre so cute! They must be (almost) identical because they âre the same except for the slightest difference. Anyway, see if you can find my flag. Hint: This is just math. You&rsquo;re probably not going to find any sort of specialized attack.、</p>
+<p>
+<a href="https://wwx.lanzoux.com/iVaI8jxyplc" target="_blank">https://wwx.lanzoux.com/iVaI8jxyplc</a>Aww, twins :). Theyâre so cute! They must be (almost) identical because they âre the same except for the slightest difference. Anyway, see if you can find my flag. Hint: This is just math. You&rsquo;re probably not going to find any sort of specialized attack.、</p>
 <h3 id="題目思路-5">題目思路</h3>
 <p>題目中說這是一個數學問題，應該就是傑出結果。對於RSA，有 p、q、n、φ(n)、e、d五個數字，其中關係是，n是一個很大的能分解為兩個質數p、q乘機的數，φ(n)=(p-1)*(q-1)，e是公鑰，是随机选择的，条件是1&lt; e &lt; φ(n)，且e与φ(n) 互质（常選65537）。d是私鑰，即模反元素，ed ≡ 1 (mod φ(n))，其實相當於ed + φ(n)y = 1。求解出的數字在進行相應的解密。</p>
 <h3 id="題目解決-5">題目解決</h3>
@@ -406,9 +411,11 @@ if __name__=='__main__':
 <p>e = 65537</p>
 <p>c = 684151956678815994103733261966890872908254340972007896833477109225858676207046453897176861126186570268646592844185948487733725335274498844684380516667587</p>
 <p>l所以可以得知，我們要根據n和e求出d，並對c進行解密。</p>
-<p>第一步是<a href="http://factordb.com/" target="_blank">分解大數</a></p>
+<p>第一步是
+<a href="http://factordb.com/" target="_blank">分解大數</a></p>
 <p>於是我們得到p、q，以及能算出φ(n)。</p>
-<p>然後求模反元素d，我們採用<a href="https://zh.wikipedia.org/wiki/%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95" target="_blank">拓展歐幾里得算法</a>python算法如下：</p>
+<p>然後求模反元素d，我們採用
+<a href="https://zh.wikipedia.org/wiki/%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95" target="_blank">拓展歐幾里得算法</a>python算法如下：</p>
 <pre><code class="language-python">def ext_euclid(a, b):
     old_s,s=1,0
     old_t,t=0,1
@@ -441,7 +448,8 @@ def p64(n):
             temp //= 64
     return ''.join([x for x in reversed(result)])
 </code></pre>
-<p>然後<a href="https://tool.oschina.net/encrypt?type=3" target="_blank">在綫base64解碼</a>就得到了flag。</p>
+<p>然後
+<a href="https://tool.oschina.net/encrypt?type=3" target="_blank">在綫base64解碼</a>就得到了flag。</p>
 <h3 id="題目答案-5">題目答案</h3>
 <p><font color=white size=3>flag{i_l0v3_tw1N_pr1m3s}</font></p>
 <h2 id="7">7.</h2>
