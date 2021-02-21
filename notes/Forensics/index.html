@@ -269,7 +269,7 @@
 <h2 id="1-git-is-good">1. Git Is Good</h2>
 <h3 id="題目描述">題目描述</h3>
 <p>The flag used to be there. But then I redacted it. Good Luck.</p>
-<p><a href="https://wwx.lanzoux.com/iKE9zjx745i">https://wwx.lanzoux.com/iKE9zjx745</a></p>
+<p><a href="https://wwx.lanzoux.com/iKE9zjx745i" target="_blank">https://wwx.lanzoux.com/iKE9zjx745</a></p>
 <h3 id="題目思路">題目思路</h3>
 <p>題中說文件被修改，而我們拿到的zip解壓后是一個.git文件夾和一個flag.txt。可以知道，我們要通過git的記録來查看歷史版本。</p>
 <h3 id="題目解答">題目解答</h3>
@@ -282,10 +282,10 @@
 <h2 id="2-forensics-101">2. Forensics 101</h2>
 <h3 id="題目描述-1">題目描述</h3>
 <p>Think the flag is somewhere in there. Would you help me find it?</p>
-<p><a href="https://wwx.lanzoux.com/iP1SXjx7mde">https://wwx.lanzoux.com/iP1SXjx7mde</a></p>
+<p><a href="https://wwx.lanzoux.com/iP1SXjx7mde" target="_blank">https://wwx.lanzoux.com/iP1SXjx7mde</a></p>
 <h3 id="題目思路-1">題目思路</h3>
 <p>拿到文件是一張圖片，首先hex分析，查看16進制。搜索flag  ctf  等字樣。</p>
-<p>hex工具<a href="https://wwx.lanzoux.com/i43T6jyp9tg">Winhex</a></p>
+<p>hex工具<a href="https://wwx.lanzoux.com/i43T6jyp9tg" target="_blank">Winhex</a></p>
 <h3 id="題目解決">題目解決</h3>
 <p>noteoad++打開，轉到hex模式，搜索flag，出現。</p>
 <h3 id="題目答案-1">題目答案</h3>
@@ -293,16 +293,16 @@
 <h2 id="3tux">3.Tux!</h2>
 <h3 id="題目描述-2">題目描述</h3>
 <p>The flag is hidden inside the Penguin! Solve this challenge before solving my 100 point Scope challenge which uses similar techniques as this one.</p>
-<p><a href="https://wwx.lanzoux.com/izuGWjxe9xi">https://wwx.lanzoux.com/izuGWjxe9xi</a></p>
+<p><a href="https://wwx.lanzoux.com/izuGWjxe9xi" target="_blank">https://wwx.lanzoux.com/izuGWjxe9xi</a></p>
 <h3 id="題目思路-2">題目思路</h3>
-<p>拿到圖片，首先查看屬性，看看有無有用的信息。然後查看hex觀察有效字樣，可以搜索flag等。用這個工具<a href="https://wwx.lanzoux.com/iZMGIjyp8lc">foremost</a>可以分離圖種，進行查看。還可以查看圖像的不同通道。再就是LSB隱寫。</p>
+<p>拿到圖片，首先查看屬性，看看有無有用的信息。然後查看hex觀察有效字樣，可以搜索flag等。用這個工具<a href="https://wwx.lanzoux.com/iZMGIjyp8lc" target="_blank">foremost</a>可以分離圖種，進行查看。還可以查看圖像的不同通道。再就是LSB隱寫。</p>
 <h3 id="題目解決-1">題目解決</h3>
 <p>拿到的是一個jpg文件，是Linux的小企鵝。首先查看屬性，并沒有有效信息。hex打開，觀察後發現結尾處有PK字樣，可能是圖種，用foremost工具分離。得到一張圖和一個zip文件。打開zip文件，裏面是flag但是加密 。查看hex，發現大量的無效0000字段，因此採用Winrar的修復功能，得到1k的文件。因為裏面就一個文件，基本排除明文攻擊的可能。懷疑是僞加密，用hex打開，搜索 504B0102 ,將其後的0900/0100改為0000，打開失敗。嘗試暴力枚舉，1~6位沒有成功。於是回頭查看分離出來的jpg文件，觀察hex，發現一串很像base64的字節，解密后得到解壓密碼。於是成功得到flag。</p>
 <h3 id="題目答案-2">題目答案</h3>
 <p><font color=white size=3>CTFlearn{Linux_Is_Awesome}</font></p>
 <h2 id="4-2019ctf---otaku">4. 2019CTF&mdash;otaku</h2>
 <h3 id="題目描述-3">題目描述</h3>
-<p><a href="https://wwx.lanzoux.com/iBwcUjynhib">https://wwx.lanzoux.com/iBwcUjynhib</a></p>
+<p><a href="https://wwx.lanzoux.com/iBwcUjynhib" target="_blank">https://wwx.lanzoux.com/iBwcUjynhib</a></p>
 <p>One day,you and your otaku friend went to the comic expo together and he had a car accident right beside you.Before he died,he gave you a USB hard disk which contained this zip.Please find out his last wish.</p>
 <p>Hint：The txt is GBK encoding.</p>
 <h3 id="題目思路-3">題目思路</h3>
@@ -311,9 +311,9 @@
 <p>直接解壓文件會顯示錯誤，於是採用Winrar修復並解壓出了flag.zip&amp;Anime_Intro.doc。flag.zip是加密的，先不管，打開doc，發現有空白的地方，選中并改變字體顔色，發現是last words的內容。打開zip文件，發現有last words.txt，又有題中的提示GBK編碼，於是就應該是構造txt進行明文攻擊。</p>
 <p>但是根據查看zip中txt的文件大小，發現文本內容應該較多，而且GBK的暗示也說明會有中文字符。我們需要繼續在doc中尋找明文。由於office就是zip文件，於是乾脆改後綴名打開，在document.xml文件中查找，發現了另一段被隱藏的文字。重新打開doc，直接全選刷一下格式，發現明文出現了。編碼選用GBK創建txt，作為明文攻擊文件。</p>
 <p>打開zip時可以在註釋裏看到創建壓縮文件的軟件及版本、壓縮方法、平臺。然後對明文txt進行相同的壓縮。壓縮後對照一下CRC32的值，一樣就說明對了。</p>
-<p>然後就開始明文攻擊，用這個軟件<a href="https://wwx.lanzoux.com/i67BZjyot2d">ARCHPR</a>進行明文攻擊，成功得到密碼。</p>
+<p>然後就開始明文攻擊，用這個軟件<a href="https://wwx.lanzoux.com/i67BZjyot2d" target="_blank">ARCHPR</a>進行明文攻擊，成功得到密碼。</p>
 <p>解壓出來的是txt和一個flag.png。對於圖片，我們先查看屬性，hex，圖種分離一遍過，并沒有發現有效信息。於是猜想有可能是LSB隱寫。</p>
-<p>採用這個工具<a href="https://wwx.lanzoux.com/iYtqujyp02f">Stegsolve</a>進項通道分離等操作，各種通道未發現有效信息。選擇Analysis&ndash;&gt;Data Extract，選LSB，勾選GRB的0，點Preview，發現flag信息。</p>
+<p>採用這個工具<a href="https://wwx.lanzoux.com/iYtqujyp02f" target="_blank">Stegsolve</a>進項通道分離等操作，各種通道未發現有效信息。選擇Analysis&ndash;&gt;Data Extract，選LSB，勾選GRB的0，點Preview，發現flag信息。</p>
 <h3 id="題目答案-3">題目答案</h3>
 <p><font color=white size=3>ctf{vI0l3t_Ev3rg@RdeN}</font></p>
 <h2 id="5">5.</h2>
