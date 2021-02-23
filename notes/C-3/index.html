@@ -72,7 +72,7 @@
     },
     "headline": "C语言笔记-3：函数与递归 | ZSYのBlog","datePublished": "2021-02-07T00:00:00+00:00",
     "dateModified": "2021-02-07T00:00:00+00:00",
-    "wordCount":  1417 ,
+    "wordCount":  1693 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -242,11 +242,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1417字</span>
+        <span>1693字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>3分钟</span>
+        <span>4分钟</span>
     </div>
 
     
@@ -529,12 +529,50 @@ int my_strlen_1(char* str)
 //无临时变量
 int my_strlen_2(char* str)
 {
-    if (*str != '\0')
-        return 1+mystrlen_2(str+1);
+    if (*str != '\0')//边界条件
+        return 1+mystrlen_2(str+1);//函数递归
     else
         return 0;
 }
 </code></pre>
+<blockquote>
+<p>TDD - 测试驱动开发
+先设计函数在主函数中的实际使用，然后再去实现函数。</p>
+</blockquote>
+<h3 id="递归与迭代">递归与迭代</h3>
+<blockquote>
+<p>递归与循环算法是殊途同归的</p>
+<p>而递归有时会有大量的重复计算</p>
+</blockquote>
+<p>eg：</p>
+<p>求解第n个斐波那契数（不考虑溢出）</p>
+<pre><code class="language-c">//递归算法 - 大量重复计算
+int Fib1(int n)
+{
+    if (n&lt;=2)
+        return 1;
+    else
+        return Fib(n-1) + Fib(n-2);//无法计算较大的n
+}
+
+//循环算法 - 计算迅速
+int Fib2(int n)
+{
+    int a=1,b=1,c=1;
+    while (n&gt;2)
+    {
+        c = a + b;
+        a = b;
+        b = c;
+        n--;
+    }
+    return c;
+}
+</code></pre>
+<h3 id="递归深度">递归深度</h3>
+<blockquote>
+<p>递归函数f，第一次进去认为是深度是1。以后从深度为n的f中再调用用f(直接或者间接)，这个被调用f的深度为n+1; 整个f最大的深度为<em><strong>递归深度</strong></em>。</p>
+</blockquote>
         </div>
         
         <div class="my-4">
@@ -682,6 +720,8 @@ int my_strlen_2(char* str)
       <ul>
         <li><a href="#什么是递归">什么是递归</a></li>
         <li><a href="#递归的两个必要条件">递归的两个必要条件</a></li>
+        <li><a href="#递归与迭代">递归与迭代</a></li>
+        <li><a href="#递归深度">递归深度</a></li>
       </ul>
     </li>
   </ul>
