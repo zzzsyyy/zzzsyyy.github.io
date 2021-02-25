@@ -72,7 +72,7 @@
     },
     "headline": "NLP | 中文分词技术 | ZSYのBlog","datePublished": "2021-02-23T00:00:00+00:00",
     "dateModified": "2021-02-24T00:00:00+00:00",
-    "wordCount":  87 ,
+    "wordCount":  428 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -242,7 +242,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>87字</span>
+        <span>428字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -278,6 +278,62 @@
 <blockquote>
 <p>Maximum Match Method，MM法</p>
 </blockquote>
+<ul>
+<li>从左向右取待切分汉语句的 $m$ 个字符作为匹配字段， $m$ 为机器词典中最长词条的字符数。</li>
+<li>查找机器词典并进行匹配。若匹配成功，则将这个匹配字段作为一个词切分出来。若匹配不成功，则将这个匹配字段的最后一个字去掉，剩下的字符串作为新的匹配字段，进行再次匹配，重复以上过程，直到切分出所有词为止。</li>
+</ul>
+<h3 id="逆向最大匹配法">逆向最大匹配法</h3>
+<blockquote>
+<p>Reverse Maximum Match Method，RMM法</p>
+</blockquote>
+<ul>
+<li>根据逆序词典，对逆序文档进行正向最大匹配</li>
+</ul>
+<p>正确概率大于正向最大匹配法</p>
+<h3 id="双向最大匹配法">双向最大匹配法</h3>
+<blockquote>
+<p>BI-diectction Matching Method</p>
+</blockquote>
+<p>进行两种匹配，选取词数切分最少的作为结果</p>
+<p>代码实现：</p>
+<pre><code class="language-python">#逆向最大匹配
+class RMM(object):
+    def __init__(self, dic_path):
+        self.dictionary = set()
+        self.maximum = 0
+        #读取词典
+        with open (dic_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line,.strip()
+                if not line:
+                    continue
+                self.dictionary.add(line)
+                self.maximum = len(line)
+                
+    def cut(self, text):
+        result = []
+        index = len(text)
+        while index &gt; 0:
+            word = None
+            for size in range(self.maximum, 0, -1):
+                if index - size &lt; 0:
+                    continue
+                piece = text[(index - size):index]
+                if piece in self.dictionary:
+                    word = piece
+                    result.append(word)
+                    index -= size
+                    break
+            if word is None:
+                index -= 1
+        return result[::-1]
+    def main():
+        text = &quot;&quot;
+        tokenizer = RMM(./dir/dic.utf8)
+        print(tokenizer.cut(text))
+        
+</code></pre>
+<h2 id="统计分词">统计分词</h2>
         </div>
         
         <div class="my-4">
@@ -393,8 +449,11 @@
     <li><a href="#规则分词">规则分词</a>
       <ul>
         <li><a href="#正向最大匹配法">正向最大匹配法</a></li>
+        <li><a href="#逆向最大匹配法">逆向最大匹配法</a></li>
+        <li><a href="#双向最大匹配法">双向最大匹配法</a></li>
       </ul>
     </li>
+    <li><a href="#统计分词">统计分词</a></li>
   </ul>
 </nav>
 </div>
@@ -458,9 +517,6 @@
     </style>
     <canvas class="love"></canvas>
     <script src="/js/love.min.js"></script>
-    <script type="text/javascript">
-    love.setCanvasSize();
-    </script>
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
     <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://zzzsyyy.github.io/">Zhang.Mathias</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC</a> |   Powered by <a href="https://gohugo.io" target="_blank" class="hover:text-eureka">Hugo</a> & <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" class="hover:text-eureka">Eureka</a><br/>
     <span id="span_dt_dt"><SCRIPT language=javascript>
