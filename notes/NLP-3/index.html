@@ -72,7 +72,7 @@
     },
     "headline": "NLP | 中文分词技术 | ZSYのBlog","datePublished": "2021-02-23T00:00:00+00:00",
     "dateModified": "2021-02-24T00:00:00+00:00",
-    "wordCount":  428 ,
+    "wordCount":  838 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -242,11 +242,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>428字</span>
+        <span>838字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟</span>
+        <span>2分钟</span>
     </div>
 
     
@@ -334,6 +334,30 @@ class RMM(object):
         
 </code></pre>
 <h2 id="统计分词">统计分词</h2>
+<blockquote>
+<p>用字与字相邻出现的频率来反应成词的可靠程度</p>
+<ul>
+<li>建立语言模型</li>
+<li>对句子进行单词划分，对划分结界进行概率计算，获得概率最大的分词方式。</li>
+</ul>
+</blockquote>
+<h3 id="语言模型">语言模型</h3>
+<p>计算机借助于统计语言模型的概率参数，可以估计出自然语言中每个句子出现的可能性，而不是简单的判断该句子是否符合文法。</p>
+<p>常用统计语言模型，包括了N元文法模型（N-gram Model）统计语言模型把语言（词的序列）看作一个随机事件，并赋予相应的概率来描述其属于某种语言集合的可能性。</p>
+<p><strong>给定一个词汇集合 $V$，对于一个由 V 中的词构成的序列 $S = ⟨w1, · · · , wT ⟩ ∈ V_n$，统计语言模型赋予这个序列一个概率 $P(S)$，来衡量 $S$ 符合自然语言的语法和语义规则的置信度。</strong></p>
+<blockquote>
+<p>参考：
+<a href="https://blog.csdn.net/songbinxu/article/details/80209197" target="_blank">自然语言处理NLP中的N-gram模型</a>
+
+<a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf" target="_blank">Speech and Language Processing (3rd ed. draft)</a></p>
+</blockquote>
+<h3 id="hmm模型">HMM模型</h3>
+<p>隐含马尔可夫模型（HMM）是将分词在字串中的标注任务来实现的。</p>
+<p>基本思路：每个词在构造一个特定的词语时都占据一个确定的位置（词位），</p>
+<blockquote>
+<p>参考：
+<a href="https://www.cnblogs.com/skyme/p/4651331.html" target="_blank">一文搞懂HMM（隐马尔可夫模型）</a></p>
+</blockquote>
         </div>
         
         <div class="my-4">
@@ -453,7 +477,12 @@ class RMM(object):
         <li><a href="#双向最大匹配法">双向最大匹配法</a></li>
       </ul>
     </li>
-    <li><a href="#统计分词">统计分词</a></li>
+    <li><a href="#统计分词">统计分词</a>
+      <ul>
+        <li><a href="#语言模型">语言模型</a></li>
+        <li><a href="#hmm模型">HMM模型</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
