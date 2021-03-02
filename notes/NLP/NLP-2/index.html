@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>NLP | 中文分词技术 | ZSYのBlog</title>
+<title>NLP | NLP前置技术 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
 
@@ -43,7 +43,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="中文分词技术">
+  content="NLP前置技术解析">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,8 +55,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"NLP | 中文分词技术",
-      "item":"https://zzzsy.top/notes/NLP-3/"}]
+      "name":"NLP | NLP前置技术",
+      "item":"https://zzzsy.top/notes/NLP/NLP-2/"}]
 }
 </script>
 
@@ -68,11 +68,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/NLP-3/"
+        "@id": "https://zzzsy.top/notes/NLP/NLP-2/"
     },
-    "headline": "NLP | 中文分词技术 | ZSYのBlog","datePublished": "2021-02-23T00:00:00+00:00",
-    "dateModified": "2021-02-24T00:00:00+00:00",
-    "wordCount":  838 ,
+    "headline": "NLP | NLP前置技术 | ZSYのBlog","datePublished": "2021-02-19T00:00:00+00:00",
+    "dateModified": "2021-02-22T00:00:00+00:00",
+    "wordCount":  592 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -85,21 +85,21 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e中文分词技术\u003c\/p\u003e"
+    "description": "\u003cp\u003eNLP前置技术解析\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="NLP | 中文分词技术 | ZSYのBlog" />
+</script><meta property="og:title" content="NLP | NLP前置技术 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/NLP-3/" />
+<meta property="og:url" content="https://zzzsy.top/notes/NLP/NLP-2/" />
 
 
 
 
-<meta property="og:description" content="中文分词技术" />
+<meta property="og:description" content="NLP前置技术解析" />
 
 
 
@@ -116,10 +116,10 @@
 
 
 
-<meta property="article:published_time" content="2021-02-23T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-02-19T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-02-24T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-02-22T00:00:00&#43;00:00" />
 
 
 
@@ -138,13 +138,13 @@
 
 
 
+<meta property="og:see_also" content="https://zzzsy.top/notes/NLP/NLP-3/" />
 
 
-<meta property="og:see_also" content="https://zzzsy.top/notes/NLP-2/" />
 
 
 
-<meta property="og:see_also" content="https://zzzsy.top/notes/NLP-1/" />
+<meta property="og:see_also" content="https://zzzsy.top/notes/NLP/NLP-1/" />
 
 
 
@@ -234,15 +234,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">NLP | 中文分词技术</h1>
+        <h1 class="font-bold text-3xl text-primary-text">NLP | NLP前置技术</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-23</span>
+        <span>2021-02-19</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>838字</span>
+        <span>592字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -266,97 +266,57 @@
         
 
         <div class="content">
-            <p>中文分词技术</p>
-<h1 id="中文分词技术">中文分词技术</h1>
-<p><strong>分词</strong>：识别句子中的词，并在词间加入边界标记符，分隔出各个词汇。</p>
-<p>中文分词的主要困难在于<em><strong>分词歧义</strong></em>。</p>
-<h2 id="规则分词">规则分词</h2>
+            <p>NLP前置技术解析</p>
+<h1 id="nlp前置技术解析">NLP前置技术解析</h1>
+<h2 id="安装anaconda">安装Anaconda</h2>
+<p>推荐用
+<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank">Anaconda清华软件镜像站</a>下载</p>
+<h2 id="正则表达式">正则表达式</h2>
+<p>python中用<code>re</code>模块来实现正则表达式。</p>
+<p>通过<code>re.search(regex, string)</code>这个方法，来检查<code>string</code>字符串是否匹配正则表达式<code>regex</code>。如果匹配到，则返回<code>match</code>对象，否则返回<code>None</code>。</p>
 <blockquote>
-<p>机械分词法</p>
+<p>
+<a href="https://www.runoob.com/regexp/regexp-tutorial.html" target="_blank">正则表达式教程</a></p>
 </blockquote>
-<h3 id="正向最大匹配法">正向最大匹配法</h3>
-<blockquote>
-<p>Maximum Match Method，MM法</p>
-</blockquote>
-<ul>
-<li>从左向右取待切分汉语句的 $m$ 个字符作为匹配字段， $m$ 为机器词典中最长词条的字符数。</li>
-<li>查找机器词典并进行匹配。若匹配成功，则将这个匹配字段作为一个词切分出来。若匹配不成功，则将这个匹配字段的最后一个字去掉，剩下的字符串作为新的匹配字段，进行再次匹配，重复以上过程，直到切分出所有词为止。</li>
-</ul>
-<h3 id="逆向最大匹配法">逆向最大匹配法</h3>
-<blockquote>
-<p>Reverse Maximum Match Method，RMM法</p>
-</blockquote>
-<ul>
-<li>根据逆序词典，对逆序文档进行正向最大匹配</li>
-</ul>
-<p>正确概率大于正向最大匹配法</p>
-<h3 id="双向最大匹配法">双向最大匹配法</h3>
-<blockquote>
-<p>BI-diectction Matching Method</p>
-</blockquote>
-<p>进行两种匹配，选取词数切分最少的作为结果</p>
-<p>代码实现：</p>
-<pre><code class="language-python">#逆向最大匹配
-class RMM(object):
-    def __init__(self, dic_path):
-        self.dictionary = set()
-        self.maximum = 0
-        #读取词典
-        with open (dic_path, 'r', encoding='utf-8') as f:
-            for line in f:
-                line = line,.strip()
-                if not line:
-                    continue
-                self.dictionary.add(line)
-                self.maximum = len(line)
-                
-    def cut(self, text):
-        result = []
-        index = len(text)
-        while index &gt; 0:
-            word = None
-            for size in range(self.maximum, 0, -1):
-                if index - size &lt; 0:
-                    continue
-                piece = text[(index - size):index]
-                if piece in self.dictionary:
-                    word = piece
-                    result.append(word)
-                    index -= size
-                    break
-            if word is None:
-                index -= 1
-        return result[::-1]
-    def main():
-        text = &quot;&quot;
-        tokenizer = RMM(./dir/dic.utf8)
-        print(tokenizer.cut(text))
-        
+<p>eg1：</p>
+<pre><code class="language-python">import re
+text_string = ''
+regex = ''
+p_string = text_string.split('。')
+for line in p_string:
+    if re.search(regex, line) is not None:
+        print(line)
 </code></pre>
-<h2 id="统计分词">统计分词</h2>
-<blockquote>
-<p>用字与字相邻出现的频率来反应成词的可靠程度</p>
-<ul>
-<li>建立语言模型</li>
-<li>对句子进行单词划分，对划分结界进行概率计算，获得概率最大的分词方式。</li>
-</ul>
-</blockquote>
-<h3 id="语言模型">语言模型</h3>
-<p>计算机借助于统计语言模型的概率参数，可以估计出自然语言中每个句子出现的可能性，而不是简单的判断该句子是否符合文法。</p>
-<p>常用统计语言模型，包括了N元文法模型（N-gram Model）统计语言模型把语言（词的序列）看作一个随机事件，并赋予相应的概率来描述其属于某种语言集合的可能性。</p>
-<p><strong>给定一个词汇集合 $V$，对于一个由 V 中的词构成的序列 $S = ⟨w1, · · · , wT ⟩ ∈ V_n$，统计语言模型赋予这个序列一个概率 $P(S)$，来衡量 $S$ 符合自然语言的语法和语义规则的置信度。</strong></p>
-<blockquote>
-<p>参考：
-<a href="https://blog.csdn.net/songbinxu/article/details/80209197" target="_blank">自然语言处理NLP中的N-gram模型</a>
+<h3 id="一些常见匹配">一些常见匹配</h3>
+<p><code>.</code>：匹配除了换行符（<code>\n</code>、<code>\r</code>）以外的任意字符，相当于<code>[^\n\r]</code></p>
+<p><code>\d</code>：匹配一位数字</p>
+<p><code>[ABC]</code>：匹配<code>[...]</code>中的所有字符</p>
+<p><code>[^ABC]</code>：匹配除了<code>[...]</code>中的所有字符</p>
+<p><code>[A-Z]</code>：匹配一个区间，所有大写字母<code>[abc]</code>匹配所有小写字母</p>
+<p><code>[\s\S]</code>：匹配所有，<code>\s</code>匹配所有空白符，<code>\S</code>匹配 所有非空白符（包括换行）</p>
+<p><code>\w</code>：匹配字母、数字、下划线。相当于<code>[A-Za-z0-9]</code></p>
+<p><code>$</code>：匹配结尾</p>
+<p><code>^</code>：匹配开始</p>
+<h2 id="numpy">Numpy</h2>
+<h4 id="创建数组">创建数组</h4>
+<pre><code class="language-python">import numpy as np
+vector = np.array([1,2,3,4])
+matrix = np.array([[1,2],[3,4],[5,6]])
 
-<a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf" target="_blank">Speech and Language Processing (3rd ed. draft)</a></p>
-</blockquote>
-<h3 id="hmm模型">HMM模型</h3>
-<p>隐含马尔可夫模型（HMM）是将分词在字串中的标注任务来实现的。</p>
-<p>基本思路：每个词在构造一个特定的词语时都占据一个确定的位置（词位），</p>
+</code></pre>
+<h4 id="获取numpy中数组的维度">获取Numpy中数组的维度</h4>
+<pre><code class="language-python">arr = np.arange(15)#[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+arr = arr.reshape(3,5)#3行5列
+
+print(a.shape)#(3,5)
+</code></pre>
+<h4 id="获取本地数据">获取本地数据</h4>
+<pre><code class="language-python">import numpy as np
+nfl = np.genfromtxt(&quot;D:/.../..../xxx.csv&quot;, delimiter=',')
+print(nfl)
+</code></pre>
 <blockquote>
-<p>参考：
-<a href="https://www.cnblogs.com/skyme/p/4651331.html" target="_blank">一文搞懂HMM（隐马尔可夫模型）</a></p>
+<p>注意： Numpy数组中的数据必须是相同类型，比如布尔类型(bool)、整型(int),浮点型(foat)以及字符串类型( string). Numpy可以自动判断数组内的对象类型，我们可以通过 Numpy数组提供的 dtype属性来获取类型。</p>
 </blockquote>
         </div>
         
@@ -428,13 +388,13 @@ class RMM(object):
     <div>
         
         <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/C-4/" class="block">C语言笔记-4：数组</a>
+        <a href="https://zzzsy.top/notes/NLP/NLP-3/" class="block">NLP | 中文分词技术</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/NLP-2/" class="block">NLP | NLP前置技术</a>
+        <a href="https://zzzsy.top/notes/NLP/NLP-1/" class="block">NLP | NLP基础</a>
         
     </div>
 </div>
@@ -450,13 +410,13 @@ class RMM(object):
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/NLP-3/">NLP | 中文分词技术</a>
+        <a href="https://zzzsy.top/notes/NLP/NLP-3/">NLP | 中文分词技术</a>
         <br />
         
-        <a href="https://zzzsy.top/notes/NLP-2/">NLP | NLP前置技术</a>
+        <a href="https://zzzsy.top/notes/NLP/NLP-2/">NLP | NLP前置技术</a>
         <br />
         
-        <a href="https://zzzsy.top/notes/NLP-1/">NLP | NLP基础</a>
+        <a href="https://zzzsy.top/notes/NLP/NLP-1/">NLP | NLP基础</a>
         <br />
         
         
@@ -470,17 +430,21 @@ class RMM(object):
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#规则分词">规则分词</a>
+    <li><a href="#安装anaconda">安装Anaconda</a></li>
+    <li><a href="#正则表达式">正则表达式</a>
       <ul>
-        <li><a href="#正向最大匹配法">正向最大匹配法</a></li>
-        <li><a href="#逆向最大匹配法">逆向最大匹配法</a></li>
-        <li><a href="#双向最大匹配法">双向最大匹配法</a></li>
+        <li><a href="#一些常见匹配">一些常见匹配</a></li>
       </ul>
     </li>
-    <li><a href="#统计分词">统计分词</a>
+    <li><a href="#numpy">Numpy</a>
       <ul>
-        <li><a href="#语言模型">语言模型</a></li>
-        <li><a href="#hmm模型">HMM模型</a></li>
+        <li>
+          <ul>
+            <li><a href="#创建数组">创建数组</a></li>
+            <li><a href="#获取numpy中数组的维度">获取Numpy中数组的维度</a></li>
+            <li><a href="#获取本地数据">获取本地数据</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -502,22 +466,19 @@ class RMM(object):
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
-            <a href="https://zzzsy.top/notes/NLP-2/">NLP | NLP前置技术</a>
+            <a href="https://zzzsy.top/notes/NLP/NLP-1/">NLP | NLP基础</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/NLP-1/">NLP | NLP基础</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/C-3/">C语言笔记-3：函数与递归</a>
+            <a href="https://zzzsy.top/notes/C/C-3/">C语言笔记-3：函数与递归</a>
             <br />
             
             <a href="https://zzzsy.top/notes/ML-1/">机器学习笔记-1</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/C-2/">C语言笔记-2：循环和分支语句</a>
+            <a href="https://zzzsy.top/notes/C/C-2/">C语言笔记-2：循环和分支语句</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/C-1/">C语言笔记-1：初识C语言</a>
+            <a href="https://zzzsy.top/notes/C/C-1/">C语言笔记-1：初识C语言</a>
             <br />
             
         </div>
