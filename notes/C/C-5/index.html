@@ -67,7 +67,7 @@
     },
     "headline": "C语言笔记-5：操作符详解 | ZSYのBlog","datePublished": "2021-03-05T00:00:00+00:00",
     "dateModified": "2021-03-05T00:00:00+00:00",
-    "wordCount":  244 ,
+    "wordCount":  412 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -244,7 +244,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>244字</span>
+        <span>412字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -283,6 +283,11 @@ printf(&quot;%lf&quot;, b);//默认打印6位小数
 //取模的左右操作数必须是整数
 </code></pre>
 <h2 id="移位操作符">移位操作符</h2>
+<blockquote>
+<p>作用于整数</p>
+</blockquote>
+<pre><code class="language-c">&gt;&gt;  &lt;&lt;
+</code></pre>
 <pre><code class="language-c">int main()
 {
     int a  = -1;
@@ -309,9 +314,64 @@ printf(&quot;%lf&quot;, b);//默认打印6位小数
 <p>左移操作符</p>
 <p>​	左边丢弃，右边补0</p>
 <blockquote>
-<p>警告： 对于移位运算符，不要移动负数位，这是未定义的。</p>
+<p><strong>警告： 对于移位运算符，不要移动负数位，这是未定义的</strong>。</p>
 </blockquote>
 <h2 id="位操作符">位操作符</h2>
+<pre><code class="language-c">&amp;  |   ^
+</code></pre>
+<p>按<strong>二进制位</strong></p>
+<p>同样以<strong>补码</strong>进行运算</p>
+<blockquote>
+<p>不创建临时变量，交换两个变量的值</p>
+<blockquote>
+<p>溢出</p>
+</blockquote>
+<pre><code class="language-c">int a = a + b;
+int b = a - b;
+int a = a - b;
+</code></pre>
+<blockquote>
+<p>不溢出</p>
+</blockquote>
+<pre><code class="language-c">int a = a ^ b;
+int b = a ^ b;
+int a = a ^ b;
+</code></pre>
+</blockquote>
+<p>计算一个数字补码中1的个数</p>
+<pre><code class="language-c">//循环 /2 判断
+</code></pre>
+<pre><code class="language-c">//num &amp; 1; - 得到num的最低位
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    int num = ;
+    int count = 0;
+    for (int i = 0;i&lt;32;i++)
+    {
+        if ((num&gt;&gt;1)&amp;1 == 1)
+            count+=;
+    }
+    printf(&quot;%d&quot;,count);
+    return 0;
+}
+</code></pre>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int num = ;
+    int count = 0;
+    while (num)
+    {
+        count++;
+        num = num &amp; (num-1);
+    }
+    printf(&quot;%d&quot;,count);
+    return 0;
+}
+</code></pre>
         </div>
         
         <div class="my-4">
