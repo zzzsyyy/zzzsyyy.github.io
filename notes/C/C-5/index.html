@@ -65,9 +65,9 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/C/C-5/"
     },
-    "headline": "C语言笔记-5：操作符详解 | ZSYのBlog","datePublished": "2021-03-05T00:00:00+00:00",
-    "dateModified": "2021-03-05T00:00:00+00:00",
-    "wordCount":  1131 ,
+    "headline": "C语言笔记-5：操作符详解 | ZSYのBlog","datePublished": "2021-03-13T00:00:00+00:00",
+    "dateModified": "2021-03-13T00:00:00+00:00",
+    "wordCount":  1705 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -111,10 +111,10 @@
 
 
 
-<meta property="article:published_time" content="2021-03-05T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-03-13T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-03-05T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-13T00:00:00&#43;00:00" />
 
 
 
@@ -240,15 +240,15 @@
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-03-05</span>
+        <span>2021-03-13</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1131字</span>
+        <span>1705字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>3分钟</span>
+        <span>4分钟</span>
     </div>
 
     
@@ -415,7 +415,7 @@ sizeof     //操作数的类型长度（以字节为单位）
 *          //间接访问操作符（解引用操作符）
 (类型)      //强制类型转换
 </code></pre>
-<p>数组的类型（去掉数组名）</p>
+<p>数组的类型（<strong>去掉数组名</strong>）</p>
 <p><code>printf(&quot;%d&quot;,sizeof(int [10]))</code></p>
 <p><code>sizeof()</code> 后加变量名可以省略括号</p>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
@@ -491,21 +491,135 @@ int main()
 <h2 id="条件操作符">条件操作符</h2>
 <p><code>exp1 ? exp2 : exp3</code></p>
 <h2 id="逗号表达式">逗号表达式</h2>
-<p>就是用逗号隔开的多个表达式，从左向右依次执行，整个表达式的结果是最后一个表达式的结果。</p>
+<p>就是用逗号隔开的多个表达式，<strong>从左向右依次执行</strong>，整个表达式的结果是<strong>最后一个表达式</strong>的结果。</p>
 <pre><code class="language-c">int a = 1;
 int b = 1;
-int c = (a&gt;b, a=b+10, b=a+1);
+int c = (a&gt;b, a=b+10, a, b=a+1);
 //c=?
+//c = 13
 </code></pre>
 <pre><code class="language-c">if (a=b+1, c=a/2, d&gt;0);
+//真正判断的是d&gt;0
 </code></pre>
-<pre><code class="language-c">a = get_val();
+<pre><code class="language-c">//bofore
+a = get_val();
 count_val(a);
 while (a&gt;0)
 {
-    
+    //{业务处理}
+    a = get_val();
+    count_val(a);
+}
+
+//用逗号表达式改写
+while (a = get_val, count_val(a), a&gt;0)
+{
+    //{业务处理}
 }
 </code></pre>
+<h2 id="下标引用函数调用和结构成员">下标引用、函数调用和结构成员</h2>
+<ol>
+<li>
+<p><code>[]</code> ,下标引用</p>
+</li>
+<li>
+<p><code>()</code> ,操作数是函数名，以及参数</p>
+</li>
+<li>
+<p>访问一个结构的成员</p>
+<blockquote>
+<p><code>.</code> 结构体.成员名</p>
+<p><code>-&gt;</code> 结构体指针-&gt;成员名</p>
+</blockquote>
+<pre><code class="language-c">//创建了一个结构体类型 - struct Stu
+struct Stu
+{
+    //成员变量
+    char name[20];
+    int age;
+    char id[20];
+}
+   
+int main()
+{
+    int a = 10;
+    //使用struct Stu这个类型创建了一个学生对象s1，并初始化
+    struct Stu s1={&quot;张三&quot;, 20, &quot;20241011&quot;};
+    struct Stu* ps = &amp;s1;
+    printf(&quot;%s\n&quot;,s1.name);
+    struct Stu* ps = &amp;s1;
+    printf(&quot;%s\n&quot;,(*ps).name);
+    printf(&quot;%s\n&quot;,ps-&gt;name);//指针指向了对象
+    return 0;
+}
+</code></pre>
+</li>
+</ol>
+<h2 id="表达式求值">表达式求值</h2>
+<p>表达式求值的顺序一部分是由操作符的<strong>优先级和结合性</strong>所决定的。</p>
+<p>同样，在这个过程中可能会有<strong>类型的转换</strong>。</p>
+<h3 id="隐式类型转换">隐式类型转换</h3>
+<h4 id="整型提升"><em><strong>整型提升</strong></em></h4>
+<p>为了获取整型类型的精度，表达式中的<strong>字符</strong>和<strong>短整型</strong>在使用之前被替换为普通整型，这种转换称为<strong>整型提升</strong>。</p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    char a = 3;
+    //00000000000000000000000000000011
+    //00000011 - a
+    char b = 127;
+    //00000000000000000000000001111111
+    //01111111 - b
+    char c = a+b;
+    //a和b相加
+    //00000000000000000000000000000011
+    //00000000000000000000000001111111
+    //00000000000000000000000010000010
+    printf(&quot;%d\n&quot;,c);//-126
+    //10000010 - c
+    //11111111111111111111111110000010 - 补码
+    //00000000000000000000000001111110 - 原码
+    return 0;
+}
+</code></pre>
+<p><strong>如何进行整型提升</strong></p>
+<blockquote>
+<p>按照变量的数据类型的符号位来进行提升</p>
+<p>即 <strong>高位补充符号位</strong></p>
+<p>无符号数直接补<strong>0</strong></p>
+</blockquote>
+<p><strong>实例1</strong></p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    char a = 0xb6;
+    short b = 0xb600;
+    int c = 0xb6000000;
+    a==0xb6?printf(&quot;a&quot;):1;
+    b==0xb600?printf(&quot;b&quot;):1;
+    c==0xb6000000?printf(&quot;c&quot;):1;
+    return 0;
+}
+//只会打印c
+//报出警告 warning: comparison is always false due to limited range of data type
+</code></pre>
+<p><strong>实例2</strong></p>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    char c =1;
+    printf(&quot;%u\n&quot;,sizeof(c));//1
+    printf(&quot;%u\n&quot;,sizeof(+c));//4
+    printf(&quot;%u\n&quot;,sizeof(!c));//1
+    return 0;
+}
+</code></pre>
+<p>c只要参与了表达式运算，就会发生整型提升</p>
+<h4 id="算术转换"><em><strong>算术转换</strong></em></h4>
+<p>要合理转换</p>
         </div>
         
         <div class="my-4">
@@ -575,14 +689,11 @@ while (a&gt;0)
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/Analyse-1/" class="block">Analyse 1| Nombres réels</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/C/C-4/" class="block">C语言笔记-4：数组</a>
+        <a href="https://zzzsy.top/notes/Analyse-1/" class="block">Analyse 1| Nombres réels</a>
         
     </div>
 </div>
@@ -641,6 +752,17 @@ while (a&gt;0)
     </li>
     <li><a href="#条件操作符">条件操作符</a></li>
     <li><a href="#逗号表达式">逗号表达式</a></li>
+    <li><a href="#下标引用函数调用和结构成员">下标引用、函数调用和结构成员</a></li>
+    <li><a href="#表达式求值">表达式求值</a>
+      <ul>
+        <li><a href="#隐式类型转换">隐式类型转换</a>
+          <ul>
+            <li><a href="#整型提升"><em><strong>整型提升</strong></em></a></li>
+            <li><a href="#算术转换"><em><strong>算术转换</strong></em></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
