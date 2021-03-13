@@ -67,7 +67,7 @@
     },
     "headline": "C语言笔记-5：操作符详解 | ZSYのBlog","datePublished": "2021-03-05T00:00:00+00:00",
     "dateModified": "2021-03-05T00:00:00+00:00",
-    "wordCount":  777 ,
+    "wordCount":  850 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -244,7 +244,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>777字</span>
+        <span>850字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -445,7 +445,15 @@ int main()
 //11111111111111111111111111111110 - 反码
 //10000000000000000000000000000001 - 原码
 </code></pre>
-<pre><code class="language-c">
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int a = 11;
+    int b = a | (1&lt;&lt;2);//将第三位的0变成1
+    int c = b &amp; ~((1&lt;&lt;2));//将第三位的1还原成0
+    return 0;
+}
 </code></pre>
         </div>
         
