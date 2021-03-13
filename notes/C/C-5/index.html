@@ -67,7 +67,7 @@
     },
     "headline": "C语言笔记-5：操作符详解 | ZSYのBlog","datePublished": "2021-03-05T00:00:00+00:00",
     "dateModified": "2021-03-05T00:00:00+00:00",
-    "wordCount":  850 ,
+    "wordCount":  1131 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -244,11 +244,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>850字</span>
+        <span>1131字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -451,8 +451,59 @@ int main()
 {
     int a = 11;
     int b = a | (1&lt;&lt;2);//将第三位的0变成1
+    //00000000000000000000000000001011
+    //00000000000000000000000000000100
     int c = b &amp; ~((1&lt;&lt;2));//将第三位的1还原成0
+    //00000000000000000000000000001111
+    //11111111111111111111111111111011
     return 0;
+}
+</code></pre>
+<p><code>++</code>与<code>--</code>的前置后置表示<strong>先加减</strong>还是<strong>先使用</strong></p>
+<h2 id="关系操作符">关系操作符</h2>
+<blockquote>
+<p>大于小于等于不等于</p>
+</blockquote>
+<h2 id="逻辑操作符">逻辑操作符</h2>
+<pre><code class="language-c">&amp;&amp;               //逻辑与
+||               //逻辑或
+</code></pre>
+<p>要与<strong>按位与/或</strong>区分开，相当于 et 和 ou</p>
+<p><code>&amp;&amp;</code>的左边如果是<strong>假</strong>，则<strong>右边不会再计算</strong></p>
+<p><code>||</code>的左边如果是<strong>真</strong>，则<strong>右边不会再计算</strong></p>
+<h3 id="ex">ex</h3>
+<pre><code class="language-c">#include&lt;stdio.h&gt;
+
+int main()
+{
+    int i = 0, a = 0, b = 2, c = 3, d = 4;
+    i = a++ &amp;&amp; ++b &amp;&amp; d++;
+    printf(&quot;%d %d %d %d\n&quot;,a,b,c,d);//1 2 3 4
+    i = a-- &amp;&amp; ++b &amp;&amp; d++;
+    printf(&quot;%d %d %d %d\n&quot;,a,b,c,d);//0 3 3 4
+    i = a++ || ++b || d++;
+    printf(&quot;%d %d %d %d\n&quot;,a,b,c,d);//1 4 3 5
+    i = a++ || ++b || d++;
+    printf(&quot;%d %d %d %d\n&quot;,a,b,c,d);//2 4 3 5
+    return 0;
+}
+</code></pre>
+<h2 id="条件操作符">条件操作符</h2>
+<p><code>exp1 ? exp2 : exp3</code></p>
+<h2 id="逗号表达式">逗号表达式</h2>
+<p>就是用逗号隔开的多个表达式，从左向右依次执行，整个表达式的结果是最后一个表达式的结果。</p>
+<pre><code class="language-c">int a = 1;
+int b = 1;
+int c = (a&gt;b, a=b+10, b=a+1);
+//c=?
+</code></pre>
+<pre><code class="language-c">if (a=b+1, c=a/2, d&gt;0);
+</code></pre>
+<pre><code class="language-c">a = get_val();
+count_val(a);
+while (a&gt;0)
+{
+    
 }
 </code></pre>
         </div>
@@ -582,6 +633,14 @@ int main()
       </ul>
     </li>
     <li><a href="#单目操作符">单目操作符</a></li>
+    <li><a href="#关系操作符">关系操作符</a></li>
+    <li><a href="#逻辑操作符">逻辑操作符</a>
+      <ul>
+        <li><a href="#ex">ex</a></li>
+      </ul>
+    </li>
+    <li><a href="#条件操作符">条件操作符</a></li>
+    <li><a href="#逗号表达式">逗号表达式</a></li>
   </ul>
 </nav>
 </div>
