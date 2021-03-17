@@ -67,7 +67,7 @@
     },
     "headline": "C语言笔记-5：操作符详解 | ZSYのBlog","datePublished": "2021-03-13T00:00:00+00:00",
     "dateModified": "2021-03-13T00:00:00+00:00",
-    "wordCount":  1705 ,
+    "wordCount":  1961 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -244,7 +244,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1705字</span>
+        <span>1961字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -559,7 +559,7 @@ int main()
 <p>表达式求值的顺序一部分是由操作符的<strong>优先级和结合性</strong>所决定的。</p>
 <p>同样，在这个过程中可能会有<strong>类型的转换</strong>。</p>
 <h3 id="隐式类型转换">隐式类型转换</h3>
-<h4 id="整型提升"><em><strong>整型提升</strong></em></h4>
+<h4 id="整型提升"><strong>整型提升</strong></h4>
 <p>为了获取整型类型的精度，表达式中的<strong>字符</strong>和<strong>短整型</strong>在使用之前被替换为普通整型，这种转换称为<strong>整型提升</strong>。</p>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
 
@@ -618,8 +618,69 @@ int main()
 }
 </code></pre>
 <p>c只要参与了表达式运算，就会发生整型提升</p>
-<h4 id="算术转换"><em><strong>算术转换</strong></em></h4>
-<p>要合理转换</p>
+<h4 id="算术转换"><strong>算术转换</strong></h4>
+<p>两个不同类型的数据进行计算时，要合理转换</p>
+<h2 id="操作符的属性">操作符的属性</h2>
+<p>复杂表达式的求值一般有三个影响因素</p>
+<ol>
+<li>
+<p>操作符的优先级</p>
+</li>
+<li>
+<p>操作符的结合性</p>
+<p>从左到右还是从右到左</p>
+</li>
+<li>
+<p>是否控制求值顺序</p>
+<p>有<code>&amp;&amp;</code>, <code>||</code>, <code>?:</code>等</p>
+</li>
+</ol>
+<p><strong>一些问题表达式</strong></p>
+<ol>
+<li><code>a*b+c*d+e*f</code></li>
+</ol>
+<blockquote>
+<p>不能保证第三个<code>*</code>，一定比第一个<code>+</code>早执行</p>
+</blockquote>
+<ol start="2">
+<li><code>c+ --c</code>，</li>
+</ol>
+<blockquote>
+<p><code>–</code> 的优先级高于<code>+</code></p>
+<p>我们无法得知+操作符的左操作数的获取是在右操作数之前还是之后，有歧义</p>
+</blockquote>
+<ol start="3">
+<li>
+<p>非法表达式-1</p>
+<pre><code class="language-c">int main()
+{
+    int i = 10;
+    i = i-- - --i * ( i = -3 )*i++ + ++i; 
+    printf(&quot;%d\n&quot;,i);
+    return 0;
+}
+</code></pre>
+<p>这个表达式在不同的编译器中有不同的输出结果</p>
+</li>
+<li>
+<p>非法表达式-2</p>
+<pre><code class="language-c">int fun()
+{
+    static int count = 1;
+    return ++count;
+}
+   
+int main()
+{
+    int answer;
+    answer = fun() - fun() * fun();
+    printf(&quot;%d\n&quot;, answer);
+    return 0;
+}
+</code></pre>
+<p>不能确定调用的时间</p>
+</li>
+</ol>
         </div>
         
         <div class="my-4">
@@ -757,12 +818,13 @@ int main()
       <ul>
         <li><a href="#隐式类型转换">隐式类型转换</a>
           <ul>
-            <li><a href="#整型提升"><em><strong>整型提升</strong></em></a></li>
-            <li><a href="#算术转换"><em><strong>算术转换</strong></em></a></li>
+            <li><a href="#整型提升"><strong>整型提升</strong></a></li>
+            <li><a href="#算术转换"><strong>算术转换</strong></a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#操作符的属性">操作符的属性</a></li>
   </ul>
 </nav>
 </div>
