@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Writeup | ZSYのBlog</title>
+<title>Calculus 1| 导论 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -46,50 +46,55 @@
   "itemListElement": [{
       "@type": "ListItem",
       "position": 1 ,
-      "name":"Tags",
-      "item":"https://zzzsy.top/tags/"},{
+      "name":"笔记",
+      "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Writeup",
-      "item":"https://zzzsy.top/tags/Writeup/"}]
+      "name":"Calculus 1| 导论",
+      "item":"https://zzzsy.top/notes/Analyse/Calculus-1/"}]
 }
 </script>
 
 
 
-
 <script type="application/ld+json">
 {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "itemListElement":[{
-            "@type":"ListItem",
-            "position":  1 ,
-            "name": "一些Misc的Writeup - 1",
-            "description": "\u003cp\u003eMisc：Forensics\u003c/p\u003e",
-            "url": "https://zzzsy.top/notes/CTF/Forensics/"
-        },{
-            "@type":"ListItem",
-            "position":  2 ,
-            "name": "一些Misc的Writeup - 2",
-            "description": "\u003cp\u003eMisc：Cryptography\u003c/p\u003e",
-            "url": "https://zzzsy.top/notes/CTF/Cryptography/"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsy.top/notes/Analyse/Calculus-1/"
+    },
+    "headline": "Calculus 1| 导论 | ZSYのBlog","datePublished": "2021-03-10T00:00:00+00:00",
+    "dateModified": "2021-03-16T00:00:00+00:00",
+    "wordCount":  212 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsy.top/images/icon.png"
         }
-    ]
+        },
+    "description": ""
 }
-</script><meta property="og:title" content="Writeup | ZSYのBlog" />
-<meta property="og:type" content="website" />
+</script><meta property="og:title" content="Calculus 1| 导论 | ZSYのBlog" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/tags/Writeup/" />
+<meta property="og:url" content="https://zzzsy.top/notes/Analyse/Calculus-1/" />
 
 
 
 
-
+<meta property="og:description" content="" />
 
 
 
@@ -106,14 +111,31 @@
 
 
 
-<meta property="og:updated_time" content="2020-12-27T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-03-10T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-03-16T00:00:00&#43;00:00" />
 
 
 
-<meta property="article:section" content="tags" />
+<meta property="article:section" content="notes" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://zzzsy.top/tags/Writeup/index.xml" title="ZSYのBlog" />
+<meta property="article:tag" content="Calculus" />
+
+<meta property="article:tag" content="Analyse" />
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -132,7 +154,7 @@
     <div id="target"
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">笔记</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
             <a href="/essay/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">随笔</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
@@ -193,37 +215,24 @@
   <main class="flex-grow pt-16">
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
-<article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Writeup</h1>
-    
-</article>
-<div class="bg-secondary-bg rounded px-6">
-    <div class="overflow-hidden divide-y">
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://zzzsy.top/notes/CTF/Forensics/" class="font-bold text-xl hover:text-eureka">一些Misc的Writeup - 1</a>
-</div>
-<div class="content">
-  Misc：Forensics
 
-</div>
 
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Calculus 1| 导论</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2020-12-27</span>
+        <span>2021-03-10</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1534字</span>
+        <span>212字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>4分钟</span>
+        <span>1分钟</span>
     </div>
 
     
@@ -232,71 +241,165 @@
     <div class="mr-6 my-2">
         <i class="fas fa-th-list mr-1"></i>
         
-        <a href="https://zzzsy.top/series/CTF/" class="hover:text-eureka">CTF</a>
+        <a href="https://zzzsy.top/series/Calculus/" class="hover:text-eureka">Calculus</a>
         
     </div>
     
 
 </div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://zzzsy.top/notes/CTF/Cryptography/" class="font-bold text-xl hover:text-eureka">一些Misc的Writeup - 2</a>
-</div>
-<div class="content">
-  Misc：Cryptography
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2020-12-27</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-book-open mr-1"></i>
-        <span>1958字</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>4分钟</span>
-    </div>
-
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
         
-        <a href="https://zzzsy.top/series/CTF/" class="hover:text-eureka">CTF</a>
+        
+        
+
+        <div class="content">
+            <p>Calculus : differentiation and integration (and others)</p>
+<p>人们在计数中发现的$\Bbb{N}, - ,\text{the set of natural numbers}$</p>
+<p>比例关系中发现的$\Bbb{Q},-,\text{the set of rational numbers}$</p>
+<p>比例中值引出的$\sqrt{2}$，使人们发现无理数</p>
+<p>$\Bbb{R},-,\text{the set of real numbers}$</p>
+<blockquote>
+<p>$\overline{\Bbb{Q}},-,\text{代数数： 是整系数多项式的根的数}$</p>
+<p>$\Bbb{C}\backslash\overline{\Bbb{Q}},-,\text{超越数： 比如}\pi\text{和e}$</p>
+</blockquote>
+<h2 id="抛物线面积的计算">抛物线面积的计算</h2>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://zzzsy.top/tags/Calculus/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Calculus</a>
+    
+    <a href="https://zzzsy.top/tags/Analyse/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Analyse</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsy.top/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsy.top/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsy.top/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2"></span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/z_zzsy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://pan.zzzsy.top" class="mr-1">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsy.top/notes/C/C-5/" class="block">C语言笔记-5：操作符详解</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsy.top/notes/Analyse/Analyse-1/" class="block">Analyse 1| Nombres réels</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsy.top/notes/Analyse/Calculus-1/">Calculus 1| 导论</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#抛物线面积的计算">抛物线面积的计算</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
         
     </div>
     
 
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsy.top/notes/Analyse/Analyse-1/">Analyse 1| Nombres réels</a>
+            <br />
+            
+        </div>
+    </div>
+    
 </div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-</div>
-
-
-</div>
-
-
-
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
 
       </div>
     </div>

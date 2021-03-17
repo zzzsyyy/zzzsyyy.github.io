@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>一些Misc的Writeup - 1 | ZSYのBlog</title>
+<title>一些Misc的Writeup - 2 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="Misc：Forensics">
+  content="Misc：Cryptography">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,8 +50,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"一些Misc的Writeup - 1",
-      "item":"https://zzzsy.top/notes/Forensics/"}]
+      "name":"一些Misc的Writeup - 2",
+      "item":"https://zzzsy.top/notes/CTF/Cryptography/"}]
 }
 </script>
 
@@ -63,11 +63,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/Forensics/"
+        "@id": "https://zzzsy.top/notes/CTF/Cryptography/"
     },
-    "headline": "一些Misc的Writeup - 1 | ZSYのBlog","datePublished": "2020-12-27T00:00:00+00:00",
+    "headline": "一些Misc的Writeup - 2 | ZSYのBlog","datePublished": "2020-12-27T00:00:00+00:00",
     "dateModified": "2021-01-27T00:00:00+00:00",
-    "wordCount":  1534 ,
+    "wordCount":  1958 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -80,21 +80,21 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "\u003cp\u003eMisc：Forensics\u003c\/p\u003e"
+    "description": "\u003cp\u003eMisc：Cryptography\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="一些Misc的Writeup - 1 | ZSYのBlog" />
+</script><meta property="og:title" content="一些Misc的Writeup - 2 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/Forensics/" />
+<meta property="og:url" content="https://zzzsy.top/notes/CTF/Cryptography/" />
 
 
 
 
-<meta property="og:description" content="Misc：Forensics" />
+<meta property="og:description" content="Misc：Cryptography" />
 
 
 
@@ -125,7 +125,7 @@
 
 <meta property="article:tag" content="Writeup" />
 
-<meta property="article:tag" content="Forensics" />
+<meta property="article:tag" content="Cryptography" />
 
 
 
@@ -135,9 +135,9 @@
 
 
 
+<meta property="og:see_also" content="https://zzzsy.top/notes/CTF/Forensics/" />
 
 
-<meta property="og:see_also" content="https://zzzsy.top/notes/Cryptography/" />
 
 
 
@@ -226,7 +226,7 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">一些Misc的Writeup - 1</h1>
+        <h1 class="font-bold text-3xl text-primary-text">一些Misc的Writeup - 2</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
@@ -234,7 +234,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1534字</span>
+        <span>1958字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -258,67 +258,195 @@
         
 
         <div class="content">
-            <p>Misc：Forensics</p>
-<h1 id="一些misc的writeup---1">一些Misc的Writeup - 1</h1>
-<h2 id="1-git-is-good">1. Git Is Good</h2>
+            <p>Misc：Cryptography</p>
+<h1 id="一些misc的writeup---2">一些Misc的Writeup - 2</h1>
+<h2 id="1-character-encoding">1. Character Encoding</h2>
 <h3 id="題目描述">題目描述</h3>
-<p>The flag used to be there. But then I redacted it. Good Luck.</p>
-<p>
-<a href="https://wwx.lanzoux.com/iKE9zjx745i" target="_blank">https://wwx.lanzoux.com/iKE9zjx745</a></p>
+<p>In the computing industry, standards are established to facilitate information interchanges among American coders. Unfortunately, I&rsquo;ve made communication a little bit more difficult. Can you figure this one out? 41 42 43 54 46 7B 34 35 43 31 31 5F 31 35 5F 55 35 33 46 55 4C 7D</p>
 <h3 id="題目思路">題目思路</h3>
-<p>題中說文件被修改，而我們拿到的zip解壓后是一個.git文件夾和一個flag.txt。可以知道，我們要通過git的記録來查看歷史版本。</p>
-<h3 id="題目解答">題目解答</h3>
-<p>解壓，打開git bash ，會用到以下命令：</p>
-<p>可以显示该文件每次提交的<code>diff</code>可使用<code>git log -p filename</code></p>
-<p>根據<code>commit-id</code>查看某個提交<code>git show commit-id</code></p>
-<p>其中<code>commit-id</code>可以從<code>logs</code>文件夾中找到</p>
-<h3 id="題目答案">題目答案</h3>
-<p><font color=white size=3>flag{protect_your_git}</font></p>
-<h2 id="2-forensics-101">2. Forensics 101</h2>
-<h3 id="題目描述-1">題目描述</h3>
-<p>Think the flag is somewhere in there. Would you help me find it?</p>
-<p>
-<a href="https://wwx.lanzoux.com/iP1SXjx7mde" target="_blank">https://wwx.lanzoux.com/iP1SXjx7mde</a></p>
-<h3 id="題目思路-1">題目思路</h3>
-<p>拿到文件是一張圖片，首先hex分析，查看16進制。搜索flag  ctf  等字樣。</p>
-<p>hex工具
-<a href="https://wwx.lanzoux.com/i43T6jyp9tg" target="_blank">Winhex</a></p>
+<p>我們觀察編碼，很容易發現它的特徵：UTF-8.有數字和字母，而且已經兩兩斷開，字母是大寫。</p>
 <h3 id="題目解決">題目解決</h3>
-<p>noteoad++打開，轉到hex模式，搜索flag，出現。</p>
-<h3 id="題目答案-1">題目答案</h3>
-<p><font color=white size=3>flag{wow!_data_is_cool}</font></p>
-<h2 id="3tux">3.Tux!</h2>
-<h3 id="題目描述-2">題目描述</h3>
-<p>The flag is hidden inside the Penguin! Solve this challenge before solving my 100 point Scope challenge which uses similar techniques as this one.</p>
-<p>
-<a href="https://wwx.lanzoux.com/izuGWjxe9xi" target="_blank">https://wwx.lanzoux.com/izuGWjxe9xi</a></p>
-<h3 id="題目思路-2">題目思路</h3>
-<p>拿到圖片，首先查看屬性，看看有無有用的信息。然後查看hex觀察有效字樣，可以搜索flag等。用這個工具
-<a href="https://wwx.lanzoux.com/iZMGIjyp8lc" target="_blank">foremost</a>可以分離圖種，進行查看。還可以查看圖像的不同通道。再就是LSB隱寫。</p>
+<p>我們需要將空格換成百分號%，這裏可以用word的查找替換。</p>
+<p>最後放入
+<a href="https://tool.chinaz.com/tools/utf-8.aspx" target="_blank">UTF-8解碼工具</a>中</p>
+<h3 id="題目答案">題目答案</h3>
+<p><font color=white size=3>ABCTF{45C11_15_U53FUL}</font></p>
+<h2 id="2-hextroadinary">2. Hextroadinary</h2>
+<h3 id="題目描述-1">題目描述</h3>
+<p>Meet ROXy, a coder obsessed with being exclusively the worlds best hacker. She specializes in short cryptic hard to decipher secret codes. The below hex values for example, she did something with them to generate a secret code, can you figure out what? Your answer should start with 0x.</p>
+<p>0xc4115 0x4cf8</p>
+<h3 id="題目思路-1">題目思路</h3>
+<p>題中給出了兩個16進制數，讓我們輸出的也是十六進制數（Your answer should start with 0x.）經過觀察發現題目中的名字ROXy別具深意，ROX 倒過來是 xor 異或。所以我們想到了將其轉化為二進制求兩個數的異或，再轉換回十六進制。</p>
+<p>要注意的是，輸出的格式是 CTFlearn{&hellip;}</p>
 <h3 id="題目解決-1">題目解決</h3>
-<p>拿到的是一個jpg文件，是Linux的小企鵝。首先查看屬性，并沒有有效信息。hex打開，觀察後發現結尾處有PK字樣，可能是圖種，用foremost工具分離。得到一張圖和一個zip文件。打開zip文件，裏面是flag但是加密 。查看hex，發現大量的無效0000字段，因此採用Winrar的修復功能，得到1k的文件。因為裏面就一個文件，基本排除明文攻擊的可能。懷疑是僞加密，用hex打開，搜索 504B0102 ,將其後的0900/0100改為0000，打開失敗。嘗試暴力枚舉，1~6位沒有成功。於是回頭查看分離出來的jpg文件，觀察hex，發現一串很像base64的字節，解密后得到解壓密碼。於是成功得到flag。</p>
-<h3 id="題目答案-2">題目答案</h3>
-<p><font color=white size=3>CTFlearn{Linux_Is_Awesome}</font></p>
-<h2 id="4-2019ctf---otaku">4. 2019CTF&mdash;otaku</h2>
-<h3 id="題目描述-3">題目描述</h3>
 <p>
-<a href="https://wwx.lanzoux.com/iBwcUjynhib" target="_blank">https://wwx.lanzoux.com/iBwcUjynhib</a></p>
-<p>One day,you and your otaku friend went to the comic expo together and he had a car accident right beside you.Before he died,he gave you a USB hard disk which contained this zip.Please find out his last wish.</p>
-<p>Hint：The txt is GBK encoding.</p>
-<h3 id="題目思路-3">題目思路</h3>
-<p>文件是一個zip，打開裏面是一個Anime_Intro.doc和另一個flag.zip。而flag.zip是加密的，想來是用僞加密或者明文攻擊或者其他的思路吧。</p>
+<a href="https://tool.lu/hexconvert/" target="_blank">進制轉換</a></p>
+<p>4cf8&ndash;&gt;100110011111000</p>
+<p>c4115&ndash;&gt;11000100000100010101</p>
+<p>求異或</p>
+<h3 id="題目答案-1">題目答案</h3>
+<p><font color=white size=3>CTFlearn{c0ded}</font></p>
+<h2 id="3-base-2-2-the-6">3. Base 2 2 the 6</h2>
+<h3 id="題目描述-2">題目描述</h3>
+<p>There are so many different ways of encoding and decoding information nowadays&hellip; One of them will work! Q1RGe0ZsYWdneVdhZ2d5UmFnZ3l9</p>
+<h3 id="題目思路-2">題目思路</h3>
+<p>觀察題目，發現Base  6  2  2  ，嚴重懷疑是base64編碼。而且給出的字符串也具有base64的特徵，有大小寫，字母和數字。</p>
 <h3 id="題目解決-2">題目解決</h3>
-<p>直接解壓文件會顯示錯誤，於是採用Winrar修復並解壓出了flag.zip&amp;Anime_Intro.doc。flag.zip是加密的，先不管，打開doc，發現有空白的地方，選中并改變字體顔色，發現是last words的內容。打開zip文件，發現有last words.txt，又有題中的提示GBK編碼，於是就應該是構造txt進行明文攻擊。</p>
-<p>但是根據查看zip中txt的文件大小，發現文本內容應該較多，而且GBK的暗示也說明會有中文字符。我們需要繼續在doc中尋找明文。由於office就是zip文件，於是乾脆改後綴名打開，在document.xml文件中查找，發現了另一段被隱藏的文字。重新打開doc，直接全選刷一下格式，發現明文出現了。編碼選用GBK創建txt，作為明文攻擊文件。</p>
-<p>打開zip時可以在註釋裏看到創建壓縮文件的軟件及版本、壓縮方法、平臺。然後對明文txt進行相同的壓縮。壓縮後對照一下CRC32的值，一樣就說明對了。</p>
-<p>然後就開始明文攻擊，用這個軟件
-<a href="https://wwx.lanzoux.com/i67BZjyot2d" target="_blank">ARCHPR</a>進行明文攻擊，成功得到密碼。</p>
-<p>解壓出來的是txt和一個flag.png。對於圖片，我們先查看屬性，hex，圖種分離一遍過，并沒有發現有效信息。於是猜想有可能是LSB隱寫。</p>
-<p>採用這個工具
-<a href="https://wwx.lanzoux.com/iYtqujyp02f" target="_blank">Stegsolve</a>進項通道分離等操作，各種通道未發現有效信息。選擇Analysis&ndash;&gt;Data Extract，選LSB，勾選GRB的0，點Preview，發現flag信息。</p>
+<p>base64的編碼一定會被4整除，不能的後面加等號=。</p>
+<p>
+<a href="https://tool.oschina.net/encrypt?type=3" target="_blank">在綫base64解碼</a></p>
+<h3 id="題目答案-2">題目答案</h3>
+<p><font color=white size=3>CTF{FlaggyWaggyRaggy}</font></p>
+<h2 id="4-morse-code">4. Morse Code</h2>
+<h3 id="題目描述-3">題目描述</h3>
+<p>..-. .-.. .- &ndash;. &hellip; .- &ndash; ..- . .-.. &ndash; &mdash; .-. &hellip; . .. &hellip; -.-. &mdash; &mdash; .-.. -&hellip; -.&ndash; - &hellip;. . .&ndash; .- -.&ndash; .. .-.. .. -.- . -.-. &hellip;. . . &hellip;</p>
+<h3 id="題目思路-3">題目思路</h3>
+<p>由題目可知，這就是簡單的莫斯密碼。</p>
+<h3 id="題目解決-3">題目解決</h3>
+<p>
+<a href="https://www.jb51.net/tools/morse.htm" target="_blank">莫斯密碼解密</a></p>
 <h3 id="題目答案-3">題目答案</h3>
-<p><font color=white size=3>ctf{vI0l3t_Ev3rg@RdeN}</font></p>
-<h2 id="5">5.</h2>
+<p><font color=white size=3>FLAGSAMUELMORSEISCOOLBYTHEWAYILIKECHEES</font></p>
+<h2 id="5-vigenere-cipher">5. Vigenere Cipher</h2>
+<h3 id="題目描述-4">題目描述</h3>
+<p>The vignere cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers based on the letters of a keyword.<br /></p>
+<p>I’m not sure what this means, but it was left lying around: blorpy</p>
+<p>gwox{RgqssihYspOntqpxs}</p>
+<h3 id="題目思路-4">題目思路</h3>
+<p>很顯然，這是古典密碼中的維吉尼亞密碼。用python解決。</p>
+<h3 id="題目解決-4">題目解決</h3>
+<p>用python編寫程序：源碼如下</p>
+<pre><code class="language-python">####Vigenere密码###
+ 
+letter_list='ABCDEFGHIJKLMNOPQRSTUVWXYZ'  #字母表
+ 
+#根据输入的key生成key列表
+def Get_KeyList(key):
+  key_list=[]
+  for ch in key:
+    key_list.append(ord(ch.upper())-65)
+  return key_list
+  
+#加密函数
+def Encrypt(plaintext,key_list):
+  ciphertext=&quot;&quot;
+  i=0
+  for ch in plaintext:  #遍历明文
+    if 0==i%len(key_list):
+      i=0
+    if ch.isalpha():  #明文是否为字母,如果是,则判断大小写,分别进行加密
+      if ch.isupper():  
+        ciphertext+=letter_list[(ord(ch)-65+key_list[i]) % 26]
+        i+=1
+      else:
+        ciphertext+=letter_list[(ord(ch)-97+key_list[i]) % 26].lower()
+        i+=1
+    else: #如果密文不为字母,直接添加到密文字符串里
+      ciphertext+=ch
+  return ciphertext
+  
+#解密函数
+def Decrypt(ciphertext,key):
+  plaintext=&quot;&quot;
+  i=0
+  for ch in ciphertext: #遍历密文
+    if 0==i%len(key_list):
+      i=0
+    if ch.isalpha():  #密文为否为字母,如果是,则判断大小写,分别进行解密
+      if ch.isupper():
+        plaintext+=letter_list[(ord(ch)-65-key_list[i]) % 26]
+        i+=1
+      else:
+        plaintext+=letter_list[(ord(ch)-97-key_list[i]) % 26].lower()
+        i+=1
+    else: #如果密文不为字母,直接添加到明文字符串里
+      plaintext+=ch
+  return plaintext
+ 
+if __name__=='__main__':
+  print(&quot;加密请按D,解密请按E:&quot;)
+  user_input=input();
+  while(user_input!='D' and user_input!='E'):#输入合法性判断
+    print(&quot;输入有误!请重新输入:&quot;)
+    user_input=input()
+  
+  print(&quot;请输入密钥:&quot;)
+  key=input()
+  while(False==key.isalpha()):#输入合法性判断
+    print(&quot;输入有误!密钥为字母,请重新输入:&quot;)
+    key=input()
+  
+  key_list=Get_KeyList(key)
+  
+  if user_input=='D':
+    #加密
+    print(&quot;请输入明文:&quot;)
+    plaintext=input()
+    ciphertext=Encrypt(plaintext,key_list)
+    print(&quot;密文为:\n%s&quot; % ciphertext)
+  else:
+    #解密
+    print(&quot;请输入密文:&quot;)
+    ciphertext=input()
+    plaintext=Decrypt(ciphertext,key_list)
+    print(&quot;明文为:\n%s&quot; % plaintext)
+</code></pre>
+<h3 id="題目答案-4">題目答案</h3>
+<p><font color=white size=3>flag{CiphersAreAwesome}</font></p>
+<h2 id="6-rsa-twins">6. RSA Twins!</h2>
+<h3 id="題目描述-5">題目描述</h3>
+<p>
+<a href="https://wwx.lanzoux.com/iVaI8jxyplc" target="_blank">https://wwx.lanzoux.com/iVaI8jxyplc</a>Aww, twins :). Theyâre so cute! They must be (almost) identical because they âre the same except for the slightest difference. Anyway, see if you can find my flag. Hint: This is just math. You&rsquo;re probably not going to find any sort of specialized attack.、</p>
+<h3 id="題目思路-5">題目思路</h3>
+<p>題目中說這是一個數學問題，應該就是傑出結果。對於RSA，有 p、q、n、φ(n)、e、d五個數字，其中關係是，n是一個很大的能分解為兩個質數p、q乘機的數，φ(n)=(p-1)*(q-1)，e是公鑰，是随机选择的，条件是1&lt; e &lt; φ(n)，且e与φ(n) 互质（常選65537）。d是私鑰，即模反元素，ed ≡ 1 (mod φ(n))，其實相當於ed + φ(n)y = 1。求解出的數字在進行相應的解密。</p>
+<h3 id="題目解決-5">題目解決</h3>
+<p>題目數據如下</p>
+<p>n = 14783703403657671882600600446061886156235531325852194800287001788765221084107631153330658325830443132164971084137462046607458019775851952933254941568056899</p>
+<p>e = 65537</p>
+<p>c = 684151956678815994103733261966890872908254340972007896833477109225858676207046453897176861126186570268646592844185948487733725335274498844684380516667587</p>
+<p>l所以可以得知，我們要根據n和e求出d，並對c進行解密。</p>
+<p>第一步是
+<a href="http://factordb.com/" target="_blank">分解大數</a></p>
+<p>於是我們得到p、q，以及能算出φ(n)。</p>
+<p>然後求模反元素d，我們採用
+<a href="https://zh.wikipedia.org/wiki/%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95" target="_blank">拓展歐幾里得算法</a>python算法如下：</p>
+<pre><code class="language-python">def ext_euclid(a, b):
+    old_s,s=1,0
+    old_t,t=0,1
+‘’    old_r,r=a,b
+    if b == 0:
+        return 1, 0, a
+    else:
+        while(r!=0):
+            q=old_r//r
+            old_r,r=r,old_r-q*r
+            old_s,s=s,old_s-q*s
+            old_t,t=t,old_t-q*t
+    return old_s
+</code></pre>
+<p>得到私鑰我們對c進行解密，公式cd≡ m (mod n),python中即m=pow(c,d,n)
+於是我們拿到了解密後的一串數字2511413510841857968238260398011789038678337904998872216445</p>
+<p>要拿到flag，我們想到的一般就是base64編碼。</p>
+<p>將其轉換為base64，python算法如下：</p>
+<pre><code class="language-python">###10進制數轉換base64###
+def p64(n):
+    table = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;#碼錶
+    result = []
+    temp = n
+    print(temp%64)
+    if 0==temp:
+        result.append(&quot;0&quot;)
+    else:
+        while 0 &lt;temp:
+            result.append(table[int(temp%64)])
+            temp //= 64
+    return ''.join([x for x in reversed(result)])
+</code></pre>
+<p>然後
+<a href="https://tool.oschina.net/encrypt?type=3" target="_blank">在綫base64解碼</a>就得到了flag。</p>
+<h3 id="題目答案-5">題目答案</h3>
+<p><font color=white size=3>flag{i_l0v3_tw1N_pr1m3s}</font></p>
+<h2 id="7">7.</h2>
         </div>
         
         <div class="my-4">
@@ -327,7 +455,7 @@
     
     <a href="https://zzzsy.top/tags/Writeup/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Writeup</a>
     
-    <a href="https://zzzsy.top/tags/Forensics/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Forensics</a>
+    <a href="https://zzzsy.top/tags/Cryptography/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Cryptography</a>
     
 </div>
         
@@ -391,13 +519,10 @@
     <div>
         
         <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/C/C-1/" class="block">C语言笔记-1：初识C语言</a>
+        <a href="https://zzzsy.top/notes/CTF/Forensics/" class="block">一些Misc的Writeup - 1</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
-        
-        <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/Cryptography/" class="block">一些Misc的Writeup - 2</a>
         
     </div>
 </div>
@@ -413,10 +538,10 @@
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/Forensics/">一些Misc的Writeup - 1</a>
+        <a href="https://zzzsy.top/notes/CTF/Forensics/">一些Misc的Writeup - 1</a>
         <br />
         
-        <a href="https://zzzsy.top/notes/Cryptography/">一些Misc的Writeup - 2</a>
+        <a href="https://zzzsy.top/notes/CTF/Cryptography/">一些Misc的Writeup - 2</a>
         <br />
         
         
@@ -430,39 +555,55 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-git-is-good">1. Git Is Good</a>
+    <li><a href="#1-character-encoding">1. Character Encoding</a>
       <ul>
         <li><a href="#題目描述">題目描述</a></li>
         <li><a href="#題目思路">題目思路</a></li>
-        <li><a href="#題目解答">題目解答</a></li>
+        <li><a href="#題目解決">題目解決</a></li>
         <li><a href="#題目答案">題目答案</a></li>
       </ul>
     </li>
-    <li><a href="#2-forensics-101">2. Forensics 101</a>
+    <li><a href="#2-hextroadinary">2. Hextroadinary</a>
       <ul>
         <li><a href="#題目描述-1">題目描述</a></li>
         <li><a href="#題目思路-1">題目思路</a></li>
-        <li><a href="#題目解決">題目解決</a></li>
+        <li><a href="#題目解決-1">題目解決</a></li>
         <li><a href="#題目答案-1">題目答案</a></li>
       </ul>
     </li>
-    <li><a href="#3tux">3.Tux!</a>
+    <li><a href="#3-base-2-2-the-6">3. Base 2 2 the 6</a>
       <ul>
         <li><a href="#題目描述-2">題目描述</a></li>
         <li><a href="#題目思路-2">題目思路</a></li>
-        <li><a href="#題目解決-1">題目解決</a></li>
+        <li><a href="#題目解決-2">題目解決</a></li>
         <li><a href="#題目答案-2">題目答案</a></li>
       </ul>
     </li>
-    <li><a href="#4-2019ctf---otaku">4. 2019CTF&mdash;otaku</a>
+    <li><a href="#4-morse-code">4. Morse Code</a>
       <ul>
         <li><a href="#題目描述-3">題目描述</a></li>
         <li><a href="#題目思路-3">題目思路</a></li>
-        <li><a href="#題目解決-2">題目解決</a></li>
+        <li><a href="#題目解決-3">題目解決</a></li>
         <li><a href="#題目答案-3">題目答案</a></li>
       </ul>
     </li>
-    <li><a href="#5">5.</a></li>
+    <li><a href="#5-vigenere-cipher">5. Vigenere Cipher</a>
+      <ul>
+        <li><a href="#題目描述-4">題目描述</a></li>
+        <li><a href="#題目思路-4">題目思路</a></li>
+        <li><a href="#題目解決-4">題目解決</a></li>
+        <li><a href="#題目答案-4">題目答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-rsa-twins">6. RSA Twins!</a>
+      <ul>
+        <li><a href="#題目描述-5">題目描述</a></li>
+        <li><a href="#題目思路-5">題目思路</a></li>
+        <li><a href="#題目解決-5">題目解決</a></li>
+        <li><a href="#題目答案-5">題目答案</a></li>
+      </ul>
+    </li>
+    <li><a href="#7">7.</a></li>
   </ul>
 </nav>
 </div>
@@ -482,7 +623,7 @@
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
-            <a href="https://zzzsy.top/notes/Cryptography/">一些Misc的Writeup - 2</a>
+            <a href="https://zzzsy.top/notes/CTF/Forensics/">一些Misc的Writeup - 1</a>
             <br />
             
         </div>
