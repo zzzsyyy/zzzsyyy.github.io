@@ -67,7 +67,7 @@
     },
     "headline": "Calculus 2| 最小上界、最大下界，Dedekind cut，数列极限的定义与性质 | ZSYのBlog","datePublished": "2021-03-14T00:00:00+00:00",
     "dateModified": "2021-03-17T00:00:00+00:00",
-    "wordCount":  182 ,
+    "wordCount":  511 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -232,11 +232,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>182字</span>
+        <span>511字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟</span>
+        <span>2分钟</span>
     </div>
 
     
@@ -257,8 +257,7 @@
 
         <div class="content">
             <h2 id="最小上界最大下界">最小上界，最大下界</h2>
-<p><em><strong>Def</strong></em></p>
-<blockquote>
+<h3 id="def"><em><strong>Def</strong></em></h3>
 <p>令 $S\subseteq\R$ ， $r\in\R$ , 我们说</p>
 <ol>
 <li>
@@ -284,7 +283,37 @@ $$
 <p>称作$S$的<strong>上确界</strong>（$resp. $<strong>下确界</strong>）</p>
 </li>
 </ol>
+<p><em><strong>一个规定</strong></em></p>
+<p>​	任意一个实数既是0的上界，也是0的下界</p>
+<h3 id="convention"><em><strong>Convention</strong></em></h3>
+<ol>
+<li>We write $\sup S=\infin(resp. \inf S=-\infin)$ if and only if $S$ has no upper($resp.$ lower) bound. 我们说<strong>不存在</strong></li>
+<li>$S$ is  bounded from above ($resp.$ below) if and only if $S$ has a upper ($resp.$ lower) bound.</li>
+</ol>
+<h2 id="戴德金分割dedekind-cut">戴德金分割（Dedekind cut）</h2>
+<p>###<em><strong>Def</strong></em></p>
+<p>Soit $A,B \subseteq\R$, on dit que $(A,B)$, est un <strong>Dedekind cut</strong> (dans $\R$), si</p>
+<ol>
+<li>$A\neq \varnothing\neq B$</li>
+<li>$A\cup B=\R$</li>
+<li>$\forall a\in A,b\in B,, [a&lt;b]$</li>
+</ol>
+<blockquote>
+<p>我们常把$A$($resp. B$)，叫做分割$(A,B)$的下部（lower part​）$(resp. \text{上部（upperpart）})$</p>
 </blockquote>
+<h3 id="dedekind-cut-gapless-property"><strong>Dedekind cut</strong> <em><strong>gapless property</strong></em></h3>
+<p>如果$(A,B)$是 $\R$ 的一个Dedekind cut ，下面命题就会有一个成立</p>
+<ol>
+<li>$\max A \text{ exsits but}\min B\text{ doesn&rsquo;t}$</li>
+<li>$\min B \text{ exsits but}\max A\text{ doesn&rsquo;t}$</li>
+</ol>
+<p>存在的那个点称作 <strong>切点（cutting）</strong>。</p>
+<p>我们在有理数集上定义D-cut时，这个属性是不成立的。</p>
+<h3 id="确界原理lub-property">确界原理（LUB property）</h3>
+<p><em><strong>Def</strong></em></p>
+<p>​	Let $\varnothing\neq S\subseteq \R$, if $S$ has upper bound, then $\sup S$ exists.</p>
+<p><em><strong>Preuve</strong></em></p>
+<p>​	Let $B\coloneqq\lbrace b\in\R | \text{b is upper bound of }S\rbrace$ and $A\coloneqq \R\backslash B$</p>
         </div>
         
         <div class="my-4">
@@ -394,7 +423,18 @@ $$
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#最小上界最大下界">最小上界，最大下界</a></li>
+    <li><a href="#最小上界最大下界">最小上界，最大下界</a>
+      <ul>
+        <li><a href="#def"><em><strong>Def</strong></em></a></li>
+        <li><a href="#convention"><em><strong>Convention</strong></em></a></li>
+      </ul>
+    </li>
+    <li><a href="#戴德金分割dedekind-cut">戴德金分割（Dedekind cut）</a>
+      <ul>
+        <li><a href="#dedekind-cut-gapless-property"><strong>Dedekind cut</strong> <em><strong>gapless property</strong></em></a></li>
+        <li><a href="#确界原理lub-property">确界原理（LUB property）</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
