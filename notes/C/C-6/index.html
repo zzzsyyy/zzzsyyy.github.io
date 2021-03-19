@@ -67,7 +67,7 @@
     },
     "headline": "C语言笔记-6：初识指针 | ZSYのBlog","datePublished": "2021-03-17T00:00:00+00:00",
     "dateModified": "2021-03-18T00:00:00+00:00",
-    "wordCount":  565 ,
+    "wordCount":  812 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -248,7 +248,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>565字</span>
+        <span>812字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -278,7 +278,7 @@
 <p>一个变量，存放内存单元的<strong>地址</strong>。</p>
 <pre><code class="language-c">int a = 10;//内存中开辟一块空间
 int* p = &amp;a;//对变量a取出它的地址，用&amp;操作符
-			//将a的地址放在变量p中，p是一个指针变量，类型是int*
+            //将a的地址放在变量p中，p是一个指针变量，类型是int*
 </code></pre>
 <p>32位机器指针大小是4字节</p>
 <p>64位机器指针大小是8字节</p>
@@ -341,13 +341,15 @@ int* p = &amp;a;//对变量a取出它的地址，用&amp;操作符
 <blockquote>
 <p>野指针就是指针指向的未知是不可知的（随机的、不正确的、没有明确限制的）</p>
 </blockquote>
+<h3 id="分类">分类</h3>
 <ol>
 <li>
-<p>指针未初始化</p>
-<p><code>int* p</code>，未初始化放的是随机值</p>
+<p>指针<strong>未初始化</strong></p>
+<p><code>int* p</code>，未初始化放的是<strong>随机值</strong></p>
+<p>访问时就是<strong>非法访问</strong></p>
 </li>
 <li>
-<p>指针越界访问</p>
+<p>指针<strong>越界访问</strong></p>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
    
 int main()
@@ -355,13 +357,13 @@ int main()
     int arr[10] = {0};
     int* p = arr;
     for (int i=0;i&lt;=12;i++)
-        *(p++) = i;//作用范围已经超过数组
+        *(p++) = i;//作用范围已经超过数组，即越界
     return 0;
 }
 </code></pre>
 </li>
 <li>
-<p>指针指向的空间释放</p>
+<p>指针<strong>指向的空间释放</strong></p>
 <pre><code class="language-c">int* test()
 {
     int a = 10;
@@ -376,6 +378,75 @@ int main()
 </code></pre>
 </li>
 </ol>
+<h3 id="规避方法">规避方法</h3>
+<ol>
+<li>
+<p>指针初始化</p>
+</li>
+<li>
+<p>小心指针越界</p>
+</li>
+<li>
+<p>指针指向空间释放即使置NULL</p>
+<pre><code class="language-c">int main()
+{
+    int a = 10;
+    int* pa = &amp;a;
+    int *p = NULL;//NULL - ((void*)0)
+}
+</code></pre>
+</li>
+<li>
+<p>指针使用前检查有效性</p>
+<p><code>if (pa != NULL)</code></p>
+</li>
+</ol>
+<h2 id="指针运算">指针运算</h2>
+<ul>
+<li>指针+-整数</li>
+<li>指针-指针</li>
+<li>指针的关系运算</li>
+</ul>
+<h3 id="指针-整数">指针+-整数</h3>
+<pre><code class="language-c">int main()
+{
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    int i = 0;
+    int* p = arr;
+    for (i=0;i&lt;10;i++)
+        printf(&quot;%d&quot;,*p++);
+    return 0; 
+}
+</code></pre>
+<h3 id="指针-指针">指针-指针</h3>
+<pre><code class="language-c">int main()
+{
+    int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+    printf(&quot;%d&quot;,&amp;arr[9] - &amp;arr[0]);//打印中间元素的个数 - 9
+    printf(&quot;%d&quot;,&amp;arr[0] - &amp;arr[9]);//-9
+}
+</code></pre>
+<p>相减的两个指针一定要指向一个类型</p>
+<p><em><strong>模拟实现 <code>strlen</code>函数</strong></em></p>
+<pre><code class="language-c">int my_strlen(char* str)
+{
+    char* start = str;
+    char* end = str;
+    while (*end != \0)
+        end++;
+    return end - start;
+}
+
+int main()
+{
+    char arr[] = &quot;bit&quot;;
+    int len = my_strlen(arr);
+    printf(&quot;%d\n&quot;,len);
+    return 0;
+}
+</code></pre>
+<h3 id="指针的关系运算">指针的关系运算</h3>
+<p>即比较大小</p>
         </div>
         
         <div class="my-4">
@@ -500,7 +571,19 @@ int main()
         <li><a href="#指针类型的意义">指针类型的意义</a></li>
       </ul>
     </li>
-    <li><a href="#野指针">野指针</a></li>
+    <li><a href="#野指针">野指针</a>
+      <ul>
+        <li><a href="#分类">分类</a></li>
+        <li><a href="#规避方法">规避方法</a></li>
+      </ul>
+    </li>
+    <li><a href="#指针运算">指针运算</a>
+      <ul>
+        <li><a href="#指针-整数">指针+-整数</a></li>
+        <li><a href="#指针-指针">指针-指针</a></li>
+        <li><a href="#指针的关系运算">指针的关系运算</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
