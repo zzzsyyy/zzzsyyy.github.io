@@ -67,7 +67,7 @@
     },
     "headline": "C语言笔记-6：初识指针 | ZSYのBlog","datePublished": "2021-03-17T00:00:00+00:00",
     "dateModified": "2021-03-18T00:00:00+00:00",
-    "wordCount":  812 ,
+    "wordCount":  1114 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -248,11 +248,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>812字</span>
+        <span>1114字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -447,6 +447,72 @@ int main()
 </code></pre>
 <h3 id="指针的关系运算">指针的关系运算</h3>
 <p>即比较大小</p>
+<pre><code class="language-c">//代码1
+#define N_VALUES 5
+float values[N_VALUES];
+float* vp;
+for (vp = &amp;values[N_VALUES];vp&gt;&amp;values[0];)
+{
+    *--vp = 0;
+}
+
+//代码2
+#define N_VALUES 5
+float values[N_VALUES];
+float* vp;
+for (vp = &amp;values[N_VALUES-1];vp&gt;=&amp;values[0];vp--)
+{
+    *vp = 0;
+}
+</code></pre>
+<p>我们要用第一种方法来写</p>
+<p><strong>标准规定</strong>：</p>
+<blockquote>
+<p>允许指向数组元素的指针与指向最后一个元素后面的那个内存位置的指针比较，但是不允许与指向第一个元素之前的那个内存位置的指针进行比较。</p>
+</blockquote>
+<h2 id="指针与数组">指针与数组</h2>
+<p>数组名是数组<strong>首元素的地址</strong>，</p>
+<ol>
+<li>
+<p><code>&amp;arr</code>，取的时整个数组的地址</p>
+<pre><code class="language-c">int arr[10] = {0};
+printf(&quot;%p\n&quot;,arr);//x
+printf(&quot;%p\n&quot;,arr+1);//x+4
+   
+printf(&quot;%d\n&quot;,&amp;arr[0]);//x
+printf(&quot;%d\n&quot;,&amp;arr[0]+1);//x+4
+   
+printf(&quot;%p\n&quot;,&amp;arr);//x 整个数组的地址
+printf(&quot;%p\n&quot;,&amp;arr+1);//x+40
+</code></pre>
+</li>
+<li>
+<p><code>sizeof(arr)</code>，计算整个数组的大小</p>
+</li>
+</ol>
+<h2 id="二级指针">二级指针</h2>
+<pre><code class="language-c">int a = 10;
+int* pa = &amp;a;
+int** ppa = &amp;pa;//二级指针
+int*** pppa = &amp;ppa;//三级指针
+</code></pre>
+<h2 id="指针数组">指针数组</h2>
+<ul>
+<li>指针数组 - 数组，存放指针的数组</li>
+<li>数组指针 - 指针</li>
+</ul>
+<pre><code class="language-c">int main()
+{
+    int a = 10;
+    int b = 20;
+    int c = 30;
+    int* arr[3] = {&amp;a, &amp;b, &amp;c};
+    for (int i = 0;i&lt;3;i++)
+    {
+        printf(&quot;%d\n&quot;, *(arr[i]));
+    }
+}
+</code></pre>
         </div>
         
         <div class="my-4">
@@ -584,6 +650,9 @@ int main()
         <li><a href="#指针的关系运算">指针的关系运算</a></li>
       </ul>
     </li>
+    <li><a href="#指针与数组">指针与数组</a></li>
+    <li><a href="#二级指针">二级指针</a></li>
+    <li><a href="#指针数组">指针数组</a></li>
   </ul>
 </nav>
 </div>
