@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Calculus on ZSYのBlog</title>
-    <link>https://zzzsy.top/tags/Calculus/</link>
-    <description>Recent content in Calculus on ZSYのBlog</description>
+    <title>Math on ZSYのBlog</title>
+    <link>https://zzzsy.top/tags/Math/</link>
+    <description>Recent content in Math on ZSYのBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/Calculus/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/Math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Calculus 2| 最小上界、最大下界，Dedekind cut，数列极限的定义与性质</title>
       <link>https://zzzsy.top/notes/Analyse/Calculus-2/</link>
@@ -23,6 +23,15 @@
       <pubDate>Wed, 10 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zzzsy.top/notes/Analyse/Calculus-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analyse 1| Nombres réels</title>
+      <link>https://zzzsy.top/notes/Analyse/Analyse-1/</link>
+      <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/Analyse/Analyse-1/</guid>
       <description></description>
     </item>
     
