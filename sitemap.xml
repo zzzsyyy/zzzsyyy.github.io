@@ -4,52 +4,72 @@
   
   <url>
     <loc>https://zzzsy.top/authors/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zzzsy.top/tags/C/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <loc>https://zzzsy.top/tags/Deep-Learning/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zzzsy.top/series/C/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <loc>https://zzzsy.top/tags/fastai/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://zzzsy.top/notes/C/C-6/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <loc>https://zzzsy.top/series/fastai/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/notes/MLDL/DL-1/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zzzsy.top/series/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zzzsy.top/tags/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zzzsy.top/authors/Zhang/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zzzsy.top/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://zzzsy.top/notes/</loc>
-    <lastmod>2021-03-18T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/tags/C/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/series/C/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/notes/C/C-6/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2021-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -163,7 +183,7 @@
   </url>
   
   <url>
-    <loc>https://zzzsy.top/notes/ML-1/</loc>
+    <loc>https://zzzsy.top/notes/MLDL/ML-1/</loc>
     <lastmod>2021-02-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -178,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://zzzsy.top/notes/pytorch-1/</loc>
+    <loc>https://zzzsy.top/notes/pytorch/pytorch-1/</loc>
     <lastmod>2021-01-31T00:00:00+00:00</lastmod>
   </url>
   

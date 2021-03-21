@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fastai笔记</title>
+      <link>https://zzzsy.top/notes/MLDL/DL-1/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/MLDL/DL-1/</guid>
+      <description>&lt;p&gt;Deep Learning for Coders (2020) Lesson 1：
+&lt;a href=&#34;https://www.youtube.com/watch?v=_QUEXsHfsA0&#34; target=&#34;_blank&#34;&gt;Lesson 1 - Deep Learning for Coders (2020) - YouTube&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>C语言笔记-6：初识指针</title>
       <link>https://zzzsy.top/notes/C/C-6/</link>
@@ -100,19 +110,19 @@
     
     <item>
       <title>机器学习笔记-1</title>
-      <link>https://zzzsy.top/notes/ML-1/</link>
+      <link>https://zzzsy.top/notes/MLDL/ML-1/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsy.top/notes/ML-1/</guid>
+      <guid>https://zzzsy.top/notes/MLDL/ML-1/</guid>
       <description>&lt;p&gt;机器学习 笔记-1&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>pytorch：模型载存、Datasets、数据预处理</title>
-      <link>https://zzzsy.top/notes/pytorch-1/</link>
+      <link>https://zzzsy.top/notes/pytorch/pytorch-1/</link>
       <pubDate>Sun, 31 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsy.top/notes/pytorch-1/</guid>
+      <guid>https://zzzsy.top/notes/pytorch/pytorch-1/</guid>
       <description>&lt;p&gt;pytorch：模型载存、Datasets、数据预处理&lt;/p&gt;</description>
     </item>
     
