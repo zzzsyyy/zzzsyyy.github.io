@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>ZSYのBlog</title>
+<title>fastai笔记 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -38,23 +38,65 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="">
+  content="Deep Learning for Coders (2020) Lesson 2：
+Lesson 1 - Deep Learning for Coders (2020) - YouTube">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"笔记",
+      "item":"https://zzzsy.top/notes/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"fastai笔记",
+      "item":"https://zzzsy.top/notes/MLDL/DL-2/"}]
+}
+</script>
 
 
 
-<meta property="og:title" content="ZSYのBlog" />
-<meta property="og:type" content="website" />
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsy.top/notes/MLDL/DL-2/"
+    },
+    "headline": "fastai笔记 | ZSYのBlog","datePublished": "2021-03-23T00:00:00+00:00",
+    "dateModified": "2021-03-23T00:00:00+00:00",
+    "wordCount":  39 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsy.top/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003eDeep Learning for Coders (2020) Lesson 2：\r\n\u003ca href=\u0022https:\/\/www.youtube.com\/watch?v=_QUEXsHfsA0\u0022 target=\u0022_blank\u0022\u003eLesson 1 - Deep Learning for Coders (2020) - YouTube\u003c\/a\u003e\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="fastai笔记 | ZSYのBlog" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/authors/" />
+<meta property="og:url" content="https://zzzsy.top/notes/MLDL/DL-2/" />
 
 
 
 
-
+<meta property="og:description" content="Deep Learning for Coders (2020) Lesson 2：
+Lesson 1 - Deep Learning for Coders (2020) - YouTube" />
 
 
 
@@ -71,14 +113,35 @@
 
 
 
-<meta property="og:updated_time" content="2021-03-25T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-03-23T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-03-23T00:00:00&#43;00:00" />
 
 
 
-<meta property="article:section" content="authors" />
+<meta property="article:section" content="notes" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://zzzsy.top/authors/index.xml" title="ZSYのBlog" />
+<meta property="article:tag" content="fastai" />
+
+<meta property="article:tag" content="Deep Learning" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/MLDL/DL-1/" />
+
+
+
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -97,7 +160,7 @@
     <div id="target"
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">笔记</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
             <a href="/essay/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">随笔</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
@@ -156,26 +219,197 @@
       </script>
   </header>
   <main class="flex-grow pt-16">
-<article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Authors</h1>
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">fastai笔记</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-23</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-book-open mr-1"></i>
+        <span>39字</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1分钟</span>
+    </div>
+
     
-</article>
-<div class="bg-secondary-bg rounded px-6 py-8">
+
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://zzzsy.top/authors/Zhang/" class="text-eureka hover:underline">Zhang.Mathias</a>
-    </h2>
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://zzzsy.top/series/fastai/" class="hover:text-eureka">fastai</a>
+        
+    </div>
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://zzzsy.top/authors/example-author/" class="text-eureka hover:underline">example-author</a>
-    </h2>
+
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>Deep Learning for Coders (2020) Lesson 2：
+<a href="https://www.youtube.com/watch?v=_QUEXsHfsA0" target="_blank">Lesson 1 - Deep Learning for Coders (2020) - YouTube</a></p>
+<h2 id="分类与回归">分类与回归</h2>
+<p><em><strong>classification</strong></em></p>
+<p>输出分立的结果</p>
+<p><em><strong>regression</strong></em></p>
+<p>输出连续的结果</p>
+        </div>
+        
+        <div class="my-4">
     
-    <h2 class="text-lg text-primary-text my-2">
-        <a href="https://zzzsy.top/authors/hugo-authors/" class="text-eureka hover:underline">Hugo Authors</a>
-    </h2>
+    <a href="https://zzzsy.top/tags/fastai/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#fastai</a>
+    
+    <a href="https://zzzsy.top/tags/Deep-Learning/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Deep Learning</a>
     
 </div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsy.top/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsy.top/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsy.top/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2"></span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/z_zzsy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://pan.zzzsy.top" class="mr-1">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsy.top/notes/C/C-7/" class="block">C语言笔记-7：一些习题</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsy.top/notes/MLDL/DL-1/" class="block">fastai笔记</a>
+        
+    </div>
+</div>
 
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsy.top/notes/MLDL/DL-2/">fastai笔记</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/MLDL/DL-1/">fastai笔记</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#分类与回归">分类与回归</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsy.top/notes/MLDL/DL-1/">fastai笔记</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
   </main>
   <footer class="pl-scrollbar">
     <style type="text/css">

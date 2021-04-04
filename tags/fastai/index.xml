@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/fastai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/fastai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fastai笔记</title>
+      <link>https://zzzsy.top/notes/MLDL/DL-2/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/MLDL/DL-2/</guid>
+      <description>&lt;p&gt;Deep Learning for Coders (2020) Lesson 2：
+&lt;a href=&#34;https://www.youtube.com/watch?v=_QUEXsHfsA0&#34; target=&#34;_blank&#34;&gt;Lesson 1 - Deep Learning for Coders (2020) - YouTube&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>fastai笔记</title>
       <link>https://zzzsy.top/notes/MLDL/DL-1/</link>

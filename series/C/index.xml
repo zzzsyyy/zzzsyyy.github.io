@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/series/C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/series/C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C语言笔记-7：一些习题</title>
+      <link>https://zzzsy.top/notes/C/C-7/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/C/C-7/</guid>
+      <description>&lt;p&gt;C语言笔记-7：一些习题&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>C语言笔记-6：初识指针</title>
       <link>https://zzzsy.top/notes/C/C-6/</link>

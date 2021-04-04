@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误 | ZSYのBlog</title>
+<title>C语言笔记-7：一些习题 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -15,13 +15,30 @@
      integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+    });
+  });
+</script>
 
 
 <link rel="icon" type="image/png" sizes="32x32" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_32x32_fill_box_center_2.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="">
+  content="C语言笔记-7：一些习题">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -29,12 +46,12 @@
   "itemListElement": [{
       "@type": "ListItem",
       "position": 1 ,
-      "name":"随笔",
-      "item":"https://zzzsy.top/essay/"},{
+      "name":"笔记",
+      "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误",
-      "item":"https://zzzsy.top/essay/resolve-err-too-many-redirects-on-cloudflare/"}]
+      "name":"C语言笔记-7：一些习题",
+      "item":"https://zzzsy.top/notes/C/C-7/"}]
 }
 </script>
 
@@ -46,11 +63,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/essay/resolve-err-too-many-redirects-on-cloudflare/"
+        "@id": "https://zzzsy.top/notes/C/C-7/"
     },
-    "headline": "解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误 | ZSYのBlog","datePublished": "2021-02-20T00:00:00+00:00",
-    "dateModified": "2021-02-20T00:00:00+00:00",
-    "wordCount":  397 ,
+    "headline": "C语言笔记-7：一些习题 | ZSYのBlog","datePublished": "2021-03-25T00:00:00+00:00",
+    "dateModified": "2021-03-26T00:00:00+00:00",
+    "wordCount":  227 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -63,21 +80,21 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": ""
+    "description": "\u003cp\u003eC语言笔记-7：一些习题\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误 | ZSYのBlog" />
+</script><meta property="og:title" content="C语言笔记-7：一些习题 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/essay/resolve-err-too-many-redirects-on-cloudflare/" />
+<meta property="og:url" content="https://zzzsy.top/notes/C/C-7/" />
 
 
 
 
-<meta property="og:description" content="" />
+<meta property="og:description" content="C语言笔记-7：一些习题" />
 
 
 
@@ -94,19 +111,51 @@
 
 
 
-<meta property="article:published_time" content="2021-02-20T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-03-25T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-02-20T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-03-26T00:00:00&#43;00:00" />
 
 
 
-<meta property="article:section" content="essay" />
+<meta property="article:section" content="notes" />
 
 
-<meta property="article:tag" content="DNS" />
+<meta property="article:tag" content="C" />
 
-<meta property="article:tag" content="建站" />
+<meta property="article:tag" content="笔记" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/C/C-6/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/C/C-5/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/C/C-4/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/C/C-3/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/C/C-2/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/C/C-1/" />
 
 
 
@@ -129,8 +178,8 @@
     <div id="target"
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">笔记</a>
-            <a href="/essay/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">随笔</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
+            <a href="/essay/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">随笔</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
             <a href="/authors/Zhang/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
@@ -195,15 +244,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</h1>
+        <h1 class="font-bold text-3xl text-primary-text">C语言笔记-7：一些习题</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-20</span>
+        <span>2021-03-25</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>397字</span>
+        <span>227字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -213,6 +262,13 @@
     
 
     
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://zzzsy.top/series/C/" class="hover:text-eureka">C</a>
+        
+    </div>
+    
 
 </div>
         
@@ -220,37 +276,33 @@
         
 
         <div class="content">
-            <p>今天打开网站，发现出现错误“ERR_TOO_MANY_REDIRECTS”，意思是“重定向次数过多”。估计是将域名解析放在Cloudflare上的问题。</p>
-<p>这个错误在以前打开
-<a href="https://www.codewars.com/dashboard" target="_blank">CodeWars</a>时也遇见过，当时查好像和服务器什么的有关系。查找一通发现和我问题一样的<u>情况</u><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
-<p>原因就是服务器的SSL与Cloudflare的配置冲突，这在<u>官方的文档</u><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>也有描述。</p>
+            <p>C语言笔记-7：一些习题</p>
+<h1 id="一些习题中的知识点">一些习题中的知识点</h1>
+<p><code>return</code>不能返回两个数</p>
+<p>函数不能嵌套定义，可以嵌套调用</p>
+<p>函数必须保证先声明，后使用</p>
+<p><em><strong>ex1</strong></em></p>
+<p>函数调用<code>exec((a,b),(c,d),e,f)</code>中，参数的个数是？</p>
+<p>4个</p>
 <blockquote>
-<p>The <em>Flexible</em> <strong>SSL</strong> encryption mode in the Cloudflare <strong>SSL/TLS</strong> app <strong>Overview</strong> tab encrypts traffic between the browser and the Cloudflare network over HTTPS. However, when the <em>Flexible</em> <strong>SSL</strong> option is enabled, Cloudflare sends requests to your origin web server unencrypted over HTTP. Redirect loops occur if your origin web server is configured to redirect all HTTP requests to HTTPS when using the <em>Flexible</em> <strong>SSL</strong> option.</p>
-<p>Redirect loops may also occur when using the <em>Full</em> or <em>Full(strict)</em> <strong>SSL</strong> option.  The only difference is that Cloudflare contacts your origin web server over HTTPS and the redirect loop occurs if your origin web server redirects HTTPS requests to HTTP.</p>
+<p>括号括起来的<strong>逗号表达式</strong>的结果是最后一个数</p>
 </blockquote>
-<p>我没有采用官网推荐的方式（这也是上面文章的方式），而是将SSL的选项从Flexible SSL改成了Full SSL。</p>
-<p>问题解决！</p>
-<p>参考资料：</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>
-<a href="https://www.heartnn.com/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/" target="_blank">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p>
-<a href="https://support.cloudflare.com/hc/en-us/articles/115000219871" target="_blank">Why does Flexible SSL cause a redirect loop?</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+<p>函数的设计要追求<strong>高内聚、低耦合</strong></p>
+<p>要尽可能少的使用全局变量</p>
+<p><code>main</code>函数的位置可以任意</p>
+<p>函数中的形参是在<strong>栈</strong>上保存的</p>
+<p>在函数的<strong>复合语句</strong>内定义的变量，不能在函数的内的任意位置使用</p>
+<blockquote>
+<p>复合语句：有大括号括起来的语句</p>
+</blockquote>
+<p>二位数组是<strong>不能省略列</strong>的</p>
         </div>
         
         <div class="my-4">
     
-    <a href="https://zzzsy.top/tags/DNS/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#DNS</a>
+    <a href="https://zzzsy.top/tags/C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#C</a>
     
-    <a href="https://zzzsy.top/tags/%E5%BB%BA%E7%AB%99/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#建站</a>
+    <a href="https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
     
 </div>
         
@@ -310,16 +362,85 @@
         
         
         
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsy.top/notes/MLDL/DL-2/" class="block">fastai笔记</a>
+        
+    </div>
+</div>
+
         
     </div>
     
     <div class="col-span-2">
         
         
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsy.top/notes/C/C-7/">C语言笔记-7：一些习题</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/C/C-6/">C语言笔记-6：初识指针</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/C/C-5/">C语言笔记-5：操作符详解</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/C/C-4/">C语言笔记-4：数组</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/C/C-3/">C语言笔记-3：函数与递归</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/C/C-2/">C语言笔记-2：循环和分支语句</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/C/C-1/">C语言笔记-1：初识C语言</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
     </div>
     
 
     
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsy.top/notes/C/C-6/">C语言笔记-6：初识指针</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/C/C-4/">C语言笔记-4：数组</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/C/C-3/">C语言笔记-3：函数与递归</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/C/C-2/">C语言笔记-2：循环和分支语句</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/C/C-1/">C语言笔记-1：初识C语言</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/C/C-5/">C语言笔记-5：操作符详解</a>
+            <br />
+            
+        </div>
+    </div>
     
 </div>
 <script>

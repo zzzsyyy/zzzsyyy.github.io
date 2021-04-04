@@ -7,29 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Fri, 19 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deep Learning</title>
-      <link>https://zzzsy.top/tags/Deep-Learning/</link>
-      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/tags/Deep-Learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fastai</title>
-      <link>https://zzzsy.top/tags/fastai/</link>
-      <pubDate>Fri, 19 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/tags/fastai/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C</title>
       <link>https://zzzsy.top/tags/C/</link>
-      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zzzsy.top/tags/C/</guid>
       <description></description>
@@ -38,9 +20,27 @@
     <item>
       <title>笔记</title>
       <link>https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://zzzsy.top/tags/Deep-Learning/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/tags/Deep-Learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fastai</title>
+      <link>https://zzzsy.top/tags/fastai/</link>
+      <pubDate>Tue, 23 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/tags/fastai/</guid>
       <description></description>
     </item>
     
