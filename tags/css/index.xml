@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Sat, 17 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css笔记-1：选择器</title>
+      <link>https://zzzsy.top/notes/htmlcss/css-1/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/htmlcss/css-1/</guid>
+      <description>&lt;p&gt;css笔记-1：选择器&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>HTML笔记-1：Web语言</title>
       <link>https://zzzsy.top/notes/htmlcss/ht-1/</link>
