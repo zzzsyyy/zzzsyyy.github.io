@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Forensics | ZSYのBlog</title>
+<title>在Archlinux上挂载可读写的ntfs | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -15,23 +15,6 @@
      integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
-  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false },
-      ],
-    });
-  });
-</script>
 
 
 <link rel="icon" type="image/png" sizes="32x32" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_32x32_fill_box_center_2.png">
@@ -46,44 +29,59 @@
   "itemListElement": [{
       "@type": "ListItem",
       "position": 1 ,
-      "name":"Tags",
-      "item":"https://zzzsy.top/tags/"},{
+      "name":"笔记",
+      "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Forensics",
-      "item":"https://zzzsy.top/tags/Forensics/"}]
+      "name":"随笔",
+      "item":"https://zzzsy.top/notes/essay/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"在Archlinux上挂载可读写的ntfs",
+      "item":"https://zzzsy.top/notes/essay/archlinux-mount-ntfs-rw/"}]
 }
 </script>
 
 
 
-
 <script type="application/ld+json">
 {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "itemListElement":[{
-            "@type":"ListItem",
-            "position":  1 ,
-            "name": "一些Misc的Writeup - 1",
-            "description": "\u003cp\u003eMisc：Forensics\u003c/p\u003e",
-            "url": "https://zzzsy.top/notes/CTF/Forensics/"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsy.top/notes/essay/archlinux-mount-ntfs-rw/"
+    },
+    "headline": "在Archlinux上挂载可读写的ntfs | ZSYのBlog","datePublished": "2021-04-28T00:00:00+00:00",
+    "dateModified": "2021-04-28T00:00:00+00:00",
+    "wordCount":  339 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsy.top/images/icon.png"
         }
-    ]
+        },
+    "description": ""
 }
-</script><meta property="og:title" content="Forensics | ZSYのBlog" />
-<meta property="og:type" content="website" />
+</script><meta property="og:title" content="在Archlinux上挂载可读写的ntfs | ZSYのBlog" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/tags/Forensics/" />
+<meta property="og:url" content="https://zzzsy.top/notes/essay/archlinux-mount-ntfs-rw/" />
 
 
 
 
-
+<meta property="og:description" content="" />
 
 
 
@@ -100,14 +98,23 @@
 
 
 
-<meta property="og:updated_time" content="2020-12-27T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-04-28T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-04-28T00:00:00&#43;00:00" />
 
 
 
-<meta property="article:section" content="tags" />
+<meta property="article:section" content="notes" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://zzzsy.top/tags/Forensics/index.xml" title="ZSYのBlog" />
+<meta property="article:tag" content="linux" />
+
+<meta property="article:tag" content="mount" />
+
+
+
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -126,7 +133,7 @@
     <div id="target"
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">笔记</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
             <a href="/authors/Zhang/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
@@ -186,65 +193,177 @@
   <main class="flex-grow pt-16">
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
-<article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Forensics</h1>
-    
-</article>
-<div class="bg-secondary-bg rounded px-6">
-    <div class="overflow-hidden divide-y">
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://zzzsy.top/notes/CTF/Forensics/" class="font-bold text-xl hover:text-eureka">一些Misc的Writeup - 1</a>
-</div>
-<div class="content">
-  Misc：Forensics
 
-</div>
 
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">在Archlinux上挂载可读写的ntfs</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2020-12-27</span>
+        <span>2021-04-28</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1534字</span>
+        <span>339字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>4分钟</span>
+        <span>1分钟</span>
     </div>
 
     
 
     
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
+
+</div>
         
-        <a href="https://zzzsy.top/series/CTF/" class="hover:text-eureka">CTF</a>
+        
+        
+
+        <div class="content">
+            <p>今天想把在linux上下载的一个文件放到公共的分区<code>Data</code>时，发现它是不可写的。</p>
+<p>于是整开<code>/etc/fstab</code>在挂载语句后面加上<code>rw</code>，变成</p>
+<pre><code class="language-bash">UUID=6A268974849B /home/username/Data ntfs-3g rw,uid=1000,gid=users,umask=0022 0 0
+</code></pre>
+<blockquote>
+<p>其中参数意义参见
+<a href="https://wiki.archlinux.org/index.php/Fstab_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29" target="_blank">fstab</a></p>
+</blockquote>
+<p>先取消挂载<code>sudo umount /home/username/Data</code>，重新挂载<code>mount -a</code></p>
+<p>爆出错误：</p>
+<pre><code class="language-text">Error mounting: mount exited with exit code 1: helper failed with:
+Unprivileged user can not mount NTFS block devices using the external FUSE
+library. Either mount the volume as root, or rebuild NTFS-3G with integrated
+FUSE support and make it setuid root. Please see more information at
+http://tuxera.com/community/ntfs-3g-faq/#unprivileged
+</code></pre>
+<p>大概意思是非特权用户不能加载使用了额外FUSE库的NTFS文件系统</p>
+<p>使用<code>sudo</code>命令，发现又有新的错误</p>
+<pre><code class="language-text">The disk contains an unclean file system (0, 0).
+Metadata kept in Windows cache, refused to mount.
+Falling back to read-only mount because the NTFS partition is in an
+unsafe state. Please resume and shutdown Windows fully (no hibernation
+or fast restarting.)
+</code></pre>
+<p>意思是元数据保存在其中，拒绝挂载</p>
+<p>查找了一下解决办法<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<pre><code class="language-bash">yay -Sy ntfsprogs
+sudo ntfsfix /dev/nvme0n1p4
+sudo umount /home/username/Data
+sudo mount -a
+</code></pre>
+<p>成功解决</p>
+<p>参考：</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>
+<a href="https://wiki.archlinux.org/index.php/NTFS-3G_%28%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%29#%E6%8D%9F%E5%9D%8F%E7%9A%84NTFS%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F" target="_blank">NTFS-3G (简体中文)</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>
+<a href="https://www.cnblogs.com/zhishuai/p/7822810.html" target="_blank">kali 2016：mount ntfs 分区只读 </a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://zzzsy.top/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#linux</a>
+    
+    <a href="https://zzzsy.top/tags/mount/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#mount</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsy.top/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsy.top/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsy.top/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2">巧者劳而智者忧，无能者无所求，饱食而遨游，泛若不系之舟</span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/zzzsyyy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://pan.zzzsy.top" class="mr-1">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsy.top/notes/essay/resolve-err-too-many-redirects-on-cloudflare/" class="block">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
         
     </div>
     
 
+    
+    
 </div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-</div>
-
-
-</div>
-
-
-
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
 
       </div>
     </div>

@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Forensics | ZSYのBlog</title>
+<title>解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -15,23 +15,6 @@
      integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
-  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false },
-      ],
-    });
-  });
-</script>
 
 
 <link rel="icon" type="image/png" sizes="32x32" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_32x32_fill_box_center_2.png">
@@ -46,44 +29,59 @@
   "itemListElement": [{
       "@type": "ListItem",
       "position": 1 ,
-      "name":"Tags",
-      "item":"https://zzzsy.top/tags/"},{
+      "name":"笔记",
+      "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Forensics",
-      "item":"https://zzzsy.top/tags/Forensics/"}]
+      "name":"随笔",
+      "item":"https://zzzsy.top/notes/essay/"},{
+      "@type": "ListItem",
+      "position": 3 ,
+      "name":"解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误",
+      "item":"https://zzzsy.top/notes/essay/resolve-err-too-many-redirects-on-cloudflare/"}]
 }
 </script>
 
 
 
-
 <script type="application/ld+json">
 {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "itemListElement":[{
-            "@type":"ListItem",
-            "position":  1 ,
-            "name": "一些Misc的Writeup - 1",
-            "description": "\u003cp\u003eMisc：Forensics\u003c/p\u003e",
-            "url": "https://zzzsy.top/notes/CTF/Forensics/"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://zzzsy.top/notes/essay/resolve-err-too-many-redirects-on-cloudflare/"
+    },
+    "headline": "解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误 | ZSYのBlog","datePublished": "2021-02-20T00:00:00+00:00",
+    "dateModified": "2021-02-20T00:00:00+00:00",
+    "wordCount":  397 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "zhangshanying",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://zzzsy.top/images/icon.png"
         }
-    ]
+        },
+    "description": ""
 }
-</script><meta property="og:title" content="Forensics | ZSYのBlog" />
-<meta property="og:type" content="website" />
+</script><meta property="og:title" content="解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误 | ZSYのBlog" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/tags/Forensics/" />
+<meta property="og:url" content="https://zzzsy.top/notes/essay/resolve-err-too-many-redirects-on-cloudflare/" />
 
 
 
 
-
+<meta property="og:description" content="" />
 
 
 
@@ -100,14 +98,23 @@
 
 
 
-<meta property="og:updated_time" content="2020-12-27T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-02-20T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-02-20T00:00:00&#43;00:00" />
 
 
 
-<meta property="article:section" content="tags" />
+<meta property="article:section" content="notes" />
 
 
-<link rel="alternate" type="application/rss+xml" href="https://zzzsy.top/tags/Forensics/index.xml" title="ZSYのBlog" />
+<meta property="article:tag" content="DNS" />
+
+<meta property="article:tag" content="建站" />
+
+
+
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -126,7 +133,7 @@
     <div id="target"
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">笔记</a>
+            <a href="/notes/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">笔记</a>
             <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文档</a>
             <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
             <a href="/authors/Zhang/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
@@ -186,65 +193,155 @@
   <main class="flex-grow pt-16">
     <div class="pl-scrollbar">
       <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
-<article class="mx-6 my-8">
-    <h1 class="font-bold text-3xl text-primary-text">Forensics</h1>
-    
-</article>
-<div class="bg-secondary-bg rounded px-6">
-    <div class="overflow-hidden divide-y">
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="https://zzzsy.top/notes/CTF/Forensics/" class="font-bold text-xl hover:text-eureka">一些Misc的Writeup - 1</a>
-</div>
-<div class="content">
-  Misc：Forensics
 
-</div>
 
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2020-12-27</span>
+        <span>2021-02-20</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1534字</span>
+        <span>397字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>4分钟</span>
+        <span>1分钟</span>
     </div>
 
     
 
     
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
+
+</div>
         
-        <a href="https://zzzsy.top/series/CTF/" class="hover:text-eureka">CTF</a>
+        
+        
+
+        <div class="content">
+            <p>今天打开网站，发现出现错误“ERR_TOO_MANY_REDIRECTS”，意思是“重定向次数过多”。估计是将域名解析放在Cloudflare上的问题。</p>
+<p>这个错误在以前打开
+<a href="https://www.codewars.com/dashboard" target="_blank">CodeWars</a>时也遇见过，当时查好像和服务器什么的有关系。查找一通发现和我问题一样的<u>情况</u><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<p>原因就是服务器的SSL与Cloudflare的配置冲突，这在<u>官方的文档</u><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>也有描述。</p>
+<blockquote>
+<p>The <em>Flexible</em> <strong>SSL</strong> encryption mode in the Cloudflare <strong>SSL/TLS</strong> app <strong>Overview</strong> tab encrypts traffic between the browser and the Cloudflare network over HTTPS. However, when the <em>Flexible</em> <strong>SSL</strong> option is enabled, Cloudflare sends requests to your origin web server unencrypted over HTTP. Redirect loops occur if your origin web server is configured to redirect all HTTP requests to HTTPS when using the <em>Flexible</em> <strong>SSL</strong> option.</p>
+<p>Redirect loops may also occur when using the <em>Full</em> or <em>Full(strict)</em> <strong>SSL</strong> option.  The only difference is that Cloudflare contacts your origin web server over HTTPS and the redirect loop occurs if your origin web server redirects HTTPS requests to HTTP.</p>
+</blockquote>
+<p>我没有采用官网推荐的方式（这也是上面文章的方式），而是将SSL的选项从Flexible SSL改成了Full SSL。</p>
+<p>问题解决！</p>
+<p>参考资料：</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>
+<a href="https://www.heartnn.com/2018/11/17/resolve-err-too-many-redirects-on-cloudflare/" target="_blank">解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>
+<a href="https://support.cloudflare.com/hc/en-us/articles/115000219871" target="_blank">Why does Flexible SSL cause a redirect loop?</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://zzzsy.top/tags/DNS/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#DNS</a>
+    
+    <a href="https://zzzsy.top/tags/%E5%BB%BA%E7%AB%99/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#建站</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsy.top/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsy.top/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsy.top/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2">巧者劳而智者忧，无能者无所求，饱食而遨游，泛若不系之舟</span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/zzzsyyy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://pan.zzzsy.top" class="mr-1">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsy.top/notes/essay/archlinux-mount-ntfs-rw/" class="block">在Archlinux上挂载可读写的ntfs</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
         
     </div>
     
 
+    
+    
 </div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-</div>
-
-
-</div>
-
-
-
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
 
       </div>
     </div>

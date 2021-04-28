@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on ZSYのBlog</title>
-    <link>https://zzzsy.top/tags/linux/</link>
-    <description>Recent content in linux on ZSYのBlog</description>
+    <title>随笔 on ZSYのBlog</title>
+    <link>https://zzzsy.top/notes/essay/</link>
+    <description>Recent content in 随笔 on ZSYのBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | </copyright>
-    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/notes/essay/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在Archlinux上挂载可读写的ntfs</title>
       <link>https://zzzsy.top/notes/essay/archlinux-mount-ntfs-rw/</link>
       <pubDate>Wed, 28 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zzzsy.top/notes/essay/archlinux-mount-ntfs-rw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解决Cloudflare产生的“ERR_TOO_MANY_REDIRECTS”错误</title>
+      <link>https://zzzsy.top/notes/essay/resolve-err-too-many-redirects-on-cloudflare/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/essay/resolve-err-too-many-redirects-on-cloudflare/</guid>
       <description></description>
     </item>
     
