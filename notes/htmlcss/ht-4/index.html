@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>HTML笔记-4：HTML属性 | ZSYのBlog</title>
+<title>HTML笔记-4：HTML链接、头部、CSS | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="HTML笔记-4：HTML属性">
+  content="HTML笔记-4：链接、头部、CSS">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +50,7 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"HTML笔记-4：HTML属性",
+      "name":"HTML笔记-4：HTML链接、头部、CSS",
       "item":"https://zzzsy.top/notes/htmlcss/ht-4/"}]
 }
 </script>
@@ -65,7 +65,7 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/htmlcss/ht-4/"
     },
-    "headline": "HTML笔记-4：HTML属性 | ZSYのBlog","wordCount":  261 ,
+    "headline": "HTML笔记-4：HTML链接、头部、CSS | ZSYのBlog","wordCount":  396 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -78,9 +78,9 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "\u003cp\u003eHTML笔记-4：HTML属性\u003c\/p\u003e"
+    "description": "\u003cp\u003eHTML笔记-4：链接、头部、CSS\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="HTML笔记-4：HTML属性 | ZSYのBlog" />
+</script><meta property="og:title" content="HTML笔记-4：HTML链接、头部、CSS | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
@@ -92,7 +92,7 @@
 
 
 
-<meta property="og:description" content="HTML笔记-4：HTML属性" />
+<meta property="og:description" content="HTML笔记-4：链接、头部、CSS" />
 
 
 
@@ -235,7 +235,7 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">HTML笔记-4：HTML属性</h1>
+        <h1 class="font-bold text-3xl text-primary-text">HTML笔记-4：HTML链接、头部、CSS</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
@@ -243,7 +243,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>261字</span>
+        <span>396字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -267,57 +267,32 @@
         
 
         <div class="content">
-            <p>HTML笔记-4：HTML属性</p>
-<h1 id="属性">属性</h1>
-<p>提供附加的信息</p>
+            <p>HTML笔记-4：链接、头部、CSS</p>
+<h2 id="链接">链接</h2>
+<p>html用标签<code>a</code>来设置超文本链接，<code>href</code>属性指定了链接的目标（Hypertext Reference的缩写）</p>
+<pre><code class="language-html">&lt;a href=&quot;url&quot;&gt;链接文本&lt;/a&gt;
+</code></pre>
 <blockquote>
-<p>属性是元素的附加信息</p>
-<p>属性一般写在开始标签</p>
-<p>属性总是以键值对的形式出现</p>
+<p>链接文本不一定是文本，还可以是图片等其他元素。</p>
 </blockquote>
+<h3 id="target属性">target属性</h3>
+<p>使用<code>target</code>属性，你可以定义被连接的文档在何处显示</p>
+<h3 id="id属性">id属性</h3>
+<p>id属性可以“创建一个<strong>标签</strong>（书签）”，一般用于目录的跳转</p>
+<p>演示：</p>
+<pre><code class="language-html">&lt;a id=&quot;tips&quot;&gt;AAA&lt;/a&gt;
+
+&lt;a href=&quot;#tips&quot;&gt;访问AAA&lt;/a&gt;
+</code></pre>
 <ul>
-<li>属性应该始终被<strong>包含在引号</strong>内</li>
+<li>
+<p>请始终添加<strong>正斜杠</strong><code>/</code>到子文件夹，否则会产生两次请求</p>
+<p><code>href=&quot;https://www......com/html/</code></p>
+</li>
 </ul>
-<h3 id="常见全局属性">常见全局属性</h3>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>class</td>
-<td>规定元素的类名（classname）</td>
-</tr>
-<tr>
-<td>hidden</td>
-<td>规定对元素进行隐藏</td>
-</tr>
-<tr>
-<td>id</td>
-<td>规定元素唯一的id</td>
-</tr>
-<tr>
-<td>lang</td>
-<td>设置元素中内容的语言代码</td>
-</tr>
-<tr>
-<td>style</td>
-<td>规定元素的行内样式（inline style）</td>
-</tr>
-<tr>
-<td>title</td>
-<td>规定元素的额外信息（作为工具条使用）</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>属性和属性值，尽量小写</li>
-<li>class属性可以使用<code>class=&quot; &quot;</code>，引号内可以使用多个class</li>
-<li>id属性只能单独`id=&quot; &ldquo;，只能填写一个</li>
-</ul>
+<h2 id="head">HEAD</h2>
+<p><code>&lt;head&gt;</code> 元素包含了所有的头部标签元素。在 <code>&lt;head&gt;</code>元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。</p>
+<p>可以添加在头部区域的元素标签为: <code>&lt;title&gt;</code>, <code>&lt;style&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;noscript&gt;</code>和 <code>&lt;base&gt;</code>。</p>
         </div>
         
         <div class="my-4">
@@ -424,7 +399,7 @@
         <a href="https://zzzsy.top/notes/htmlcss/ht-3/">HTML笔记-3：常用标签与属性</a>
         <br />
         
-        <a href="https://zzzsy.top/notes/htmlcss/ht-4/">HTML笔记-4：HTML属性</a>
+        <a href="https://zzzsy.top/notes/htmlcss/ht-4/">HTML笔记-4：HTML链接、头部、CSS</a>
         <br />
         
         <a href="https://zzzsy.top/notes/JavaScript/js-1/">js笔记-1：</a>
@@ -441,11 +416,13 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#链接">链接</a>
       <ul>
-        <li><a href="#常见全局属性">常见全局属性</a></li>
+        <li><a href="#target属性">target属性</a></li>
+        <li><a href="#id属性">id属性</a></li>
       </ul>
     </li>
+    <li><a href="#head">HEAD</a></li>
   </ul>
 </nav>
 </div>
