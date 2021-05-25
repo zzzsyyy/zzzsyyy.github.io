@@ -58,6 +58,26 @@
   </url>
   
   <url>
+    <loc>https://zzzsy.top/tags/css/</loc>
+    <lastmod>2021-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/tags/html/</loc>
+    <lastmod>2021-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/notes/htmlcss/ht-4/</loc>
+    <lastmod>2021-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/notes/htmlcss/ht-3/</loc>
+    <lastmod>2021-05-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zzzsy.top/series/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2021-05-03T00:00:00+00:00</lastmod>
   </url>
@@ -70,6 +90,16 @@
   <url>
     <loc>https://zzzsy.top/notes/miniprogram/mnp-1/</loc>
     <lastmod>2021-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/tags/JS/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zzzsy.top/notes/JavaScript/js-1/</loc>
+    <lastmod>2021-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -88,17 +118,7 @@
   </url>
   
   <url>
-    <loc>https://zzzsy.top/tags/css/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://zzzsy.top/notes/htmlcss/css-1/</loc>
-    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zzzsy.top/tags/html/</loc>
     <lastmod>2021-04-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -379,22 +399,6 @@
   
   <url>
     <loc>https://zzzsy.top/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zzzsy.top/notes/htmlcss/ht-3/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zzzsy.top/notes/htmlcss/ht-4/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zzzsy.top/tags/JS/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zzzsy.top/notes/JavaScript/js-1/</loc>
   </url>
   
 </urlset>

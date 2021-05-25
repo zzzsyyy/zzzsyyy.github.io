@@ -18,6 +18,33 @@
     </item>
     
     <item>
+      <title>HTML笔记-4：HTML链接、头部、CSS</title>
+      <link>https://zzzsy.top/notes/htmlcss/ht-4/</link>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/htmlcss/ht-4/</guid>
+      <description>&lt;p&gt;HTML笔记-4：链接、头部、CSS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML笔记-3：常用标签与属性</title>
+      <link>https://zzzsy.top/notes/htmlcss/ht-3/</link>
+      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/htmlcss/ht-3/</guid>
+      <description>&lt;p&gt;HTML笔记-3：常用标签&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JS笔记-1：JS介绍</title>
+      <link>https://zzzsy.top/notes/JavaScript/js-1/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/JavaScript/js-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>css笔记-1：选择器</title>
       <link>https://zzzsy.top/notes/htmlcss/css-1/</link>
       <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
@@ -42,33 +69,6 @@
       
       <guid>https://zzzsy.top/notes/htmlcss/ht-2/</guid>
       <description>&lt;p&gt;HTML笔记-2：深入了解超文本&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>HTML笔记-3：常用标签与属性</title>
-      <link>https://zzzsy.top/notes/htmlcss/ht-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/notes/htmlcss/ht-3/</guid>
-      <description>&lt;p&gt;HTML笔记-3：常用标签&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>HTML笔记-4：HTML链接、头部、CSS</title>
-      <link>https://zzzsy.top/notes/htmlcss/ht-4/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/notes/htmlcss/ht-4/</guid>
-      <description>&lt;p&gt;HTML笔记-4：链接、头部、CSS&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>JS笔记-1：JS介绍</title>
-      <link>https://zzzsy.top/notes/JavaScript/js-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/notes/JavaScript/js-1/</guid>
-      <description></description>
     </item>
     
   </channel>
