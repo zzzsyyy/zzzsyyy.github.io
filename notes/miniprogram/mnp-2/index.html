@@ -67,7 +67,7 @@
     },
     "headline": "微信小程序-语法基础 | ZSYのBlog","datePublished": "2021-05-07T00:00:00+00:00",
     "dateModified": "2021-05-09T00:00:00+00:00",
-    "wordCount":  63 ,
+    "wordCount":  635 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -231,11 +231,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>63字</span>
+        <span>635字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟</span>
+        <span>2分钟</span>
     </div>
 
     
@@ -261,6 +261,91 @@
 <h4 id="普通写法">普通写法</h4>
 <p><code>text</code>标签相当于<code>span</code>标签：行内元素</p>
 <p><code>view</code>标签相当于<code>div</code>bnqm：块级元素</p>
+<h4 id="数据绑定-1">数据绑定</h4>
+<p><code>.js</code>文件</p>
+<pre><code class="language-javascript">Page({
+    data: {
+        msg: &quot;hello&quot;,
+        num: 10000,
+        person:{
+            age:74,
+            height:176,
+            name:&quot;Paul&quot;
+        },
+        isChecked:false
+    }
+})
+</code></pre>
+<p><code>.wxml</code>文件</p>
+<pre><code class="language-html">&lt;view&gt; {{msg}} &lt;/view&gt;
+&lt;view&gt; {{person.age}} &lt;/view&gt;
+&lt;view data-num=&quot;{{num}}&quot; &gt; 自定义属性 &lt;/view&gt;
+&lt;view&gt;
+    &lt;checkbox checked=&quot;{{isChecked}}&quot; &gt;  &lt;/checkbox&gt;
+    &lt;!--引号与括号间不能有空格--&gt;
+&lt;/view&gt;
+</code></pre>
+<h2 id="运算">运算</h2>
+<blockquote>
+<p>可已在花括号中加入一些表达式</p>
+</blockquote>
+<pre><code class="language-html">&lt;!--数字运算--&gt;
+&lt;view&gt; {{1+1}} &lt;/view&gt;
+&lt;!--字符串拼接--&gt;
+&lt;view&gt; {{'1'+'1'}} &lt;/view&gt;
+&lt;!--三目表达式--&gt;
+&lt;view&gt; {{ 10%2===0 ? '偶数' : '奇数'}} &lt;/view&gt;
+&lt;!--三个’=’是严格等于，即值相等，数据类型也相等--&gt;
+</code></pre>
+<h3 id="列表渲染">列表渲染</h3>
+<h4 id="wxfor"><code>wx:for</code></h4>
+<p>项的变量名默认为<code>item</code> <code>wx:for-item</code>可移指定当前元素的变量名</p>
+<p>下标变量名默认为<code>index</code> <code>wx:for-index</code>可以指定当前下标的变量名</p>
+<p><code>.js</code></p>
+<pre><code class="language-javascript">list:[
+    {
+        id:0,
+        name:&quot;A&quot;
+    },
+    {
+        id:1,
+        name:&quot;B&quot;
+    },
+    {
+        id:2,
+        name:&quot;C&quot;
+    }
+]
+</code></pre>
+<p><code>.wxml</code></p>
+<pre><code class="language-html">&lt;!--
+  列表循环
+    1  wx:for=&quot;{{数组或对象}}&quot; 
+      wx:for-item=&quot;循环项的名称&quot; 
+      wx:for-index=&quot;索引项的索引&quot;
+    2 wx:key=&quot;唯一的值&quot; 提高渲染性能
+      使用主键或 *this
+    3 循环嵌套时，名称不要重复（index，item）
+    4 wx:for-item=&quot;item&quot; wx:for-index=&quot;index&quot;是默认值，可以不写（无嵌套时）
+--&gt;
+&lt;view&gt; 
+    &lt;view wx:for=&quot;{{list}}&quot; wx:for-item=&quot;item&quot; wx:for-index=&quot;index&quot;&gt; 
+        索引：{{index}}
+        --
+        值：{{item.name}}
+    &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<p>对象循环</p>
+<pre><code class="language-html">&lt;view&gt; 
+    &lt;view&gt; 对象循环 &lt;/view&gt;
+    &lt;view&gt;wx:for=&quot;{{person}}&quot;
+        属性:{{index}}
+        --
+        值:{{item}}
+    &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
         </div>
         
         <div class="my-4">
