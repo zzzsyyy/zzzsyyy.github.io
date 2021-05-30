@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>微信小程序-语法基础 | ZSYのBlog</title>
+<title>微信小程序-数据绑定、运算和循环 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -50,7 +50,7 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"微信小程序-语法基础",
+      "name":"微信小程序-数据绑定、运算和循环",
       "item":"https://zzzsy.top/notes/miniprogram/mnp-2/"}]
 }
 </script>
@@ -65,9 +65,9 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/miniprogram/mnp-2/"
     },
-    "headline": "微信小程序-语法基础 | ZSYのBlog","datePublished": "2021-05-07T00:00:00+00:00",
+    "headline": "微信小程序-数据绑定、运算和循环 | ZSYのBlog","datePublished": "2021-05-07T00:00:00+00:00",
     "dateModified": "2021-05-09T00:00:00+00:00",
-    "wordCount":  635 ,
+    "wordCount":  658 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -82,7 +82,7 @@
         },
     "description": "\u003cp\u003e微信小程序的语法基础\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="微信小程序-语法基础 | ZSYのBlog" />
+</script><meta property="og:title" content="微信小程序-数据绑定、运算和循环 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
@@ -223,7 +223,7 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">微信小程序-语法基础</h1>
+        <h1 class="font-bold text-3xl text-primary-text">微信小程序-数据绑定、运算和循环</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
@@ -231,7 +231,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>635字</span>
+        <span>658字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -260,7 +260,7 @@
 <h3 id="数据绑定">数据绑定</h3>
 <h4 id="普通写法">普通写法</h4>
 <p><code>text</code>标签相当于<code>span</code>标签：行内元素</p>
-<p><code>view</code>标签相当于<code>div</code>bnqm：块级元素</p>
+<p><code>view</code>标签相当于<code>div</code>标签：块级元素</p>
 <h4 id="数据绑定-1">数据绑定</h4>
 <p><code>.js</code>文件</p>
 <pre><code class="language-javascript">Page({
@@ -316,11 +316,17 @@
         name:&quot;C&quot;
     }
 ]
+person:{
+    age:74,
+    height:176,
+    name:&quot;Paul&quot;,
+    id=1234
+}
 </code></pre>
 <p><code>.wxml</code></p>
 <pre><code class="language-html">&lt;!--
   列表循环
-    1  wx:for=&quot;{{数组或对象}}&quot; 
+    1 wx:for=&quot;{{数组或对象}}&quot; 
       wx:for-item=&quot;循环项的名称&quot; 
       wx:for-index=&quot;索引项的索引&quot;
     2 wx:key=&quot;唯一的值&quot; 提高渲染性能
@@ -337,12 +343,18 @@
 &lt;/view&gt;
 </code></pre>
 <p>对象循环</p>
-<pre><code class="language-html">&lt;view&gt; 
+<pre><code class="language-html">&lt;!--wx:for-item=&quot;value&quot; wx:for-index=&quot;key&quot;
+为了便于识别对象--&gt;
+&lt;view&gt; 
     &lt;view&gt; 对象循环 &lt;/view&gt;
-    &lt;view&gt;wx:for=&quot;{{person}}&quot;
-        属性:{{index}}
+    &lt;view
+        wx:for=&quot;{{person}}&quot;
+        wx:for-item=&quot;value&quot; 
+        wx:for-index=&quot;key&quot;
+        wx:key=&quot;id&quot;&gt;
+        属性:{{value}}
         --
-        值:{{item}}
+        值:{{key}}
     &lt;/view&gt;
 &lt;/view&gt;
 </code></pre>
@@ -438,7 +450,7 @@
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/miniprogram/mnp-2/">微信小程序-语法基础</a>
+        <a href="https://zzzsy.top/notes/miniprogram/mnp-2/">微信小程序-数据绑定、运算和循环</a>
         <br />
         
         <a href="https://zzzsy.top/notes/miniprogram/mnp-1/">微信小程序-配置文件</a>
