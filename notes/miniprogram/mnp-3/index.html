@@ -67,7 +67,7 @@
     },
     "headline": "微信小程序-block标签、条件渲染和事件绑定 | ZSYのBlog","datePublished": "2021-05-12T00:00:00+00:00",
     "dateModified": "2021-05-13T00:00:00+00:00",
-    "wordCount":  314 ,
+    "wordCount":  401 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -130,6 +130,10 @@
 
 
 
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-4/" />
 
 
 
@@ -235,7 +239,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>314字</span>
+        <span>401字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -287,6 +291,7 @@
 <p><code>hidden</code>属性不要和<code>diplay</code>样式一起使用</p>
 </blockquote>
 <h2 id="事件绑定">事件绑定</h2>
+<h4 id="双向绑定">双向绑定</h4>
 <p><code>.js</code></p>
 <pre><code class="language-js">Page({
     data:{
@@ -313,6 +318,32 @@
     })
 --&gt;
 &lt;input type=&quot;text&quot; bindinput=&quot;handleInput&quot; /&gt;
+&lt;view&gt;  
+  {{num}}
+&lt;/view&gt;
+</code></pre>
+<h4 id="绑定一个按钮">绑定一个按钮</h4>
+<pre><code class="language-js">Page({
+    //
+    handletap(e){
+        //console.log(e);
+        const operation=e.currentTarget.dataset.operation;
+        this.setData({
+            num: this.data.num + operation
+        })
+    }
+})
+</code></pre>
+<pre><code class="language-html">&lt;!--
+  1 需要加入一个点击事件
+    1 bindtap
+    2 无法在小程序的事件中直接传参
+    3 在属性中自定义 来传参
+    4 事件源中获取参数
+--&gt;
+&lt;input type=&quot;text&quot; bindinput=&quot;handleInput&quot; /&gt;
+&lt;button bindtap=&quot;handletap data-operation=&quot;{{1}}&gt;+&lt;/button&gt;
+&lt;button bindtap=&quot;handletap data-operation=&quot;{{-1}}&gt;-&lt;/button&gt;
 &lt;view&gt;  
   {{num}}
 &lt;/view&gt;
@@ -387,7 +418,7 @@
     <div>
         
         <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/JavaScript/json/" class="block">json格式详解</a>
+        <a href="https://zzzsy.top/notes/miniprogram/mnp-4/" class="block">微信小程序-样式</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
@@ -408,6 +439,9 @@
     <h3 class="text-lg font-semibold mb-4">系列文章</h3>
     <div class="content">
         
+        
+        <a href="https://zzzsy.top/notes/miniprogram/mnp-4/">微信小程序-样式</a>
+        <br />
         
         <a href="https://zzzsy.top/notes/miniprogram/mnp-3/">微信小程序-block标签、条件渲染和事件绑定</a>
         <br />
@@ -440,7 +474,16 @@
         <li><a href="#hidden属性"><code>hidden</code>属性</a></li>
       </ul>
     </li>
-    <li><a href="#事件绑定">事件绑定</a></li>
+    <li><a href="#事件绑定">事件绑定</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#双向绑定">双向绑定</a></li>
+            <li><a href="#绑定一个按钮">绑定一个按钮</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
