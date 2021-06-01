@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>微信小程序-数据绑定、运算和循环 | ZSYのBlog</title>
+<title>微信小程序 ｜  | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -50,8 +50,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"微信小程序-数据绑定、运算和循环",
-      "item":"https://zzzsy.top/notes/miniprogram/mnp-2/"}]
+      "name":"微信小程序 ｜ ",
+      "item":"https://zzzsy.top/notes/miniprogram/mnp-5/"}]
 }
 </script>
 
@@ -63,11 +63,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/miniprogram/mnp-2/"
+        "@id": "https://zzzsy.top/notes/miniprogram/mnp-5/"
     },
-    "headline": "微信小程序-数据绑定、运算和循环 | ZSYのBlog","datePublished": "2021-05-07T00:00:00+00:00",
-    "dateModified": "2021-05-09T00:00:00+00:00",
-    "wordCount":  658 ,
+    "headline": "微信小程序 ｜  | ZSYのBlog","datePublished": "2021-05-20T00:00:00+00:00",
+    "dateModified": "2021-05-23T00:00:00+00:00",
+    "wordCount":  550 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -82,14 +82,14 @@
         },
     "description": "\u003cp\u003e微信小程序的语法基础\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="微信小程序-数据绑定、运算和循环 | ZSYのBlog" />
+</script><meta property="og:title" content="微信小程序 ｜  | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/miniprogram/mnp-2/" />
+<meta property="og:url" content="https://zzzsy.top/notes/miniprogram/mnp-5/" />
 
 
 
@@ -111,10 +111,10 @@
 
 
 
-<meta property="article:published_time" content="2021-05-07T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-05-20T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-05-09T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-05-23T00:00:00&#43;00:00" />
 
 
 
@@ -133,8 +133,6 @@
 
 
 
-<meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-5/" />
-
 
 
 <meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-4/" />
@@ -144,6 +142,8 @@
 <meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-3/" />
 
 
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-2/" />
 
 
 
@@ -235,15 +235,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">微信小程序-数据绑定、运算和循环</h1>
+        <h1 class="font-bold text-3xl text-primary-text">微信小程序 ｜ </h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-05-07</span>
+        <span>2021-05-20</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>658字</span>
+        <span>550字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -268,107 +268,140 @@
 
         <div class="content">
             <p>微信小程序的语法基础</p>
-<h2 id="模版语法">模版语法</h2>
-<h3 id="数据绑定">数据绑定</h3>
-<h4 id="普通写法">普通写法</h4>
-<p><code>text</code>标签相当于<code>span</code>标签：行内元素</p>
-<p><code>view</code>标签相当于<code>div</code>标签：块级元素</p>
-<h4 id="数据绑定-1">数据绑定</h4>
-<p><code>.js</code>文件</p>
-<pre><code class="language-javascript">Page({
-    data: {
-        msg: &quot;hello&quot;,
-        num: 10000,
-        person:{
-            age:74,
-            height:176,
-            name:&quot;Paul&quot;
-        },
-        isChecked:false
-    }
-})
-</code></pre>
-<p><code>.wxml</code>文件</p>
-<pre><code class="language-html">&lt;view&gt; {{msg}} &lt;/view&gt;
-&lt;view&gt; {{person.age}} &lt;/view&gt;
-&lt;view data-num=&quot;{{num}}&quot; &gt; 自定义属性 &lt;/view&gt;
-&lt;view&gt;
-    &lt;checkbox checked=&quot;{{isChecked}}&quot; &gt;  &lt;/checkbox&gt;
-    &lt;!--引号与括号间不能有空格--&gt;
-&lt;/view&gt;
-</code></pre>
-<h2 id="运算">运算</h2>
-<blockquote>
-<p>可已在花括号中加入一些表达式</p>
-</blockquote>
-<pre><code class="language-html">&lt;!--数字运算--&gt;
-&lt;view&gt; {{1+1}} &lt;/view&gt;
-&lt;!--字符串拼接--&gt;
-&lt;view&gt; {{'1'+'1'}} &lt;/view&gt;
-&lt;!--三目表达式--&gt;
-&lt;view&gt; {{ 10%2===0 ? '偶数' : '奇数'}} &lt;/view&gt;
-&lt;!--三个’=’是严格等于，即值相等，数据类型也相等--&gt;
-</code></pre>
-<h3 id="列表渲染">列表渲染</h3>
-<h4 id="wxfor"><code>wx:for</code></h4>
-<p>项的变量名默认为<code>item</code> <code>wx:for-item</code>可移指定当前元素的变量名</p>
-<p>下标变量名默认为<code>index</code> <code>wx:for-index</code>可以指定当前下标的变量名</p>
-<p><code>.js</code></p>
-<pre><code class="language-javascript">list:[
-    {
-        id:0,
-        name:&quot;A&quot;
-    },
-    {
-        id:1,
-        name:&quot;B&quot;
-    },
-    {
-        id:2,
-        name:&quot;C&quot;
-    }
-]
-person:{
-    age:74,
-    height:176,
-    name:&quot;Paul&quot;,
-    id=1234
-}
-</code></pre>
+<h1 id="常见组件">常见组件</h1>
+<h2 id="view标签"><code>view</code>标签</h2>
+<p>代替原来的 <code>div</code> 标签</p>
+<h2 id="text标签"><code>text</code>标签</h2>
+<ul>
+<li>文本标签</li>
+<li>只能嵌套text</li>
+<li>可以实现文字复制（只有这个标签）</li>
+<li>可以对空格、回车进行编码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>默认</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user-select</td>
+<td>false</td>
+<td>文字是否可选</td>
+</tr>
+<tr>
+<td>decode</td>
+<td>false</td>
+<td>是否解码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image标签"><code>image</code>标签</h2>
+<ul>
+<li>
+<p>image组件的默认宽度是320px、高度是240px</p>
+</li>
+<li>
+<p>支持lazy 加载：当图片出现在某个高度之内时，自动开始加载</p>
+</li>
+<li>
+<p>一些属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>指定图片加载路径</td>
+</tr>
+<tr>
+<td>lazy-load</td>
+<td>图片懒加载</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>指定图片裁剪、缩放的形式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>常见mode的值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scaleToFill</td>
+<td>缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素</td>
+</tr>
+<tr>
+<td>aspectFit</td>
+<td>缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。</td>
+</tr>
+<tr>
+<td>widthFix</td>
+<td>缩放模式，宽度不变，高度自动变化，保持原图宽高比不变</td>
+</tr>
+<tr>
+<td>heightFix</td>
+<td>缩放模式，高度不变，宽度自动变化，保持原图宽高比不变</td>
+</tr>
+<tr>
+<td>aspectFill</td>
+<td>缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>image组件中的二维码、小程序码不支持长按识别</p>
+</li>
+</ul>
+<h2 id="swiper-组件"><code>swiper</code> 组件</h2>
+<p>轮播图</p>
+<ul>
+<li>轮播图外层容器：<code>swiper</code></li>
+<li>每一个轮播项： <code>swiper-item</code></li>
+<li>默认样式
+<ul>
+<li>width 100%</li>
+<li>height 150px</li>
+<li>swiper 高度 无法由内容撑开</li>
+</ul>
+</li>
+<li>先找原图的宽高，等比例计算swiper的宽高
+<ul>
+<li>swiper 宽度 = 100vw × 原图高度 / 原图的宽度</li>
+</ul>
+</li>
+</ul>
 <p><code>.wxml</code></p>
-<pre><code class="language-html">&lt;!--
-  列表循环
-    1 wx:for=&quot;{{数组或对象}}&quot; 
-      wx:for-item=&quot;循环项的名称&quot; 
-      wx:for-index=&quot;索引项的索引&quot;
-    2 wx:key=&quot;唯一的值&quot; 提高渲染性能
-      使用主键或 *this
-    3 循环嵌套时，名称不要重复（index，item）
-    4 wx:for-item=&quot;item&quot; wx:for-index=&quot;index&quot;是默认值，可以不写（无嵌套时）
---&gt;
-&lt;view&gt; 
-    &lt;view wx:for=&quot;{{list}}&quot; wx:for-item=&quot;item&quot; wx:for-index=&quot;index&quot;&gt; 
-        索引：{{index}}
-        --
-        值：{{item.name}}
-    &lt;/view&gt;
-&lt;/view&gt;
+<pre><code class="language-html">&lt;swiper&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+&lt;/swiper&gt;
 </code></pre>
-<p>对象循环</p>
-<pre><code class="language-html">&lt;!--wx:for-item=&quot;value&quot; wx:for-index=&quot;key&quot;
-为了便于识别对象--&gt;
-&lt;view&gt; 
-    &lt;view&gt; 对象循环 &lt;/view&gt;
-    &lt;view
-        wx:for=&quot;{{person}}&quot;
-        wx:for-item=&quot;value&quot; 
-        wx:for-index=&quot;key&quot;
-        wx:key=&quot;id&quot;&gt;
-        属性:{{value}}
-        --
-        值:{{key}}
-    &lt;/view&gt;
-&lt;/view&gt;
+<p><code>.wxss</code></p>
+<pre><code class="language-css">swiiper{
+    width: 100%;
+    height: calc(100vw * 352 / 1125);
+}
+image{
+    width: 100%;
+}
 </code></pre>
         </div>
         
@@ -440,13 +473,13 @@ person:{
     <div>
         
         <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/miniprogram/mnp-3/" class="block">微信小程序-block标签、条件渲染和事件绑定</a>
+        <a href="https://zzzsy.top/notes/JavaScript/json/" class="block">json格式详解</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/htmlcss/ht-4/" class="block">HTML笔记-4：HTML链接、头部、CSS</a>
+        <a href="https://zzzsy.top/notes/miniprogram/mnp-4/" class="block">微信小程序-样式</a>
         
     </div>
 </div>
@@ -488,25 +521,10 @@ person:{
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#模版语法">模版语法</a>
-      <ul>
-        <li><a href="#数据绑定">数据绑定</a>
-          <ul>
-            <li><a href="#普通写法">普通写法</a></li>
-            <li><a href="#数据绑定-1">数据绑定</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#运算">运算</a>
-      <ul>
-        <li><a href="#列表渲染">列表渲染</a>
-          <ul>
-            <li><a href="#wxfor"><code>wx:for</code></a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#view标签"><code>view</code>标签</a></li>
+    <li><a href="#text标签"><code>text</code>标签</a></li>
+    <li><a href="#image标签"><code>image</code>标签</a></li>
+    <li><a href="#swiper-组件"><code>swiper</code> 组件</a></li>
   </ul>
 </nav>
 </div>
@@ -526,22 +544,22 @@ person:{
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-4/">微信小程序-样式</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-3/">微信小程序-block标签、条件渲染和事件绑定</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-2/">微信小程序-数据绑定、运算和循环</a>
+            <br />
+            
             <a href="https://zzzsy.top/notes/miniprogram/mnp-1/">微信小程序-配置文件</a>
             <br />
             
+            <a href="https://zzzsy.top/notes/JavaScript/json/">json格式详解</a>
+            <br />
+            
             <a href="https://zzzsy.top/notes/htmlcss/ht-4/">HTML笔记-4：HTML链接、头部、CSS</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/htmlcss/ht-3/">HTML笔记-3：常用标签与属性</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/JavaScript/js-1/">JS笔记-1：JS介绍</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/htmlcss/css-1/">css笔记-1：选择器</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/htmlcss/ht-1/">HTML笔记-1：Web语言</a>
             <br />
             
         </div>
