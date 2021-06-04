@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>微信小程序 ｜  | ZSYのBlog</title>
+<title>微信小程序 ｜ 常见组件 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -50,7 +50,7 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"微信小程序 ｜ ",
+      "name":"微信小程序 ｜ 常见组件",
       "item":"https://zzzsy.top/notes/miniprogram/mnp-5/"}]
 }
 </script>
@@ -65,9 +65,9 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/miniprogram/mnp-5/"
     },
-    "headline": "微信小程序 ｜  | ZSYのBlog","datePublished": "2021-05-20T00:00:00+00:00",
+    "headline": "微信小程序 ｜ 常见组件 | ZSYのBlog","datePublished": "2021-05-20T00:00:00+00:00",
     "dateModified": "2021-05-23T00:00:00+00:00",
-    "wordCount":  550 ,
+    "wordCount":  847 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -82,7 +82,7 @@
         },
     "description": "\u003cp\u003e微信小程序的语法基础\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="微信小程序 ｜  | ZSYのBlog" />
+</script><meta property="og:title" content="微信小程序 ｜ 常见组件 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
@@ -235,7 +235,7 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">微信小程序 ｜ </h1>
+        <h1 class="font-bold text-3xl text-primary-text">微信小程序 ｜ 常见组件</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
@@ -243,7 +243,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>550字</span>
+        <span>847字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -403,6 +403,106 @@ image{
     width: 100%;
 }
 </code></pre>
+<blockquote>
+<p>“视区”：浏览器内部可视区域的大小</p>
+<p>“vw”：1vw等于视图窗口宽度的1%</p>
+</blockquote>
+<h3 id="swiper常见属性">swiper常见属性</h3>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicator-dots</td>
+<td>Boolean</td>
+<td>false</td>
+<td>显示指示点</td>
+</tr>
+<tr>
+<td>indicator-color</td>
+<td>Color</td>
+<td>rgba(0,0,0,3)</td>
+<td>指示点颜色</td>
+</tr>
+<tr>
+<td>circular</td>
+<td>Boolean</td>
+<td>false</td>
+<td>循环轮播</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>false</td>
+<td>自动轮播</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>Number</td>
+<td>5000</td>
+<td>修改轮播时间</td>
+</tr>
+<tr>
+<td>indicator-active-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td>选中指示点的颜色</td>
+</tr>
+</tbody>
+</table>
+<h2 id="navigator标签"><code>navigator</code>标签</h2>
+<p>导航组件</p>
+<pre><code class="language-html">&lt;!--
+  0 块级元素
+  1 url 要跳转的要页面路径
+  2 target 跳转的页面（self/miniProgram）
+  3 open-type 
+    1  
+--&gt;
+
+&lt;navigator url=&quot;/.../.../...&quot;&gt; 下个界面 &lt;/navigator&gt;
+</code></pre>
+<p>open-type的有效值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navigate</td>
+<td>保留当前页面，跳转到除了tabbar的应用内其他页面</td>
+</tr>
+<tr>
+<td>redirect</td>
+<td>关闭当前页面，跳转到除了tabbar的应用内其他页面</td>
+</tr>
+<tr>
+<td>switchTab</td>
+<td>跳转到tabbar页面，并关闭其他非tabbar页面</td>
+</tr>
+<tr>
+<td>reLaunch</td>
+<td>关闭所有界面，打开到应用内的某个界面</td>
+</tr>
+<tr>
+<td>navigateBack</td>
+<td>关闭当前页面，</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
         </div>
         
         <div class="my-4">
@@ -495,7 +595,7 @@ image{
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/miniprogram/mnp-5/">微信小程序 ｜ </a>
+        <a href="https://zzzsy.top/notes/miniprogram/mnp-5/">微信小程序 ｜ 常见组件</a>
         <br />
         
         <a href="https://zzzsy.top/notes/miniprogram/mnp-4/">微信小程序-样式</a>
@@ -524,7 +624,12 @@ image{
     <li><a href="#view标签"><code>view</code>标签</a></li>
     <li><a href="#text标签"><code>text</code>标签</a></li>
     <li><a href="#image标签"><code>image</code>标签</a></li>
-    <li><a href="#swiper-组件"><code>swiper</code> 组件</a></li>
+    <li><a href="#swiper-组件"><code>swiper</code> 组件</a>
+      <ul>
+        <li><a href="#swiper常见属性">swiper常见属性</a></li>
+      </ul>
+    </li>
+    <li><a href="#navigator标签"><code>navigator</code>标签</a></li>
   </ul>
 </nav>
 </div>
