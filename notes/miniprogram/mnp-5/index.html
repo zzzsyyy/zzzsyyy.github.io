@@ -67,7 +67,7 @@
     },
     "headline": "微信小程序 ｜ 常见组件 | ZSYのBlog","datePublished": "2021-05-20T00:00:00+00:00",
     "dateModified": "2021-05-23T00:00:00+00:00",
-    "wordCount":  847 ,
+    "wordCount":  1028 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -243,11 +243,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>847字</span>
+        <span>1028字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -461,9 +461,8 @@ image{
 <pre><code class="language-html">&lt;!--
   0 块级元素
   1 url 要跳转的要页面路径
-  2 target 跳转的页面（self/miniProgram）
+  2 target 跳转的页面（self/miniProgram）：自己或其他小程序
   3 open-type 
-    1  
 --&gt;
 
 &lt;navigator url=&quot;/.../.../...&quot;&gt; 下个界面 &lt;/navigator&gt;
@@ -495,14 +494,51 @@ image{
 </tr>
 <tr>
 <td>navigateBack</td>
-<td>关闭当前页面，</td>
+<td>关闭当前页面，返回一级或多级页面</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>exit</td>
+<td>退出小程序</td>
 </tr>
 </tbody>
 </table>
+<h2 id="rich-text标签"><code>rich-text</code>标签</h2>
+<p>
+<a href="https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html" target="_blank">开发者文档</a></p>
+<p>富文本标签：将字符串解析为</p>
+<pre><code class="language-html">&lt;!--
+  1 nodes属性来实现
+    1 接收标签字符串
+    2 接收对象数组
+--&gt;
+</code></pre>
+<p><code>.js</code></p>
+<pre><code class="language-js">Page({
+    data:{
+        //1 标签字符串
+        //html:'......'
+        //2对象数组
+        html:[
+            //1 div标签 name属性来指定
+            name:&quot;div&quot;,
+            //标签上有哪些属性
+            attrs:{
+              //标签上的属性 class style
+              class:&quot;my_div&quot;,
+              style:&quot;color:red;&quot;
+            },
+            //3 子节点 children 要接收的数据类型和nodes第二种渲染方式的类型一致
+            children:[
+                {
+                    type:&quot;text&quot;,
+                    text:&quot;hello&quot;
+                }
+            ]
+        ]
+    }
+})
+</code></pre>
+<h2 id="button-标签"><code>button</code> 标签</h2>
         </div>
         
         <div class="my-4">
@@ -630,6 +666,8 @@ image{
       </ul>
     </li>
     <li><a href="#navigator标签"><code>navigator</code>标签</a></li>
+    <li><a href="#rich-text标签"><code>rich-text</code>标签</a></li>
+    <li><a href="#button-标签"><code>button</code> 标签</a></li>
   </ul>
 </nav>
 </div>
