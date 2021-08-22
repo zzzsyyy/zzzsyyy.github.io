@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>微信小程序 | 配置文件 | ZSYのBlog</title>
+<title>微信小程序 | 实践项目笔记（1）-- css部分 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="微信小程序的配置文件：全局配置、页面配置、sitemap配置">
+  content="微信小程序">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,8 +50,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"微信小程序 | 配置文件",
-      "item":"https://zzzsy.top/notes/miniprogram/mnp-1/"}]
+      "name":"微信小程序 | 实践项目笔记（1）-- css部分",
+      "item":"https://zzzsy.top/notes/miniprogram/mnp-7/"}]
 }
 </script>
 
@@ -63,11 +63,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/miniprogram/mnp-1/"
+        "@id": "https://zzzsy.top/notes/miniprogram/mnp-7/"
     },
-    "headline": "微信小程序 | 配置文件 | ZSYのBlog","datePublished": "2021-05-02T00:00:00+00:00",
-    "dateModified": "2021-05-05T00:00:00+00:00",
-    "wordCount":  523 ,
+    "headline": "微信小程序 | 实践项目笔记（1）-- css部分 | ZSYのBlog","datePublished": "2021-08-20T00:00:00+00:00",
+    "dateModified": "2021-08-22T00:00:00+00:00",
+    "wordCount":  1191 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -80,21 +80,21 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e微信小程序的配置文件：全局配置、页面配置、sitemap配置\u003c\/p\u003e"
+    "description": "\u003cp\u003e微信小程序\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="微信小程序 | 配置文件 | ZSYのBlog" />
+</script><meta property="og:title" content="微信小程序 | 实践项目笔记（1）-- css部分 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/miniprogram/mnp-1/" />
+<meta property="og:url" content="https://zzzsy.top/notes/miniprogram/mnp-7/" />
 
 
 
 
-<meta property="og:description" content="微信小程序的配置文件：全局配置、页面配置、sitemap配置" />
+<meta property="og:description" content="微信小程序" />
 
 
 
@@ -111,10 +111,10 @@
 
 
 
-<meta property="article:published_time" content="2021-05-02T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-08-20T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-05-05T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-22T00:00:00&#43;00:00" />
 
 
 
@@ -132,8 +132,6 @@
 
 
 
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-7/" />
 
 
 
@@ -156,6 +154,8 @@
 <meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-2/" />
 
 
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/miniprogram/mnp-1/" />
 
 
 
@@ -243,19 +243,19 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">微信小程序 | 配置文件</h1>
+        <h1 class="font-bold text-3xl text-primary-text">微信小程序 | 实践项目笔记（1）-- css部分</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-05-02</span>
+        <span>2021-08-20</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>523字</span>
+        <span>1191字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -275,56 +275,269 @@
         
 
         <div class="content">
-            <p>微信小程序的配置文件：全局配置、页面配置、sitemap配置</p>
-<h2 id="全局配置文件appjson">全局配置文件——app.json</h2>
-<p>
-<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html" target="_blank">开发者文档</a></p>
-<h3 id="pages字段">pages字段</h3>
-<p>描述所有的页面路径，对应小程序的页面<code>pages</code></p>
-<p>对应的value是<code>pages/index/index</code>，<strong>无后缀名</strong></p>
+            <p>微信小程序</p>
+<h2 id="基础知识">基础知识</h2>
+<h3 id="盒子模型--box-model">盒子模型&ndash;box model</h3>
+<p>基本分为四部分：</p>
+<ul>
+<li><strong>Margin(外边距)</strong> - 清除边框外的区域，外边距是透明的。</li>
+<li><strong>Border(边框)</strong> - 围绕在内边距和内容外的边框。</li>
+<li><strong>Padding(内边距)</strong> - 清除内容周围的区域，内边距是透明的。</li>
+<li><strong>Content(内容)</strong> - 盒子的内容，显示文本和图像。</li>
+</ul>
+<h3 id="边框--border">边框&ndash;<code>border</code></h3>
 <ul>
 <li>
-<p>在开发者工具中直接添加语句就可以创建文件</p>
+<p><strong><code>border-style</code></strong>：none、dotted、dashed、solid，double</p>
 </li>
 <li>
-<p><code>pages</code>中的一个语句对应打开的默认界面（否则可以使用<code>entryPagePath</code>属性）</p>
+<p><strong><code>border-width</code></strong></p>
+</li>
+<li>
+<p><strong><code>border-color</code></strong></p>
 </li>
 </ul>
-<h3 id="windows字段">windows字段</h3>
-<p>定义小程序所有页面的状态栏、导航条、标题、窗口背景色等</p>
-<p>常见属性</p>
+<blockquote>
+<p>可以在中间加入方向指示某一边框 如 <code>border-right-color</code></p>
+<p>采用简写模式：<strong><code>border: 2px solid #fff </code></strong></p>
+</blockquote>
+<h3 id="外边距--margin">外边距&ndash;<code>margin</code></h3>
+<p>指定元素周围的空间</p>
+<h3 id="阴影--box-shadow">阴影&ndash;<code>box-shadow</code></h3>
+<p><code>box-shadow: h-shadow v-shadow blur spread color inset;</code></p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h-shadow</td>
+<td>必需的。水平阴影的位置。允许负值</td>
+</tr>
+<tr>
+<td>v-shadow</td>
+<td>必需的。垂直阴影的位置。允许负值</td>
+</tr>
+<tr>
+<td>blur</td>
+<td>可选。模糊距离</td>
+</tr>
+<tr>
+<td>spread</td>
+<td>可选。阴影的大小</td>
+</tr>
+<tr>
+<td>color</td>
+<td>可选。阴影的颜色。在CSS颜色值寻找颜色值的完整列表</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>可选。从外层的阴影（开始时）改变阴影内侧阴影</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-less">.md{
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+</code></pre>
+<h2 id="弹性盒子flex-box">弹性盒子（flex box）</h2>
+<p>一种好用的布局模型</p>
+<blockquote>
+<p>弹性盒子由弹性容器(Flex container)和弹性子元素(Flex item)组成。</p>
+<p>弹性容器通过设置 display 属性的值为 flex 或 inline-flex将其定义为弹性容器。</p>
+</blockquote>
 <ul>
-<li><code>navigationBarBackgroundColor</code> 导航栏文字内容</li>
-<li><code>navigationBarTitleText</code> 导航栏文字内容</li>
-<li><code>navigationBarTextStyle</code> 导航栏标题颜色（black/white）</li>
-<li><code>enablePullDownRefresh</code> 是否开启全局的下拉刷新</li>
-<li><code>backgroundTextStyle</code> 下拉 loading 的样式，仅支持 <code>dark</code> / <code>light</code></li>
-<li><code>backgroundColor</code> 窗口的背景颜色（下拉后三个小圆点的背景）</li>
-</ul>
-<h3 id="tabbar字段">tabBar字段</h3>
-<p>定义多tab应用的表现</p>
-<ul>
-<li><code>color</code> tab上的文字颜色</li>
-<li><code>selectedColor</code> tab上的文字选中时的颜色</li>
-<li><code>backgroundColor</code> tab背景色</li>
-<li><code>list</code> tab的列表，最少两个，最多五个
-<ul>
-<li><code>pagePath</code> 已经在pages中定义的页面路径</li>
-<li><code>text</code> tab上的按钮文字</li>
-<li><code>iconPath</code> 图片路径</li>
-<li><code>selectedIconPath</code> 选中时的图片路径</li>
-</ul>
+<li>
+<p><strong><code>flex-direction</code></strong>：定义排列方向</p>
+<p><code>flex-direction: row | row-reverse | column | column-reverse</code></p>
+</li>
+<li>
+<p><strong><code>justify-content</code></strong>：定义内容对齐（沿主轴线）</p>
+<p><code>justify-content: flex-start | flex-end | center | space-between | space-around</code></p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2016/04/2259AD60-BD56-4865-8E35-472CEABF88B2.jpg" alt="jc"></p>
+</li>
+<li>
+<p><strong><code>align-items</code></strong>：定义内容对齐（沿侧轴）</p>
+<p><code>align-items: flex-start | flex-end | center | baseline | stretch</code></p>
+</li>
+<li>
+<p><strong><code>flex</code></strong>：定义占比</p>
+<pre><code class="language-less">.wrap{
+    display: flex;
+    .item1{
+        flex: 2;
+    }
+    .item2{
+        flex: 3;
+    }
+}
+</code></pre>
+</li>
+<li>
+<p><strong><code>flex-wrap</code></strong>：定义是否换行</p>
 </li>
 </ul>
-<h2 id="页面配置文件pagejson">页面配置文件——page.json</h2>
-<p>
-<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html" target="_blank">开发者文档</a></p>
-<p>单独配置页面的属性</p>
-<p>只能配置<code>app.json</code>中的<code>windows</code>部分，会覆盖<code>app.json</code>中的配置</p>
-<h2 id="sitemap配置sitemapjson">sitemap配置——sitemap.json</h2>
-<p>
-<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/sitemap.html" target="_blank">开发者文档</a></p>
-<p>配置小程序及其页面是否允许被微信索引</p>
+<h2 id="一些操作">一些操作</h2>
+<ul>
+<li>同一属性的不同方向设置</li>
+</ul>
+<pre><code class="language-css">style：attr1，attr2，attr3，attr4
+/*上-&gt;右-&gt;下-&gt;左*/
+style：attr1，attr2，attr3
+/*上-&gt;左右-&gt;下*/
+style：attr1，attr2
+/*上下-&gt;左右*/
+style：attr1
+/*上下左右属性相同*/
+</code></pre>
+<ul>
+<li>页脚定位</li>
+</ul>
+<pre><code class="language-css">.foot{
+    position: absolute;
+    buttom: 28rpx;
+    text-align: center;
+}
+</code></pre>
+<ul>
+<li>圆形Logo</li>
+</ul>
+<pre><code class="language-css">.logo{
+    border-radius: 50%;
+}
+</code></pre>
+<ul>
+<li>
+<p>选择器</p>
+<ul>
+<li>less语法中：<code>&amp;</code>代表上一级父元素</li>
+<li><code>:nth-of-type(1)</code>可以选择第几个元素</li>
+</ul>
+<pre><code class="language-less">.content{
+        margin: 4rpx 25rpx;
+        flex:1;
+        font-size: 30rpx;
+        color: var(--commentColorLight);
+        &amp;:nth-of-type(1){
+            margin-top: 25rpx;
+        }
+        &amp;:nth-last-of-type(1){
+            margin-bottom: 25rpx;
+        }
+    }
+</code></pre>
+</li>
+<li>
+<p>只显示几行字</p>
+<ul>
+<li>
+<p><strong><code>word-break</code></strong>：自动换行的方式</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>使用默认的换行规则</td>
+</tr>
+<tr>
+<td>break-all</td>
+<td>允许在单词内换行</td>
+</tr>
+<tr>
+<td>keep-all</td>
+<td>只能在半角空格或连字符处换行</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong><code>text-overflow</code></strong>：规定当文本溢出包含元素时发生的事情</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clip</td>
+<td>修剪文本</td>
+</tr>
+<tr>
+<td>ellipsis</td>
+<td>使用省略号表示被修剪的文本</td>
+</tr>
+<tr>
+<td>string</td>
+<td>使用给定的符号表示被修剪的文本</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<pre><code class="language-less">.meta {
+    width: 100%;
+    margin-left: 6rpx;
+    font-size: 28rpx;
+    color: #888888;
+    font-size: 28rpx;
+    /*自动换行*/
+    display: -webkit-box;
+    word-break: break-all;
+    text-overflow: ellipsis;  
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;       /*定义可以显示几行*/
+    }
+</code></pre>
+</li>
+<li>
+<p>可以在app.wxss定义全局的变量</p>
+<pre><code class="language-less">page{
+    --themeColor: #1296db; 
+}
+</code></pre>
+<p>然后在页面page.wxss使用</p>
+<pre><code class="language-less">.item{
+    color: var(--themeColor)
+}
+</code></pre>
+</li>
+<li>
+<p>自定义按钮样式</p>
+<pre><code class="language-less">.btn{
+    height: 160rpx;
+    width: 200rpx;
+    margin: 0 60rpx;
+    border-radius: 16rpx;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    &amp;::after {
+      border: 0;/*requied*/
+      border-radius: 16rpx;
+    }
+}
+.btn_hover{
+    /*要使用!important*/
+    background-color: #f4f4f4 !important;
+    opacity: 0.9 !important;
+}
+</code></pre>
+<p>在wxml文件中定义<code>hover</code>样式</p>
+<pre><code class="language-html">&lt;button bind:tap=&quot;onEdit&quot; hover-class=&quot;btn_hover&quot;&gt;
+</code></pre>
+</li>
+</ul>
         </div>
         
         <div class="my-4">
@@ -394,14 +607,11 @@
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/htmlcss/ht-3/" class="block">HTML笔记-3：常用标签与属性</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/JavaScript/js-1/" class="block">JS笔记-1：JS介绍</a>
+        <a href="https://zzzsy.top/notes/miniprogram/mnp-6/" class="block">微信小程序 ｜ 自定义组件</a>
         
     </div>
 </div>
@@ -449,15 +659,16 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#全局配置文件appjson">全局配置文件——app.json</a>
+    <li><a href="#基础知识">基础知识</a>
       <ul>
-        <li><a href="#pages字段">pages字段</a></li>
-        <li><a href="#windows字段">windows字段</a></li>
-        <li><a href="#tabbar字段">tabBar字段</a></li>
+        <li><a href="#盒子模型--box-model">盒子模型&ndash;box model</a></li>
+        <li><a href="#边框--border">边框&ndash;<code>border</code></a></li>
+        <li><a href="#外边距--margin">外边距&ndash;<code>margin</code></a></li>
+        <li><a href="#阴影--box-shadow">阴影&ndash;<code>box-shadow</code></a></li>
       </ul>
     </li>
-    <li><a href="#页面配置文件pagejson">页面配置文件——page.json</a></li>
-    <li><a href="#sitemap配置sitemapjson">sitemap配置——sitemap.json</a></li>
+    <li><a href="#弹性盒子flex-box">弹性盒子（flex box）</a></li>
+    <li><a href="#一些操作">一些操作</a></li>
   </ul>
 </nav>
 </div>
@@ -477,22 +688,22 @@
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
-            <a href="https://zzzsy.top/notes/JavaScript/js-1/">JS笔记-1：JS介绍</a>
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-6/">微信小程序 ｜ 自定义组件</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/htmlcss/css-1/">css笔记-1：选择器</a>
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-5/">微信小程序 ｜ 常见组件</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/htmlcss/ht-1/">HTML笔记-1：Web语言</a>
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-4/">微信小程序 | 样式</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/htmlcss/ht-2/">HTML笔记-2：深入了解超文本</a>
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-3/">微信小程序 | block标签、条件渲染和事件绑定</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/C/C-7/">C语言笔记-7：一些习题</a>
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-2/">微信小程序 | 数据绑定、运算和循环</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/C/C-6/">C语言笔记-6：初识指针</a>
+            <a href="https://zzzsy.top/notes/miniprogram/mnp-1/">微信小程序 | 配置文件</a>
             <br />
             
         </div>
