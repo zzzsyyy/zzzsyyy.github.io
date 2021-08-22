@@ -38,7 +38,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="微信小程序">
+  content="微信小程序项目实践中关于wxss的一些笔记">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -67,7 +67,7 @@
     },
     "headline": "微信小程序 | 实践项目笔记（1）-- css部分 | ZSYのBlog","datePublished": "2021-08-20T00:00:00+00:00",
     "dateModified": "2021-08-22T00:00:00+00:00",
-    "wordCount":  1191 ,
+    "wordCount":  1197 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -80,7 +80,7 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e微信小程序\u003c\/p\u003e"
+    "description": "\u003cp\u003e微信小程序项目实践中关于wxss的一些笔记\u003c\/p\u003e"
 }
 </script><meta property="og:title" content="微信小程序 | 实践项目笔记（1）-- css部分 | ZSYのBlog" />
 <meta property="og:type" content="article" />
@@ -94,7 +94,7 @@
 
 
 
-<meta property="og:description" content="微信小程序" />
+<meta property="og:description" content="微信小程序项目实践中关于wxss的一些笔记" />
 
 
 
@@ -251,7 +251,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1191字</span>
+        <span>1197字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -275,9 +275,9 @@
         
 
         <div class="content">
-            <p>微信小程序</p>
+            <p>微信小程序项目实践中关于wxss的一些笔记</p>
 <h2 id="基础知识">基础知识</h2>
-<h3 id="盒子模型--box-model">盒子模型&ndash;box model</h3>
+<h3 id="盒子模型box-model">盒子模型（box model）</h3>
 <p>基本分为四部分：</p>
 <ul>
 <li><strong>Margin(外边距)</strong> - 清除边框外的区域，外边距是透明的。</li>
@@ -285,7 +285,7 @@
 <li><strong>Padding(内边距)</strong> - 清除内容周围的区域，内边距是透明的。</li>
 <li><strong>Content(内容)</strong> - 盒子的内容，显示文本和图像。</li>
 </ul>
-<h3 id="边框--border">边框&ndash;<code>border</code></h3>
+<h3 id="边框border">边框（border）</h3>
 <ul>
 <li>
 <p><strong><code>border-style</code></strong>：none、dotted、dashed、solid，double</p>
@@ -301,9 +301,9 @@
 <p>可以在中间加入方向指示某一边框 如 <code>border-right-color</code></p>
 <p>采用简写模式：<strong><code>border: 2px solid #fff </code></strong></p>
 </blockquote>
-<h3 id="外边距--margin">外边距&ndash;<code>margin</code></h3>
+<h3 id="外边距margin">外边距（margin）</h3>
 <p>指定元素周围的空间</p>
-<h3 id="阴影--box-shadow">阴影&ndash;<code>box-shadow</code></h3>
+<h3 id="阴影box-shadow">阴影（box-shadow）</h3>
 <p><code>box-shadow: h-shadow v-shadow blur spread color inset;</code></p>
 <table>
 <thead>
@@ -357,7 +357,8 @@
 <li>
 <p><strong><code>justify-content</code></strong>：定义内容对齐（沿主轴线）</p>
 <p><code>justify-content: flex-start | flex-end | center | space-between | space-around</code></p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2016/04/2259AD60-BD56-4865-8E35-472CEABF88B2.jpg" alt="jc"></p>
+<p>
+<a href="https://imgtu.com/i/hSrHln" target="_blank"><img src="https://z3.ax1x.com/2021/08/22/hSrHln.jpg" alt="hSrHln.jpg"></a></p>
 </li>
 <li>
 <p><strong><code>align-items</code></strong>：定义内容对齐（沿侧轴）</p>
@@ -381,9 +382,7 @@
 </li>
 </ul>
 <h2 id="一些操作">一些操作</h2>
-<ul>
-<li>同一属性的不同方向设置</li>
-</ul>
+<h3 id="同一属性的不同方向设置">同一属性的不同方向设置</h3>
 <pre><code class="language-css">style：attr1，attr2，attr3，attr4
 /*上-&gt;右-&gt;下-&gt;左*/
 style：attr1，attr2，attr3
@@ -393,25 +392,19 @@ style：attr1，attr2
 style：attr1
 /*上下左右属性相同*/
 </code></pre>
-<ul>
-<li>页脚定位</li>
-</ul>
+<h3 id="页脚定位">页脚定位</h3>
 <pre><code class="language-css">.foot{
     position: absolute;
     buttom: 28rpx;
     text-align: center;
 }
 </code></pre>
-<ul>
-<li>圆形Logo</li>
-</ul>
+<h3 id="圆形logo">圆形Logo</h3>
 <pre><code class="language-css">.logo{
     border-radius: 50%;
 }
 </code></pre>
-<ul>
-<li>
-<p>选择器</p>
+<h3 id="选择器">选择器</h3>
 <ul>
 <li>less语法中：<code>&amp;</code>代表上一级父元素</li>
 <li><code>:nth-of-type(1)</code>可以选择第几个元素</li>
@@ -429,9 +422,7 @@ style：attr1
         }
     }
 </code></pre>
-</li>
-<li>
-<p>只显示几行字</p>
+<h3 id="只显示几行字">只显示几行字</h3>
 <ul>
 <li>
 <p><strong><code>word-break</code></strong>：自动换行的方式</p>
@@ -499,8 +490,7 @@ style：attr1
     -webkit-line-clamp: 2;       /*定义可以显示几行*/
     }
 </code></pre>
-</li>
-<li>
+<h3 id="定义全局变量">定义全局变量</h3>
 <p>可以在app.wxss定义全局的变量</p>
 <pre><code class="language-less">page{
     --themeColor: #1296db; 
@@ -511,9 +501,7 @@ style：attr1
     color: var(--themeColor)
 }
 </code></pre>
-</li>
-<li>
-<p>自定义按钮样式</p>
+<h3 id="自定义按钮样式">自定义按钮样式</h3>
 <pre><code class="language-less">.btn{
     height: 160rpx;
     width: 200rpx;
@@ -536,8 +524,6 @@ style：attr1
 <p>在wxml文件中定义<code>hover</code>样式</p>
 <pre><code class="language-html">&lt;button bind:tap=&quot;onEdit&quot; hover-class=&quot;btn_hover&quot;&gt;
 </code></pre>
-</li>
-</ul>
         </div>
         
         <div class="my-4">
@@ -661,14 +647,24 @@ style：attr1
   <ul>
     <li><a href="#基础知识">基础知识</a>
       <ul>
-        <li><a href="#盒子模型--box-model">盒子模型&ndash;box model</a></li>
-        <li><a href="#边框--border">边框&ndash;<code>border</code></a></li>
-        <li><a href="#外边距--margin">外边距&ndash;<code>margin</code></a></li>
-        <li><a href="#阴影--box-shadow">阴影&ndash;<code>box-shadow</code></a></li>
+        <li><a href="#盒子模型box-model">盒子模型（box model）</a></li>
+        <li><a href="#边框border">边框（border）</a></li>
+        <li><a href="#外边距margin">外边距（margin）</a></li>
+        <li><a href="#阴影box-shadow">阴影（box-shadow）</a></li>
       </ul>
     </li>
     <li><a href="#弹性盒子flex-box">弹性盒子（flex box）</a></li>
-    <li><a href="#一些操作">一些操作</a></li>
+    <li><a href="#一些操作">一些操作</a>
+      <ul>
+        <li><a href="#同一属性的不同方向设置">同一属性的不同方向设置</a></li>
+        <li><a href="#页脚定位">页脚定位</a></li>
+        <li><a href="#圆形logo">圆形Logo</a></li>
+        <li><a href="#选择器">选择器</a></li>
+        <li><a href="#只显示几行字">只显示几行字</a></li>
+        <li><a href="#定义全局变量">定义全局变量</a></li>
+        <li><a href="#自定义按钮样式">自定义按钮样式</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
