@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 <script src="//cdn.jsdelivr.net/gh/zzzsyyy/zzzsyyy/CDN/instant.page@5.1.0.js" type="module"></script>
+ <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 
 <title>C语言笔记-1：初识C语言 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
@@ -1225,6 +1226,13 @@ int main()
     </div>
     
   </main>
+  <div id="waline"></div>
+  <script>
+    Waline({
+      el: '#waline',
+      serverURL: 'https://waline-cyan.vercel.app',
+    });
+  </script>
   <footer class="pl-scrollbar">
     <style type="text/css">
       .love {
