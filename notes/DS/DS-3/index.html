@@ -69,7 +69,7 @@
     },
     "headline": "数据结构与算法-3：线性表 | ZSYのBlog","datePublished": "2021-09-04T00:00:00+00:00",
     "dateModified": "2021-09-04T00:00:00+00:00",
-    "wordCount":  702 ,
+    "wordCount":  1145 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -237,11 +237,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>702字</span>
+        <span>1145字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -404,6 +404,136 @@ void ListInsert(SqList &amp;L, int i, int e){
     struct LNode *next;
 }LNode, *LinkList;
 </code></pre>
+<blockquote>
+<p><code>typedef &lt;数据类型&gt; &lt;别名&gt;</code></p>
+<p>在这里，<code>LNode</code> 强调结点而 <code>LinkList</code> 强调链表</p>
+<p>声明一个指向单链表第一个结点的指针可以<code>LNode * L</code>; 或者 <code>LinkList L;</code></p>
+</blockquote>
+<h3 id="初始化">初始化</h3>
+<ul>
+<li>不带头结点</li>
+</ul>
+<pre><code class="language-c">typedef struct LNode{
+    ElemType data;
+    struct LNode* next;
+}LNode, *LinkList;
+
+bool InitList(LinkList &amp;L){
+    L=NULL;
+    return true;
+}
+</code></pre>
+<p>空表判断：<code>L==NULL</code></p>
+<ul>
+<li>带头结点</li>
+</ul>
+<pre><code class="language-c">typedef struct LNode{
+    ElemType data;
+    struct LNode* next;
+}LNode, *LinkList;
+
+bool InitList(linkList &amp;L){
+    L = (LNode*)malloc(sizeof(LNode));
+    if(L==NULL)
+        return false;
+    L-&gt;next = NULL;
+    return true;
+}
+</code></pre>
+<p>空表判断：<code>L-&gt;next==NULL</code></p>
+<h3 id="基本操作按位序插入">基本操作——按位序插入</h3>
+<ul>
+<li>
+<p>带头结点</p>
+<pre><code class="language-c">bool ListInsert(linkList &amp;L, int i, ElemType e){
+    if(i&lt;1)
+        return false;
+    LNode *p;
+    int j=0;
+    p = L;
+    //循环找到第i-1个结点
+    while (p!=NULL &amp;&amp; j&lt;i-1){
+        p=p-&gt;next;
+        j++;
+    }
+    if (p==NULL)//i值不合法（超出了）
+        return false;
+    LNode *s=(LNode*)malloc(sizeof(LNode));
+    s-&gt;data=e;
+    s-&gt;next=p-&gt;next;
+    p-&gt;next=s;
+    return true;
+}
+</code></pre>
+</li>
+<li>
+<p>不带头结点</p>
+<p>对第一个结点进行处理</p>
+</li>
+</ul>
+<h3 id="指定节点后插操作">指定节点后插操作</h3>
+<pre><code class="language-c">bool InsertNextNode(LNode *p, ElemType e){
+    if (p==NULL)
+        return false;
+    LNode *s = (LNode*)molloc(sizeof(LNode));
+    if (s==NULL)
+        return false;
+    s-&gt;data=e;
+    s-next=p-&gt;next;
+    p-&gt;next=s;
+    return true;
+}
+</code></pre>
+<h3 id="指定结点的前插操作">指定结点的前插操作</h3>
+<pre><code class="language-c">bool InsertPriorNode (Lnode *p, ElemType e){
+    if (p==NULL)
+        return false;
+    LNode *s = (LNode*)malloc(sizeof(LNode));
+    if (s==NULL)
+        return false;
+    s-&gt;next=p-&gt;next;
+    p-&gt;next=s;        //新结点连到p之后
+    s-&gt;data=p-&gt;data;  //将p中元素复制到s中
+    p-&gt;data=e;        //p中元素覆盖为e
+    return true;
+}
+</code></pre>
+<h3 id="按位序删除">按位序删除</h3>
+<pre><code class="language-c">bool ListDelete(LinkList &amp;L, int i, ElemType &amp;e){
+    if (i&lt;1)
+        return false;
+    LNode *p;
+    int j=0;
+    p = L;
+    while (p!==NULL &amp;&amp; j&lt;i-1){
+        p=p-&gt;next;
+        j++;
+    }
+    if (p==NULL)
+        return false;
+    if (p-&gt;next==NULL)
+        return false;
+    LNode *q=p-&gt;next;
+    e=q-&gt;next;
+    p-&gt;next=q-&gt;next;
+    free(q);
+    return true;
+}
+</code></pre>
+<h3 id="指定结点删除">指定结点删除</h3>
+<pre><code class="language-c">bool DeleteNode(LNode *p){
+    if (p==NULL)
+        return false;
+    LNode *q=p-&gt;next;
+    p-&gt;data=p-&gt;next-&gt;data;
+    p-&gt;next=q-&gt;next;
+    free(q);
+    return true;
+}
+</code></pre>
+<blockquote>
+<p>代码不能删除最后一个结点（只能从前往后找）</p>
+</blockquote>
         </div>
         
         <div class="my-4">
@@ -527,6 +657,12 @@ void ListInsert(SqList &amp;L, int i, int e){
     <li><a href="#单链表">单链表</a>
       <ul>
         <li><a href="#定义-1">定义</a></li>
+        <li><a href="#初始化">初始化</a></li>
+        <li><a href="#基本操作按位序插入">基本操作——按位序插入</a></li>
+        <li><a href="#指定节点后插操作">指定节点后插操作</a></li>
+        <li><a href="#指定结点的前插操作">指定结点的前插操作</a></li>
+        <li><a href="#按位序删除">按位序删除</a></li>
+        <li><a href="#指定结点删除">指定结点删除</a></li>
       </ul>
     </li>
   </ul>
@@ -548,10 +684,10 @@ void ListInsert(SqList &amp;L, int i, int e){
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
-            <a href="https://zzzsy.top/notes/DS/DS-1/">数据结构与算法-1：绪论</a>
+            <a href="https://zzzsy.top/notes/DS/DS-2/">数据结构与算法-2：复杂度</a>
             <br />
             
-            <a href="https://zzzsy.top/notes/DS/DS-2/">数据结构与算法-2：复杂度</a>
+            <a href="https://zzzsy.top/notes/DS/DS-1/">数据结构与算法-1：绪论</a>
             <br />
             
             <a href="https://zzzsy.top/notes/miniprogram/mnp-7/">微信小程序 | 实践项目笔记（1）-- css部分</a>
