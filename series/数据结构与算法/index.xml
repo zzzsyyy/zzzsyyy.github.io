@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC&lt;/a&gt; | &lt;a href=&#39;https://beian.miit.gov.cn&#39;&gt;辽ICP备2021008388号 | &lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/series/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/series/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数据结构与算法-3：线性表</title>
+      <link>https://zzzsy.top/notes/DS/DS-3/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/DS/DS-3/</guid>
+      <description>&lt;p&gt;数据结构与算法-3：线性表&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>数据结构与算法-1：绪论</title>
       <link>https://zzzsy.top/notes/DS/DS-1/</link>
@@ -24,15 +33,6 @@
       
       <guid>https://zzzsy.top/notes/DS/DS-2/</guid>
       <description>&lt;p&gt;数据结构与算法-2：时间复杂度与空间复杂度&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>数据结构与算法-3：线性表</title>
-      <link>https://zzzsy.top/notes/DS/DS-3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/notes/DS/DS-3/</guid>
-      <description>&lt;p&gt;数据结构与算法-3：线性表&lt;/p&gt;</description>
     </item>
     
   </channel>
