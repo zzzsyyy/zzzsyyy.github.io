@@ -2,28 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://zzzsy.top/bj/Alg%C3%A8bre/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zzzsy.top/authors/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/bj/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/tags/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/authors/Zhang/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zzzsy.top/series/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zzzsy.top/tags/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zzzsy.top/authors/Zhang/</loc>
+    <lastmod>2021-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://zzzsy.top/</loc>
     <lastmod>2021-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://zzzsy.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
@@ -239,29 +230,12 @@
     <loc>https://zzzsy.top/notes/CTF/Cryptography/</loc>
     <lastmod>2021-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://zzzsy.top/docs/example-doc/chapter-1/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-1/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/docs/example-doc/chapter-2/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-2/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/docs/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/docs/example-doc/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://zzzsy.top/docs/example-doc/nested-chapter/</loc>
-    <lastmod>2020-10-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://zzzsy.top/categories/</loc>
   </url><url>
+    <loc>https://zzzsy.top/docs/</loc>
+  </url><url>
     <loc>https://zzzsy.top/authors/hugo-authors/</loc>
+  </url><url>
+    <loc>https://zzzsy.top/bj/</loc>
   </url>
 </urlset>

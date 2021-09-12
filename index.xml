@@ -7,16 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | &lt;a href=&#39;https://beian.miit.gov.cn&#39;&gt;辽ICP备2021008388-1号 | &lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Algèbre 1</title>
-      <link>https://zzzsy.top/bj/Alg%C3%A8bre/</link>
-      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/bj/Alg%C3%A8bre/</guid>
-      <description>Chapitre 1 Si $d\mid a$ et $d\mid b$ , alors pour tous $u,v\in\Bbb{Z}$ on a $d\mid (au+bv)$ Soient $a\in \Bbb{Z}$, et $b\in\Bbb{N}^*$. Alors exste un unique couple d’enntiers $(q,r)\in\Bbb{Z}\times\Bbb{Z}$ tel que $$ a=bq+r\qquad et \qquad 0\le r\le b. $$ $$3n+5\equiv 4\mod{7}\Leftrightarrow 3n\equiv -1\mod{7}\Leftrightarrow 5\times 3n\equiv (-1\tims5)\mod{7}\Leftrightarrow n\equiv 2\mod{7}.$$</description>
-    </item>
-    
+    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>数据结构与算法-3：线性表</title>
       <link>https://zzzsy.top/notes/DS/DS-3/</link>
@@ -341,42 +332,6 @@
       
       <guid>https://zzzsy.top/notes/CTF/Cryptography/</guid>
       <description>&lt;p&gt;Misc：Cryptography&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 1</title>
-      <link>https://zzzsy.top/docs/example-doc/chapter-1/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/docs/example-doc/chapter-1/</guid>
-      <description>&lt;p&gt;This is chapter 1 of example doc.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 1</title>
-      <link>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-1/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-1/</guid>
-      <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 2</title>
-      <link>https://zzzsy.top/docs/example-doc/chapter-2/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/docs/example-doc/chapter-2/</guid>
-      <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chapter 2</title>
-      <link>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-2/</link>
-      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://zzzsy.top/docs/example-doc/nested-chapter/chapter-2/</guid>
-      <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
     </item>
     
   </channel>
