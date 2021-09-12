@@ -358,7 +358,7 @@ int* p = &amp;a;//对变量a取出它的地址，用&amp;操作符
 <li>
 <p>指针<strong>越界访问</strong></p>
 <pre><code class="language-c">#include&lt;stdio.h&gt;
-   
+
 int main()
 {
     int arr[10] = {0};
@@ -376,7 +376,7 @@ int main()
     int a = 10;
     return &amp;a;
 }
-   
+
 int main()
 {
     int* p = test();
@@ -485,10 +485,10 @@ for (vp = &amp;values[N_VALUES-1];vp&gt;=&amp;values[0];vp--)
 <pre><code class="language-c">int arr[10] = {0};
 printf(&quot;%p\n&quot;,arr);//x
 printf(&quot;%p\n&quot;,arr+1);//x+4
-   
+
 printf(&quot;%d\n&quot;,&amp;arr[0]);//x
 printf(&quot;%d\n&quot;,&amp;arr[0]+1);//x+4
-   
+
 printf(&quot;%p\n&quot;,&amp;arr);//x 整个数组的地址
 printf(&quot;%p\n&quot;,&amp;arr+1);//x+40
 </code></pre>
