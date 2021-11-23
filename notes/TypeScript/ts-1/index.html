@@ -69,7 +69,7 @@
     },
     "headline": "TypeScript | 1 | ZSYのBlog","datePublished": "2021-11-01T00:00:00+00:00",
     "dateModified": "2021-11-04T00:00:00+00:00",
-    "wordCount":  781 ,
+    "wordCount":  919 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -262,7 +262,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>781字</span>
+        <span>919字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -312,7 +312,7 @@ function fn(变量: 类型): 类型{
 <h3 id="数据类型分类">数据类型分类</h3>
 <p>1 <strong>原始类型</strong>  2 <strong>对象类型</strong></p>
 <p>常见的基本数据类型：</p>
-<pre><code class="language-ts">number string boolean undifined null symbol void enum
+<pre><code class="language-ts">number string boolean undefined null symbol void enum
 </code></pre>
 <ul>
 <li>
@@ -354,11 +354,49 @@ s = &lt;number&gt;b;
 <p><strong>void &amp; nerver</strong>
 主要用于函数的返回值
 void 用于没有返回值的函数，不能分配给<code>null</code>，可以分配给<code>undefined</code>，
-never 表示没有值，是一个特殊类型，比如函数<code>errorFunc</code>，<code>abs</code></p>
+never 表示没有值，是一个特殊类型，比如函数<code>errorFunc</code>，<code>forever</code></p>
 <pre><code class="language-ts">function fn(): void{}
 function fn2(): never{
     throw new Error(&quot;err!&quot;);
 }
+</code></pre>
+</li>
+<li>
+<p><strong>object</strong> 
+对象，挺少直接写object
+采用类似字面量的赋值方式</p>
+<pre><code class="language-ts">let a: {age?: number, name: string};
+//?表示是可选属性
+
+let b: {name: string, [propName: string]: ang};
+let c: (a: number, b: number)=&gt;number;
+</code></pre>
+</li>
+<li>
+<p><strong>array</strong></p>
+<pre><code class="language-ts">let a: string[];
+let b: Array&lt;number&gt;;
+</code></pre>
+</li>
+<li>
+<p><strong>tuple &amp; enum</strong> 
+元组——固定长度的数组
+枚举——和C语言差不多</p>
+<pre><code class="language-ts">let a: [string, string];
+enum Gender{
+    Female,
+    Male
+}
+let b: {name: string, gender: Gender};
+</code></pre>
+</li>
+<li>
+<p><strong>类型别名</strong> 
+comme <code>typedefined</code></p>
+<pre><code class="language-ts">type myType = 1|2|3|4|5;
+
+let k: 1|2|3|4|5;//类型复用
+let l: myType;
 </code></pre>
 </li>
 </ul>
