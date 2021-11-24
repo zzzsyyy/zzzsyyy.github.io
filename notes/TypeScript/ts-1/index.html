@@ -68,8 +68,8 @@
         "@id": "https://zzzsy.top/notes/TypeScript/ts-1/"
     },
     "headline": "TypeScript | 1 | ZSYのBlog","datePublished": "2021-11-01T00:00:00+00:00",
-    "dateModified": "2021-11-04T00:00:00+00:00",
-    "wordCount":  919 ,
+    "dateModified": "2021-11-06T00:00:00+00:00",
+    "wordCount":  1226 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -116,7 +116,7 @@
 <meta property="article:published_time" content="2021-11-01T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-11-04T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-11-06T00:00:00&#43;00:00" />
 
 
 
@@ -262,11 +262,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>919字</span>
+        <span>1226字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>2分钟</span>
+        <span>3分钟</span>
     </div>
 
     
@@ -314,9 +314,7 @@ function fn(变量: 类型): 类型{
 <p>常见的基本数据类型：</p>
 <pre><code class="language-ts">number string boolean undefined null symbol void enum
 </code></pre>
-<ul>
-<li>
-<p><strong>字面量 &amp; 联合类型</strong></p>
+<h4 id="字面量--联合类型"><strong>字面量 &amp; 联合类型</strong></h4>
 <pre><code class="language-ts">let a: 10;//10是字面量
 a = 11;// error
 
@@ -324,10 +322,8 @@ let b = &quot;male&quot; | &quot;female&quot;;//作为枚举使用
 let c = boolean | string; //称为联合类型
 </code></pre>
 <p>有点像常量</p>
-</li>
-<li>
-<p><strong>any &amp; unknown</strong>
-any表示<strong>任意类型</strong> ，相当于对该变量关闭了类型检查
+<h4 id="any--unknown"><strong>any &amp; unknown</strong></h4>
+<p>any表示<strong>任意类型</strong> ，相当于对该变量关闭了类型检查
 不建议使用</p>
 <pre><code class="language-ts">let a;//隐式的any
 let a: any;//显式的any
@@ -349,10 +345,8 @@ s = &lt;number&gt;b;
 <pre><code class="language-ts">变量 = 变量 as 类型;
 变量 = &lt;类型&gt;变量;
 </code></pre>
-</li>
-<li>
-<p><strong>void &amp; nerver</strong>
-主要用于函数的返回值
+<h4 id="void--nerver"><strong>void &amp; nerver</strong></h4>
+<p>主要用于函数的返回值
 void 用于没有返回值的函数，不能分配给<code>null</code>，可以分配给<code>undefined</code>，
 never 表示没有值，是一个特殊类型，比如函数<code>errorFunc</code>，<code>forever</code></p>
 <pre><code class="language-ts">function fn(): void{}
@@ -360,10 +354,8 @@ function fn2(): never{
     throw new Error(&quot;err!&quot;);
 }
 </code></pre>
-</li>
-<li>
-<p><strong>object</strong> 
-对象，挺少直接写object
+<h4 id="object"><strong>object</strong></h4>
+<p>对象，挺少直接写object
 采用类似字面量的赋值方式</p>
 <pre><code class="language-ts">let a: {age?: number, name: string};
 //?表示是可选属性
@@ -371,16 +363,12 @@ function fn2(): never{
 let b: {name: string, [propName: string]: ang};
 let c: (a: number, b: number)=&gt;number;
 </code></pre>
-</li>
-<li>
-<p><strong>array</strong></p>
+<h4 id="array"><strong>array</strong></h4>
 <pre><code class="language-ts">let a: string[];
 let b: Array&lt;number&gt;;
 </code></pre>
-</li>
-<li>
-<p><strong>tuple &amp; enum</strong> 
-元组——固定长度的数组
+<h4 id="tuple--enum"><strong>tuple &amp; enum</strong></h4>
+<p>元组——固定长度的数组
 枚举——和C语言差不多</p>
 <pre><code class="language-ts">let a: [string, string];
 enum Gender{
@@ -389,16 +377,48 @@ enum Gender{
 }
 let b: {name: string, gender: Gender};
 </code></pre>
-</li>
-<li>
-<p><strong>类型别名</strong> 
-comme <code>typedefined</code></p>
+<h4 id="类型别名"><strong>类型别名</strong></h4>
+<p>comme <code>typedefined</code></p>
 <pre><code class="language-ts">type myType = 1|2|3|4|5;
 
 let k: 1|2|3|4|5;//类型复用
 let l: myType;
 </code></pre>
+<h2 id="编译选项">编译选项</h2>
+<h3 id="自动编译文件">自动编译文件</h3>
+<p><code>-w</code> 选项</p>
+<pre><code class="language-ts">tsc xxx.ts -w
+</code></pre>
+<h3 id="编译配置">编译配置</h3>
+<p><code>tsconfig.json</code> ，直接<code>tsc</code> 编译所以项目文件</p>
+<ul>
+<li>
+<p>可以写注释</p>
 </li>
+<li>
+<p>include：定义编译的文件范围</p>
+<blockquote>
+<p>**表示任意目录，*表示任意文件</p>
+</blockquote>
+</li>
+<li>
+<p>exclude：定义编译排除的范围
+默认值：<code>[&quot;node_modules&quot;,&quot;bower_components&quot;,&quot;jspm_packages&quot;]</code></p>
+</li>
+<li>
+<p>extends：定义被继承的配置文件</p>
+</li>
+<li>
+<p>files：指定被编译的文件列表（编译的文件比较少）</p>
+</li>
+</ul>
+<h4 id="compileroptions"><code>compilerOptions</code></h4>
+<ul>
+<li>target：指定编译为ES的版本</li>
+<li>module：指定模块化的规范</li>
+<li>lib：指定项目使用的库</li>
+<li>outDir：指定编译后文件所在的目录<code>./dist</code></li>
+<li>outFile：将代码合并为一个文件</li>
 </ul>
 <h2 id="运算符">运算符</h2>
 <blockquote>
@@ -551,7 +571,27 @@ let l: myType;
     <li><a href="#变量和数据类型">变量和数据类型</a>
       <ul>
         <li><a href="#类型注解-type-annotation"><strong>类型注解</strong> (type annotation)</a></li>
-        <li><a href="#数据类型分类">数据类型分类</a></li>
+        <li><a href="#数据类型分类">数据类型分类</a>
+          <ul>
+            <li><a href="#字面量--联合类型"><strong>字面量 &amp; 联合类型</strong></a></li>
+            <li><a href="#any--unknown"><strong>any &amp; unknown</strong></a></li>
+            <li><a href="#void--nerver"><strong>void &amp; nerver</strong></a></li>
+            <li><a href="#object"><strong>object</strong></a></li>
+            <li><a href="#array"><strong>array</strong></a></li>
+            <li><a href="#tuple--enum"><strong>tuple &amp; enum</strong></a></li>
+            <li><a href="#类型别名"><strong>类型别名</strong></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#编译选项">编译选项</a>
+      <ul>
+        <li><a href="#自动编译文件">自动编译文件</a></li>
+        <li><a href="#编译配置">编译配置</a>
+          <ul>
+            <li><a href="#compileroptions"><code>compilerOptions</code></a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#运算符">运算符</a></li>
