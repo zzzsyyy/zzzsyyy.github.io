@@ -5,7 +5,7 @@
 <script src="//cdn.jsdelivr.net/gh/zzzsyyy/zzzsyyy/CDN/instant.page@5.1.0.js" type="module"></script>
 <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 
-<title>TypeScript | 1 | ZSYのBlog</title>
+<title>TypeScript | 2 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -52,8 +52,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"TypeScript | 1",
-      "item":"https://zzzsy.top/notes/TypeScript/ts-1/"}]
+      "name":"TypeScript | 2",
+      "item":"https://zzzsy.top/notes/TypeScript/ts-2/"}]
 }
 </script>
 
@@ -65,11 +65,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/TypeScript/ts-1/"
+        "@id": "https://zzzsy.top/notes/TypeScript/ts-2/"
     },
-    "headline": "TypeScript | 1 | ZSYのBlog","datePublished": "2021-11-01T00:00:00+00:00",
-    "dateModified": "2021-11-12T00:00:00+00:00",
-    "wordCount":  1699 ,
+    "headline": "TypeScript | 2 | ZSYのBlog","datePublished": "2021-11-13T00:00:00+00:00",
+    "dateModified": "2021-11-20T00:00:00+00:00",
+    "wordCount":  80 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -84,14 +84,14 @@
         },
     "description": ""
 }
-</script><meta property="og:title" content="TypeScript | 1 | ZSYのBlog" />
+</script><meta property="og:title" content="TypeScript | 2 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/TypeScript/ts-1/" />
+<meta property="og:url" content="https://zzzsy.top/notes/TypeScript/ts-2/" />
 
 
 
@@ -113,10 +113,10 @@
 
 
 
-<meta property="article:published_time" content="2021-11-01T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-11-13T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-11-12T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-11-20T00:00:00&#43;00:00" />
 
 
 
@@ -137,9 +137,9 @@
 
 
 
-<meta property="og:see_also" content="https://zzzsy.top/notes/TypeScript/ts-2/" />
 
 
+<meta property="og:see_also" content="https://zzzsy.top/notes/TypeScript/ts-1/" />
 
 
 
@@ -258,19 +258,19 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">TypeScript | 1</h1>
+        <h1 class="font-bold text-3xl text-primary-text">TypeScript | 2</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-11-01</span>
+        <span>2021-11-13</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>1699字</span>
+        <span>80字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>4分钟</span>
+        <span>1分钟</span>
     </div>
 
     
@@ -290,268 +290,30 @@
         
 
         <div class="content">
-            <h2 id="基础介绍">基础介绍</h2>
-<p>TypeScript——JavaScript 的<strong>超集</strong></p>
-<p>Typescript 是<strong>静态</strong>语言与动态语言 JavaScript 不同，TS 是和 JS 都是<strong>弱类型语言</strong> （只是在编译时检查）</p>
-<p><code>tsc ./...ts</code> 可以编译生成<code>.js</code> 文件，然后<code>node .js</code> 执行</p>
-<p>或者安装 <code>ts-node</code> 执行</p>
-<h2 id="变量和数据类型">变量和数据类型</h2>
-<p>声明变量并指定类型-&gt;变量赋值</p>
-<pre><code class="language-typescript">let age: number; //变量的声明
-age = 22; //变量的赋值
-let Name: string = &quot;Katre&quot;; //变量的初始化
-</code></pre>
-<h3 id="类型注解-type-annotation">类型注解 (type annotation)</h3>
-<p>为变量添加<strong>类型约束</strong>的方式 <code>: type</code></p>
-<ul>
-<li>一般简单的变量声明可以不写类型注解。能直接<strong>类型推断</strong>（type inference）。</li>
-<li>一般函数的参数需要类型注解，返回值可以不用写类型注解</li>
-</ul>
-<pre><code class="language-typescript">let 变量: 类型;
-let 变量: 类型 = 值;
-function fn(变量: 类型): 类型{
-    ···
-}
-</code></pre>
-<h3 id="数据类型分类">数据类型分类</h3>
-<p>1 <strong>原始类型</strong>  2 <strong>对象类型</strong></p>
-<p>常见的基本数据类型：</p>
-<pre><code class="language-typescript">number string boolean undefined null symbol void enum
-</code></pre>
-<h4 id="字面量--联合类型"><strong>字面量 &amp; 联合类型</strong></h4>
-<pre><code class="language-typescript">let a: 10;//10是字面量
-a = 11;// error
-
-let b = &quot;male&quot; | &quot;female&quot;;//作为枚举使用
-let c = boolean | string; //称为联合类型
-</code></pre>
-<p>有点像常量</p>
-<h4 id="any--unknown">any &amp; unknown</h4>
-<p>any表示<strong>任意类型</strong> ，相当于对该变量关闭了类型检查
-不建议使用</p>
-<pre><code class="language-typescript">let a;//隐式的any
-let a: any;//显式的any
-</code></pre>
-<p>unknown表示<strong>安全的任意类型</strong> ，不能直接赋值给其他类型变量，可以赋值给任意变量</p>
-<pre><code class="language-typescript">let a: any = &quot;ss&quot;;//类型any可以赋值给任意变量
-let b: unknown = &quot;ss&quot;;//类型unknown不能直接赋值给其他类型变量
-let s: number;
-s = a;
-s = b;//error
-//先执行类型检查
-if(typeof b === &quot;number&quot;){
-    s = b;
-}
-s = b as number;//类型断言
-s = &lt;number&gt;b;
-</code></pre>
-<p><strong>类型断言</strong> ：可以用来告诉编译器变量的实际类型</p>
-<pre><code class="language-typescript">变量 = 变量 as 类型;
-变量 = &lt;类型&gt;变量;
-</code></pre>
-<h4 id="void--nerver">void &amp; nerver</h4>
-<p>主要用于函数的返回值
-void 用于没有返回值的函数，不能分配给<code>null</code>，可以分配给<code>undefined</code>，
-never 表示没有值，是一个特殊类型，比如函数<code>errorFunc</code>，<code>forever</code></p>
-<pre><code class="language-typescript">function fn(): void{}
-function fn2(): never{
-    throw new Error(&quot;err!&quot;);
-}
-</code></pre>
-<h4 id="object">object</h4>
-<p>对象，挺少直接写object
-采用类似字面量的赋值方式</p>
-<pre><code class="language-typescript">let a: {age?: number, name: string};
-//?表示是可选属性
-
-let b: {name: string, [propName: string]: ang};
-let c: (a: number, b: number)=&gt;number;
-</code></pre>
-<h4 id="array">array</h4>
-<pre><code class="language-typescript">let a: string[];
-let b: Array&lt;number&gt;;
-</code></pre>
-<h4 id="tuple--enum">tuple &amp; enum</h4>
-<p>元组——固定长度的数组
-枚举——和C语言差不多</p>
-<pre><code class="language-typescript">let a: [string, string];
-enum Gender{
-    Female,
-    Male
-}
-let b: {name: string, gender: Gender};
-</code></pre>
-<h4 id="类型别名">类型别名</h4>
-<p>comme <code>typedefined</code></p>
-<pre><code class="language-typescript">type myType = 1|2|3|4|5;
-
-let k: 1|2|3|4|5;//类型复用
-let l: myType;
-</code></pre>
-<h2 id="编译选项">编译选项</h2>
-<h3 id="自动编译文件">自动编译文件</h3>
-<p><code>-w</code> 选项</p>
-<pre><code class="language-sh">tsc xxx.ts -w
-</code></pre>
-<h3 id="编译配置">编译配置</h3>
-<p><code>tsconfig.json</code> ，直接<code>tsc</code> 编译所以项目文件</p>
+            <h2 id="面向对象">面向对象</h2>
+<blockquote>
+<p>一切皆是对象</p>
+</blockquote>
+<h3 id="类class">类（class）</h3>
+<p>对象的模型</p>
 <ul>
 <li>
-<p>可以写注释</p>
+<p>定义类</p>
+<pre><code class="language-typescript">class 类名{
+    属性名: 类型;
+
+    constructor(参数: 类型){
+        this.属性名 = 参数;
+    }
+
+    方法名(){
+        ···
+    }
+}
+</code></pre>
 </li>
-<li>
-<p>include：定义编译的文件范围</p>
-<blockquote>
-<p>**表示任意目录，*表示任意文件</p>
-</blockquote>
-</li>
-<li>
-<p>exclude：定义编译排除的范围
-默认值：<code>[&quot;node_modules&quot;,&quot;bower_components&quot;,&quot;jspm_packages&quot;]</code></p>
-</li>
-<li>
-<p>extends：定义被继承的配置文件</p>
-</li>
-<li>
-<p>files：指定被编译的文件列表（编译的文件比较少）</p>
-</li>
+<li></li>
 </ul>
-<h4 id="compileroptions"><code>compilerOptions</code></h4>
-<ul>
-<li>
-<p>target：指定编译为ES的版本</p>
-</li>
-<li>
-<p>module：指定模块化的规范</p>
-</li>
-<li>
-<p>lib：指定项目使用的库</p>
-</li>
-<li>
-<p>outDir：指定编译后文件所在的目录<code>./dist</code></p>
-</li>
-<li>
-<p>outFile：将代码合并为一个文件</p>
-</li>
-<li>
-<p>allowJs：是否编译js文件（默认为false）</p>
-</li>
-<li>
-<p>checkJs：是否检查js代码（默认为false）</p>
-</li>
-<li>
-<p>removeComments：是否移除注释</p>
-</li>
-<li>
-<p>noEmit：不生成编译后的文件</p>
-</li>
-<li>
-<p>noEmitOnError：有错误时不生成编译的文件（默认为false）</p>
-</li>
-<li>
-<p>alwaysStrict：执行严格模式（有模块时自动进入）</p>
-</li>
-<li>
-<p>noImplicitAny：不允许隐式的any类型</p>
-</li>
-<li>
-<p>noImplicitThis：不允许不明确类型的this</p>
-</li>
-<li>
-<p>strictNullChecks ：严格检查空值</p>
-<blockquote>
-<p>ES2020的可选链</p>
-<pre><code class="language-typescript">let box1 = document.getElementById('box1');
-box1?.addEventListener('click', function(){
-    alert('hello!')
-});
-</code></pre>
-</blockquote>
-</li>
-<li>
-<p>strict：严格检查的总开关（建议打开）</p>
-</li>
-</ul>
-<h2 id="使用webpack打包ts代码">使用webpack打包ts代码</h2>
-<pre><code class="language-sh">npm init -y
-npm i -D webpack webpack-cli typescript ts-loader
-</code></pre>
-<h3 id="webpack-的配置信息webpackconfigjs">webpack 的配置信息<code>webpack.config.js</code></h3>
-<pre><code class="language-js">const path = require('path');
-
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-
-module.exports = {
-    //指定入口文件
-    entry: &quot;./src/index.ts&quot;
-    //指定打包文件所在的目录
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: &quot;bundle.js&quot;
-    },
-    module:{
-        rules:[
-            {
-                //指定规则生效的文件
-                test: /\.ts$/,
-                use: 'ts-loader'
-                exclude: /node-modules/
-            }
-
- ]
-    },
-    plugins: [
-        new HTMLWebpackPlugin({
-            title: &quot;MyTitle&quot;
-        }),
-    ],
-    mode: &quot;development&quot;,
-    resolve:{
-        extensions: ['.ts','.js']
-}
-}
-</code></pre>
-<p>添加<code>tsconfig.json</code></p>
-<p>在package.json 中添加script</p>
-<pre><code class="language-json">&quot;script&quot;:{
-    &quot;build&quot;: &quot;webpack&quot;
-}
-</code></pre>
-<h3 id="自动引入资源文件">自动引入资源文件</h3>
-<pre><code class="language-sh">npm i -D html-webpack-plugin
-</code></pre>
-<h3 id="使用babel">使用babel</h3>
-<pre><code class="language-sh">npm i -D @babel/core @babel/preset-env babel-loader core-js
-</code></pre>
-<pre><code class="language-js">modules:{
-rules:[
-use:[
-    {
-        loader: 'babel-loader',
-        options:{
-        presets:[
-            [
-              &quot;@babel/preset-env&quot;,
-              {
-                 targets:{
-                    &quot;chrome&quot;:&quot;99&quot;
-                 },
-              &quot;corejs&quot;:&quot;3&quot;,
-              &quot;useBuilt Ins&quot;:&quot;uses&quot;
-              }
-            ]
-         ]
-     }
-},
-     'ts-loader'
-]]}
-</code></pre>
-<h2 id="运算符">运算符</h2>
-<blockquote>
-<p>在字符串前面添加<code>+</code> 号，可以将 string 类型转化为 number 类型</p>
-</blockquote>
-<h2 id="语句">语句</h2>
-<p>TypeScript 支持 三元运算符 <code>?:</code></p>
         </div>
         
         <div class="my-4">
@@ -623,14 +385,11 @@ use:[
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/TypeScript/ts-2/" class="block">TypeScript | 2</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/DS/DS-2/" class="block">数据结构-2：线性表</a>
+        <a href="https://zzzsy.top/notes/TypeScript/ts-1/" class="block">TypeScript | 1</a>
         
     </div>
 </div>
@@ -699,42 +458,11 @@ use:[
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#基础介绍">基础介绍</a></li>
-    <li><a href="#变量和数据类型">变量和数据类型</a>
+    <li><a href="#面向对象">面向对象</a>
       <ul>
-        <li><a href="#类型注解-type-annotation">类型注解 (type annotation)</a></li>
-        <li><a href="#数据类型分类">数据类型分类</a>
-          <ul>
-            <li><a href="#字面量--联合类型"><strong>字面量 &amp; 联合类型</strong></a></li>
-            <li><a href="#any--unknown">any &amp; unknown</a></li>
-            <li><a href="#void--nerver">void &amp; nerver</a></li>
-            <li><a href="#object">object</a></li>
-            <li><a href="#array">array</a></li>
-            <li><a href="#tuple--enum">tuple &amp; enum</a></li>
-            <li><a href="#类型别名">类型别名</a></li>
-          </ul>
-        </li>
+        <li><a href="#类class">类（class）</a></li>
       </ul>
     </li>
-    <li><a href="#编译选项">编译选项</a>
-      <ul>
-        <li><a href="#自动编译文件">自动编译文件</a></li>
-        <li><a href="#编译配置">编译配置</a>
-          <ul>
-            <li><a href="#compileroptions"><code>compilerOptions</code></a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#使用webpack打包ts代码">使用webpack打包ts代码</a>
-      <ul>
-        <li><a href="#webpack-的配置信息webpackconfigjs">webpack 的配置信息<code>webpack.config.js</code></a></li>
-        <li><a href="#自动引入资源文件">自动引入资源文件</a></li>
-        <li><a href="#使用babel">使用babel</a></li>
-      </ul>
-    </li>
-    <li><a href="#运算符">运算符</a></li>
-    <li><a href="#语句">语句</a></li>
   </ul>
 </nav>
 </div>
@@ -754,6 +482,9 @@ use:[
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
+            <a href="https://zzzsy.top/notes/TypeScript/ts-1/">TypeScript | 1</a>
+            <br />
+            
             <a href="https://zzzsy.top/notes/DS/DS-2/">数据结构-2：线性表</a>
             <br />
             
@@ -767,9 +498,6 @@ use:[
             <br />
             
             <a href="https://zzzsy.top/notes/miniprogram/mnp-5/">微信小程序 ｜ 常见组件</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/miniprogram/mnp-4/">微信小程序 | 样式</a>
             <br />
             
         </div>
