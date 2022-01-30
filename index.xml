@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>tricks</title>
+      <link>https://zzzsy.top/notes/essay/coding/</link>
+      <pubDate>Tue, 05 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/essay/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>数据结构-2：线性表</title>
       <link>https://zzzsy.top/notes/DS/DS-2/</link>
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
@@ -59,7 +68,7 @@
       <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://zzzsy.top/essay/analog-vs-digital/</guid>
-      <description>analog的含义 相似、替代物 模拟</description>
+      <description>analog的含义 相似、替代物 模拟 analog对于一个人来讲，可能是</description>
     </item>
     
     <item>
@@ -344,11 +353,11 @@
     </item>
     
     <item>
-      <title>tricks</title>
-      <link>https://zzzsy.top/notes/essay/coding/</link>
+      <title>Rust | 1 常见编程概念</title>
+      <link>https://zzzsy.top/notes/rust/rs-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://zzzsy.top/notes/essay/coding/</guid>
+      <guid>https://zzzsy.top/notes/rust/rs-1/</guid>
       <description></description>
     </item>
     

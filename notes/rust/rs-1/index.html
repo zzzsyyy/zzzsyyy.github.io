@@ -5,7 +5,7 @@
 <script src="//cdn.zzzsy.top/instant.page@5.1.0.js" type="module"></script>
 <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 
-<title>TypeScript | 2 | ZSYのBlog</title>
+<title>Rust | 1 常见编程概念 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -52,8 +52,8 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"TypeScript | 2",
-      "item":"https://zzzsy.top/notes/TypeScript/ts-2/"}]
+      "name":"Rust | 1 常见编程概念",
+      "item":"https://zzzsy.top/notes/rust/rs-1/"}]
 }
 </script>
 
@@ -65,11 +65,9 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://zzzsy.top/notes/TypeScript/ts-2/"
+        "@id": "https://zzzsy.top/notes/rust/rs-1/"
     },
-    "headline": "TypeScript | 2 | ZSYのBlog","datePublished": "2021-11-13T00:00:00+00:00",
-    "dateModified": "2021-11-20T00:00:00+00:00",
-    "wordCount":  240 ,
+    "headline": "Rust | 1 常见编程概念 | ZSYのBlog","wordCount":  486 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -84,14 +82,14 @@
         },
     "description": ""
 }
-</script><meta property="og:title" content="TypeScript | 2 | ZSYのBlog" />
+</script><meta property="og:title" content="Rust | 1 常见编程概念 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="https://zzzsy.top/images/icon.png">
 
 
-<meta property="og:url" content="https://zzzsy.top/notes/TypeScript/ts-2/" />
+<meta property="og:url" content="https://zzzsy.top/notes/rust/rs-1/" />
 
 
 
@@ -113,19 +111,13 @@
 
 
 
-<meta property="article:published_time" content="2021-11-13T00:00:00&#43;00:00" />
-
-
-<meta property="article:modified_time" content="2021-11-20T00:00:00&#43;00:00" />
 
 
 
 <meta property="article:section" content="notes" />
 
 
-<meta property="article:tag" content="ts" />
-
-<meta property="article:tag" content="typescript" />
+<meta property="article:tag" content="rust" />
 
 <meta property="article:tag" content="笔记" />
 
@@ -136,38 +128,6 @@
 
 
 
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/TypeScript/ts-1/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/JavaScript/json/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/htmlcss/ht-4/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/htmlcss/ht-3/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/JavaScript/js-1/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/htmlcss/css-1/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/htmlcss/ht-1/" />
-
-
-
-<meta property="og:see_also" content="https://zzzsy.top/notes/htmlcss/ht-2/" />
 
 
 
@@ -258,15 +218,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">TypeScript | 2</h1>
+        <h1 class="font-bold text-3xl text-primary-text">Rust | 1 常见编程概念</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>2021-11-13</span>
+        <span>0001-01-01</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>240字</span>
+        <span>486字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -279,7 +239,7 @@
     <div class="mr-6 my-2">
         <i class="fas fa-th-list mr-1"></i>
         
-        <a href="https://zzzsy.top/series/%E5%89%8D%E7%AB%AF/" class="hover:text-eureka">前端</a>
+        <a href="https://zzzsy.top/series/Rust/" class="hover:text-eureka">Rust</a>
         
     </div>
     
@@ -290,66 +250,117 @@
         
 
         <div class="content">
-            <h2 id="面向对象">面向对象</h2>
-<blockquote>
-<p>一切皆是对象</p>
-</blockquote>
-<h3 id="类class">类（class）</h3>
-<p>对象的模型</p>
+            <h2 id="变量与可变性">变量与可变性</h2>
+<p>Rust中的变量默认是<strong>不可变的</strong>，但可以在变量名前添加<code>mut</code> 使变量可变</p>
+<pre><code class="language-rust">fn main(){
+    let mut x = 1;
+    x = 2;
+}
+</code></pre>
+<h3 id="常量">常量</h3>
+<ul>
+<li>不能对常量使用<code>mut</code> ，它总是不能变</li>
+<li>声明使用<code>const</code> 关键字，并注明<strong>值的类型</strong></li>
+<li>只能设置为常量表达式，不能是在运算时出现的值</li>
+</ul>
+<pre><code class="language-rust">const THREE_HOURS_IN_SECONDS: u32 = 60*60*3;
+</code></pre>
+<h3 id="隐藏">隐藏</h3>
+<p>rust允许定义一个与之前变量名相同的新变量，第一个变量就会被<strong>隐藏</strong></p>
+<pre><code class="language-rust">//okk 不必使用不同的名字
+let spaces = &quot;     &quot;;
+let spaces = spaces.len();
+//err 不能改变变量的类型
+let mut spaces = &quot;     &quot;;
+spaces = spaces.len();
+</code></pre>
+<h2 id="数据类型">数据类型</h2>
+<ul>
+<li>标量（scalar）</li>
+<li>复合（compound）</li>
+</ul>
+<h3 id="标量类型">标量类型</h3>
+<p>代表一个单独的值。基本有整数、浮点型、布尔类型、字符类型</p>
+<h4 id="整型">整型</h4>
+<table>
+<thead>
+<tr>
+<th>长度</th>
+<th>有符号</th>
+<th>无符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8-bit</td>
+<td><code>i8</code></td>
+<td><code>u8</code></td>
+</tr>
+<tr>
+<td>16-bit</td>
+<td><code>i16</code></td>
+<td><code>u16</code></td>
+</tr>
+<tr>
+<td>32-bit</td>
+<td><code>i32</code></td>
+<td><code>u32</code></td>
+</tr>
+<tr>
+<td>64-bit</td>
+<td><code>i64</code></td>
+<td><code>u64</code></td>
+</tr>
+<tr>
+<td>128-bit</td>
+<td><code>i128</code></td>
+<td><code>u128</code></td>
+</tr>
+<tr>
+<td>arch</td>
+<td><code>isize</code></td>
+<td><code>usize</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>有符号数可以存储$-(2^{n-1})$到$2^{n-1}-1$ 之间的数</li>
+<li>无符号数可以存储0到$2^n-1$ 之间的数</li>
+<li><code>isize</code> 和 <code>usize</code> 依赖运行的计算机架构</li>
+</ul>
+<p>rust允许使用<code>_</code> 来作为分隔符（增加可读性），如<code>98_220</code> ，可以使用<code>32_i32</code></p>
+<h4 id="浮点型">浮点型</h4>
 <ul>
 <li>
-<p>定义类</p>
-<blockquote>
-</blockquote>
-<pre><code class="language-typescript">class 类名{
-    属性名: 类型;
-
-    constructor(参数: 类型){
-        this.属性名 = 参数;
-    }
-
-    方法名(){
-        ···
-    }
-}
-</code></pre>
+<p><code>f32</code> 和 <code>f64</code></p>
 </li>
 <li>
-<p>使用类</p>
-<pre><code class="language-typescript">const aaa = new 类名();
-</code></pre>
+<p>和C一样，在浮点数的计算上要注意<strong>精度误差</strong></p>
 </li>
 <li>
-<p>实例属性和静态属性</p>
-<pre><code class="language-typescript">class sss{
-    readonly ss: string = &quot;ss&quot;//只读属性，无法修改
-    name: string = 'sss';//通过创建对象访问
-    static age: number = 16;//类属性，直接访问
-}
-</code></pre>
+<p><code>NaN</code> 未定义的结果（可以使用<code>is_nan()</code>方法判断）</p>
 </li>
 </ul>
-<h3 id="构造函数和-this">构造函数和 this</h3>
-<p>在构造类时，使用构造函数</p>
-<p>在 <code>new</code> 一个对象时，构造函数执行</p>
-<p>在实例方法中，<code>this</code>表示当前的实例</p>
-<pre><code class="language-typescript">class Dog{
-    name: string;
-    age: number;
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age
-    }
+<h4 id="序列">序列</h4>
+<p>用以生成连续的数值，如 <code>1..5</code> 相当于 <code>1..=4</code></p>
+<pre><code class="language-rust">for i in 'A'..='Z' {
+    println!(&quot;{}&quot;,i);
 }
 </code></pre>
-<h3 id="继承">继承</h3>
+<h4 id="有理数和复数">有理数和复数</h4>
+<p>使用 <code>num</code>  库</p>
+<pre><code class="language-rust">use num::complex::Complex;
+
+fn main(){
+    let a = Complex{re:2.1,im:-1.2};
+    let b = Complex::new(1)
+}
+</code></pre>
         </div>
         
         <div class="my-4">
     
-    <a href="https://zzzsy.top/tags/ts/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#ts</a>
-    
-    <a href="https://zzzsy.top/tags/typescript/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#typescript</a>
+    <a href="https://zzzsy.top/tags/rust/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#rust</a>
     
     <a href="https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
     
@@ -414,11 +425,11 @@
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
+        <span class="block font-bold">上一页</span>
+        <a href="https://zzzsy.top/notes/CTF/Cryptography/" class="block">一些Misc的Writeup - 2</a>
+        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
-        
-        <span class="block font-bold">下一页</span>
-        <a href="https://zzzsy.top/notes/TypeScript/ts-1/" class="block">TypeScript | 1</a>
         
     </div>
 </div>
@@ -449,31 +460,7 @@
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/TypeScript/ts-2/">TypeScript | 2</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/TypeScript/ts-1/">TypeScript | 1</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/JavaScript/json/">json格式详解</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/htmlcss/ht-4/">HTML笔记-4：HTML链接、头部、CSS</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/htmlcss/ht-3/">HTML笔记-3：常用标签与属性</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/JavaScript/js-1/">JS笔记-1：JS介绍</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/htmlcss/css-1/">css笔记-1：选择器</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/htmlcss/ht-1/">HTML笔记-1：Web语言</a>
-        <br />
-        
-        <a href="https://zzzsy.top/notes/htmlcss/ht-2/">HTML笔记-2：深入了解超文本</a>
+        <a href="https://zzzsy.top/notes/rust/rs-1/">Rust | 1 常见编程概念</a>
         <br />
         
         
@@ -487,11 +474,22 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#面向对象">面向对象</a>
+    <li><a href="#变量与可变性">变量与可变性</a>
       <ul>
-        <li><a href="#类class">类（class）</a></li>
-        <li><a href="#构造函数和-this">构造函数和 this</a></li>
-        <li><a href="#继承">继承</a></li>
+        <li><a href="#常量">常量</a></li>
+        <li><a href="#隐藏">隐藏</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据类型">数据类型</a>
+      <ul>
+        <li><a href="#标量类型">标量类型</a>
+          <ul>
+            <li><a href="#整型">整型</a></li>
+            <li><a href="#浮点型">浮点型</a></li>
+            <li><a href="#序列">序列</a></li>
+            <li><a href="#有理数和复数">有理数和复数</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -513,6 +511,9 @@
         <h2 class="text-lg font-semibold mb-4">相关</h2>
         <div class="content">
             
+            <a href="https://zzzsy.top/notes/TypeScript/ts-2/">TypeScript | 2</a>
+            <br />
+            
             <a href="https://zzzsy.top/notes/TypeScript/ts-1/">TypeScript | 1</a>
             <br />
             
@@ -526,9 +527,6 @@
             <br />
             
             <a href="https://zzzsy.top/notes/JavaScript/json/">json格式详解</a>
-            <br />
-            
-            <a href="https://zzzsy.top/notes/miniprogram/mnp-5/">微信小程序 ｜ 常见组件</a>
             <br />
             
         </div>
