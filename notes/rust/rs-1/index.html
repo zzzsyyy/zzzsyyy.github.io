@@ -67,7 +67,7 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/rust/rs-1/"
     },
-    "headline": "Rust | 1 常见编程概念 | ZSYのBlog","wordCount":  486 ,
+    "headline": "Rust | 1 常见编程概念 | ZSYのBlog","wordCount":  509 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -226,11 +226,11 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>486字</span>
+        <span>509字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
-        <span>1分钟</span>
+        <span>2分钟</span>
     </div>
 
     
@@ -274,13 +274,12 @@ let spaces = spaces.len();
 let mut spaces = &quot;     &quot;;
 spaces = spaces.len();
 </code></pre>
-<h2 id="数据类型">数据类型</h2>
+<h2 id="基本类型">基本类型</h2>
 <ul>
 <li>标量（scalar）</li>
 <li>复合（compound）</li>
 </ul>
-<h3 id="标量类型">标量类型</h3>
-<p>代表一个单独的值。基本有整数、浮点型、布尔类型、字符类型</p>
+<h3 id="数值类型">数值类型</h3>
 <h4 id="整型">整型</h4>
 <table>
 <thead>
@@ -329,6 +328,9 @@ spaces = spaces.len();
 <li><code>isize</code> 和 <code>usize</code> 依赖运行的计算机架构</li>
 </ul>
 <p>rust允许使用<code>_</code> 来作为分隔符（增加可读性），如<code>98_220</code> ，可以使用<code>32_i32</code></p>
+<ul>
+<li>! <code>--release</code> 时，不检测<strong>整型溢出</strong></li>
+</ul>
 <h4 id="浮点型">浮点型</h4>
 <ul>
 <li>
@@ -356,6 +358,12 @@ fn main(){
     let b = Complex::new(1)
 }
 </code></pre>
+<h4 id="总结">总结</h4>
+<ul>
+<li><strong>类型转换一定是显式的</strong></li>
+<li><strong>数值可以使用方法</strong>：如<code>.round()</code></li>
+</ul>
+<h3 id="字符布尔单元类型">字符、布尔、单元类型</h3>
         </div>
         
         <div class="my-4">
@@ -480,16 +488,18 @@ fn main(){
         <li><a href="#隐藏">隐藏</a></li>
       </ul>
     </li>
-    <li><a href="#数据类型">数据类型</a>
+    <li><a href="#基本类型">基本类型</a>
       <ul>
-        <li><a href="#标量类型">标量类型</a>
+        <li><a href="#数值类型">数值类型</a>
           <ul>
             <li><a href="#整型">整型</a></li>
             <li><a href="#浮点型">浮点型</a></li>
             <li><a href="#序列">序列</a></li>
             <li><a href="#有理数和复数">有理数和复数</a></li>
+            <li><a href="#总结">总结</a></li>
           </ul>
         </li>
+        <li><a href="#字符布尔单元类型">字符、布尔、单元类型</a></li>
       </ul>
     </li>
   </ul>
