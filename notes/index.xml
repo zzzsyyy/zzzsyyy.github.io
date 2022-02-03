@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | &lt;a href=&#39;https://beian.miit.gov.cn&#39;&gt;辽ICP备2021008388-1号 | &lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 05 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust | 2</title>
+      <link>https://zzzsy.top/notes/rust/rs-2/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/rust/rs-2/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Rust | 1 变量和基本类型</title>
       <link>https://zzzsy.top/notes/rust/rs-1/</link>
