@@ -9,7 +9,7 @@
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | &lt;a href=&#39;https://beian.miit.gov.cn&#39;&gt;辽ICP备2021008388-1号 | &lt;/a&gt;</copyright>
     <lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Rust | 3</title>
+      <title>Rust | 3 字符串、切片与元组</title>
       <link>https://zzzsy.top/notes/rust/rs-3/</link>
       <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
       
@@ -368,6 +368,15 @@
       
       <guid>https://zzzsy.top/notes/CTF/Cryptography/</guid>
       <description>&lt;p&gt;Misc：Cryptography&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zzzsy.top/notes/rust/rs-practice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/rust/rs-practice/</guid>
+      <description>变量绑定与解构 // 修复错误 fn main() { let x = define_x(); println!(&amp;quot;{}, world&amp;quot;, x); } fn define_x() { let x = &amp;quot;hello&amp;quot;; } 函数需要存在一个返回值，并且声明返回类型，但是要避免 悬垂引用。 //返回String fn define_x() -&amp;gt;</description>
     </item>
     
   </channel>

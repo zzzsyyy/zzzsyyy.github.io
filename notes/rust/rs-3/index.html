@@ -5,7 +5,7 @@
 <script src="//cdn.zzzsy.top/instant.page@5.1.0.js" type="module"></script>
 <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 
-<title>Rust | 3 | ZSYのBlog</title>
+<title>Rust | 3 字符串、切片与元组 | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -52,7 +52,7 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Rust | 3",
+      "name":"Rust | 3 字符串、切片与元组",
       "item":"https://zzzsy.top/notes/rust/rs-3/"}]
 }
 </script>
@@ -67,9 +67,9 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/rust/rs-3/"
     },
-    "headline": "Rust | 3 | ZSYのBlog","datePublished": "2022-01-15T00:00:00+00:00",
+    "headline": "Rust | 3 字符串、切片与元组 | ZSYのBlog","datePublished": "2022-01-15T00:00:00+00:00",
     "dateModified": "2022-01-16T00:00:00+00:00",
-    "wordCount":  612 ,
+    "wordCount":  810 ,
     "author": {
         "@type": "Person",
         "name": ["zhang"]
@@ -84,7 +84,7 @@
         },
     "description": ""
 }
-</script><meta property="og:title" content="Rust | 3 | ZSYのBlog" />
+</script><meta property="og:title" content="Rust | 3 字符串、切片与元组 | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
@@ -232,7 +232,7 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Rust | 3</h1>
+        <h1 class="font-bold text-3xl text-primary-text">Rust | 3 字符串、切片与元组</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
@@ -240,7 +240,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>612字</span>
+        <span>810字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -286,12 +286,12 @@ let world = &amp;s[6..11];
     let mut s = String::new();//创建空String
     s.push_str(&quot;hello&quot;);//添加&amp;str类型的字符串
     s.push(&quot;!&quot;);//添加字符
-    
+
     let mut s = &quot;hello&quot;.to_string();//从现有的切片创建
     s.push(&quot;!&quot;);
-    
+
     let mut s = String::from(&quot;hello!&quot;);
-    
+
     let s1 = String::from(&quot;hello,&quot;);
     let s2 = String::from(&quot;world!&quot;);
     let s3 = s1 + &amp;s2;//这里s1的所有权转移了
@@ -325,9 +325,59 @@ for b in &quot;你好&quot;.bytes(){
     println!(&quot;{}&quot;, b);
 }
 </code></pre>
-<p>获取子串可以考虑尝试下这个库:
+<p>获取子串可以考虑尝试下这个库：
 <a href="https://crates.io/crates/utf8_slice" target="_blank">utf8_slice</a>。</p>
 <h2 id="元组">元组</h2>
+<p>元组组合起了多种类型，它的长度和元素的顺序是固定的。</p>
+<pre><code class="language-rust">fn main(){
+    let tup:(i32, f64, u8)=(500,6.4,1)
+}
+</code></pre>
+<ul>
+<li>可以使用模式匹配解构元组</li>
+</ul>
+<pre><code class="language-rust">let (x,y,z) = tup;
+</code></pre>
+<ul>
+<li>可以使用<code>.</code>来访问元组，索引从0开始</li>
+</ul>
+<h2 id="结构体">结构体</h2>
+<h3 id="定义">定义</h3>
+<pre><code class="language-rust">struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+</code></pre>
+<p>创建结构体实例时，<strong>每个字段</strong>都需要初始化</p>
+<p>顺序则不重要</p>
+<p>使用<code>.</code>操作符来访问字段</p>
+<h3 id="简化结构体创建">简化结构体创建</h3>
+<pre><code class="language-rust">fn build_user(email: String,username:String) -&gt; User {
+    User {
+        email,
+        username,
+        active: true,
+        sign_in_count: 1,
+    }
+}
+</code></pre>
+<h3 id="结构体更新">结构体更新</h3>
+<pre><code class="language-rust">fn main() {
+  let user2 = User {
+        email: String::from(&quot;another@example.com&quot;),
+        ..user1
+    };
+}
+</code></pre>
+<blockquote>
+<p>这里<code>user1</code>的部分复杂字段发生了<strong>所有权转移</strong></p>
+</blockquote>
+<h3 id="元组结构体">元组结构体</h3>
+<p>和元组很像的结构体</p>
+<pre><code class="language-rust">struct Point(i32,i32,i32)
+</code></pre>
         </div>
         
         <div class="my-4">
@@ -432,7 +482,7 @@ for b in &quot;你好&quot;.bytes(){
     <div class="content">
         
         
-        <a href="https://zzzsy.top/notes/rust/rs-3/">Rust | 3</a>
+        <a href="https://zzzsy.top/notes/rust/rs-3/">Rust | 3 字符串、切片与元组</a>
         <br />
         
         <a href="https://zzzsy.top/notes/rust/rs-2/">Rust | 2 所有权与借用</a>
@@ -465,6 +515,14 @@ for b in &quot;你好&quot;.bytes(){
       </ul>
     </li>
     <li><a href="#元组">元组</a></li>
+    <li><a href="#结构体">结构体</a>
+      <ul>
+        <li><a href="#定义">定义</a></li>
+        <li><a href="#简化结构体创建">简化结构体创建</a></li>
+        <li><a href="#结构体更新">结构体更新</a></li>
+        <li><a href="#元组结构体">元组结构体</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 </div>
