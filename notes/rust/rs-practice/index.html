@@ -5,7 +5,7 @@
 <script src="//cdn.zzzsy.top/instant.page@5.1.0.js" type="module"></script>
 <script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
 
-<title>ZSYのBlog</title>
+<title>Rust | Practice | ZSYのBlog</title>
 <link rel="stylesheet" href="https://zzzsy.top/css/eureka.min.css">
 <script defer src="https://zzzsy.top/js/eureka.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
@@ -40,7 +40,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://zzzsy.top/images/icon_hu5814babbe4ab5dbdfaa17ff4a171f5d5_229063_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="变量绑定与解构 // 修复错误 fn main() { let x = define_x(); println!(&quot;{}, world&quot;, x); } fn define_x() { let x = &quot;hello&quot;; } 函数需要存在一个返回值，并且声明返回类型，但是要避免 悬垂引用。 //返回String fn define_x() -&gt;">
+  content="
+Rust Practice的一些练习题">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -52,7 +53,7 @@
       "item":"https://zzzsy.top/notes/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"",
+      "name":"Rust | Practice",
       "item":"https://zzzsy.top/notes/rust/rs-practice/"}]
 }
 </script>
@@ -67,7 +68,13 @@
         "@type": "WebPage",
         "@id": "https://zzzsy.top/notes/rust/rs-practice/"
     },
-    "headline": "ZSYのBlog","wordCount":  105 ,
+    "headline": "Rust | Practice | ZSYのBlog","datePublished": "2022-03-07T00:00:00+00:00",
+    "dateModified": "2022-03-08T00:00:00+00:00",
+    "wordCount":  120 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
     "publisher": {
         "@type": "Person",
         "name": "zhangshanying",
@@ -76,9 +83,9 @@
             "url": "https://zzzsy.top/images/icon.png"
         }
         },
-    "description": "变量绑定与解构 \/\/ 修复错误 fn main() { let x = define_x(); println!(\u0026quot;{}, world\u0026quot;, x); } fn define_x() { let x = \u0026quot;hello\u0026quot;; } 函数需要存在一个返回值，并且声明返回类型，但是要避免 悬垂引用。 \/\/返回String fn define_x() -\u0026gt;"
+    "description": "\u003cp\u003e\r\n\u003ca href=\u0022https:\/\/zh.practice.rs\/\u0022 target=\u0022_blank\u0022\u003eRust Practice\u003c\/a\u003e的一些练习题\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="ZSYのBlog" />
+</script><meta property="og:title" content="Rust | Practice | ZSYのBlog" />
 <meta property="og:type" content="article" />
 
 
@@ -90,7 +97,8 @@
 
 
 
-<meta property="og:description" content="变量绑定与解构 // 修复错误 fn main() { let x = define_x(); println!(&quot;{}, world&quot;, x); } fn define_x() { let x = &quot;hello&quot;; } 函数需要存在一个返回值，并且声明返回类型，但是要避免 悬垂引用。 //返回String fn define_x() -&gt;" />
+<meta property="og:description" content="
+Rust Practice的一些练习题" />
 
 
 
@@ -107,10 +115,40 @@
 
 
 
+<meta property="article:published_time" content="2022-03-07T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2022-03-08T00:00:00&#43;00:00" />
 
 
 
 <meta property="article:section" content="notes" />
+
+
+<meta property="article:tag" content="rust" />
+
+<meta property="article:tag" content="笔记" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/rust/rs-3/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/rust/rs-2/" />
+
+
+
+<meta property="og:see_also" content="https://zzzsy.top/notes/rust/rs-1/" />
+
 
 
 
@@ -199,16 +237,16 @@
 
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
-        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text"></h1>
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Rust | Practice</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
-        <span>0001-01-01</span>
+        <span>2022-03-07</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-book-open mr-1"></i>
-        <span>105字</span>
+        <span>120字</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-clock mr-1"></i>
@@ -218,6 +256,13 @@
     
 
     
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://zzzsy.top/series/Rust/" class="hover:text-eureka">Rust</a>
+        
+    </div>
+    
 
 </div>
         
@@ -225,7 +270,9 @@
         
 
         <div class="content">
-            <h2 id="变量绑定与解构">变量绑定与解构</h2>
+            <p>
+<a href="https://zh.practice.rs/" target="_blank">Rust Practice</a>的一些练习题</p>
+<h2 id="变量绑定与解构">变量绑定与解构</h2>
 <pre><code class="language-rust">// 修复错误
 fn main() {
     let x = define_x();
@@ -248,23 +295,80 @@ fn define_x&lt;'a&gt;() -&gt; &amp;'a str {
     x
 }
 </code></pre>
-
         </div>
         
+        <div class="my-4">
+    
+    <a href="https://zzzsy.top/tags/rust/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#rust</a>
+    
+    <a href="https://zzzsy.top/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
+    
+</div>
         
         
         
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://zzzsy.top/authors/Zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://zzzsy.top/images/icon.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://zzzsy.top/authors/Zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2">巧者劳而智者忧，无能者无所求，饱食而遨游，泛若不系之舟</span>
+            
+            
+            
+            
+            
+            <a href="mailto:me@zzzsy.top" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/zzzsyyy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://pan.zzzsy.top" class="mr-1">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
         
         
         
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">上一页</span>
-        <a href="https://zzzsy.top/notes/CTF/Cryptography/" class="block">一些Misc的Writeup - 2</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://zzzsy.top/notes/rust/rs-3/" class="block">Rust | 3 字符串、切片与元组</a>
         
     </div>
 </div>
@@ -287,8 +391,77 @@ fn define_x&lt;'a&gt;() -&gt; &amp;'a str {
 
     </div>
     
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://zzzsy.top/notes/rust/rs-practice/">Rust | Practice</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/rust/rs-3/">Rust | 3 字符串、切片与元组</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/rust/rs-2/">Rust | 2 所有权与借用</a>
+        <br />
+        
+        <a href="https://zzzsy.top/notes/rust/rs-1/">Rust | 1 变量和基本类型</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#变量绑定与解构">变量绑定与解构</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
 
     
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://zzzsy.top/notes/rust/rs-3/">Rust | 3 字符串、切片与元组</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/rust/rs-2/">Rust | 2 所有权与借用</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/rust/rs-1/">Rust | 1 变量和基本类型</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/TypeScript/ts-2/">TypeScript | 2</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/TypeScript/ts-1/">TypeScript | 1</a>
+            <br />
+            
+            <a href="https://zzzsy.top/notes/DS/DS-2/">数据结构-2：线性表</a>
+            <br />
+            
+        </div>
+    </div>
     
 </div>
 <script>

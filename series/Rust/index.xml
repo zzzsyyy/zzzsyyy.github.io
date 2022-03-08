@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://zzzsy.top/&#34;&gt;Zhang.Mathias&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | &lt;a href=&#39;https://beian.miit.gov.cn&#39;&gt;辽ICP备2021008388-1号 | &lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 15 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/series/Rust/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://zzzsy.top/series/Rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rust | Practice</title>
+      <link>https://zzzsy.top/notes/rust/rs-practice/</link>
+      <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/rust/rs-practice/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://zh.practice.rs/&#34; target=&#34;_blank&#34;&gt;Rust Practice&lt;/a&gt;的一些练习题&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Rust | 3 字符串、切片与元组</title>
       <link>https://zzzsy.top/notes/rust/rs-3/</link>
