@@ -226,6 +226,15 @@
     </item>
     
     <item>
+      <title>C语言笔记 - 8：C GENGO POITER KANZEN SEIHA</title>
+      <link>https://zzzsy.top/notes/C/C-pointer/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/C/C-pointer/</guid>
+      <description>&lt;p&gt;C语言笔记 - 8：征服C指针&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>C语言笔记-7：一些习题</title>
       <link>https://zzzsy.top/notes/C/C-7/</link>
       <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
@@ -378,6 +387,15 @@
       
       <guid>https://zzzsy.top/notes/CTF/Cryptography/</guid>
       <description>&lt;p&gt;Misc：Cryptography&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zzzsy.top/notes/essay/readify-code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/essay/readify-code/</guid>
+      <description>if-else语句优化 嵌套语句优化 使用do-while语句 do { if (nOld&amp;gt;35){ console.log(&amp;quot;Old not suitable&amp;quot;); break; } if (strM!==&amp;quot;SOftware Engineering&amp;quot;){ console.log(&amp;quot;M not suitable&amp;quot;); break; } if (!bIsPassed){ console.log(&amp;quot;not Passed!&amp;quot;) braek; } } while(false) 条件合并提炼 使用逻辑运算符合并，提炼判断函</description>
     </item>
     
   </channel>
