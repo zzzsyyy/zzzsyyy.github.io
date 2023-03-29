@@ -19,6 +19,24 @@
     </item>
     
     <item>
+      <title>Haskell 笔记 - 1：类型系统和函数</title>
+      <link>https://zzzsy.top/notes/Haskell/Haskell-2/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/Haskell/Haskell-2/</guid>
+      <description>&lt;p&gt;Haskell 笔记-1：类型系统和函数&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Haskell 笔记 - 0：初识</title>
+      <link>https://zzzsy.top/notes/Haskell/Haskell-1/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://zzzsy.top/notes/Haskell/Haskell-1/</guid>
+      <description>&lt;p&gt;Haskell 笔记-0：初识&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Rust | 3 字符串、切片与元组</title>
       <link>https://zzzsy.top/notes/rust/rs-3/</link>
       <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
